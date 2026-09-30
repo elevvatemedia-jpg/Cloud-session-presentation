@@ -2,7 +2,7 @@
 
 **Live deck:** https://www.figma.com/slides/nZCVLnHAeYLKMJNc6748ay
 
-Fourteen slides, English, built in Figma Slides in the Valen & Partners design
+Fifteen slides, English, built in Figma Slides in the Valen & Partners design
 language extracted from the previous V&P pitch deck.
 
 ## Design system
@@ -33,7 +33,7 @@ Slides are 1920 x 1080. Margin 120px, content width 1680px.
 ## Structure
 
 Some slides are built as progressive reveals across several grid frames and
-share one header number, so the grid holds 28 frames for 14 logical slides.
+share one header number, so the grid holds 29 frames for 15 logical slides.
 
 | # | Slide | Purpose |
 |---|---|---|
@@ -48,9 +48,10 @@ share one header number, so the grid holds 28 frames for 14 logical slides.
 | 09 | Everyone can call a model | Defensibility, shown as an asymmetry |
 | 10 | Two founders | Team |
 | 11 | A large category, entered narrow | Market, with the beachhead proof |
-| 12 | $95,000, spent on three things | Use of funds |
-| 13 | Ready for a seed round | What the raise buys (dark) |
-| 14 | $95,000 | The ask, CTA and contact (dark) |
+| 12 | Two revenue lines | Business model and retention |
+| 13 | $95,000, spent on three things | Use of funds |
+| 14 | Ready for a seed round | What the raise buys (dark) |
+| 15 | $95,000 | The ask, CTA and contact (dark) |
 
 Every slide carries speaker notes. Headers are numbered in play order.
 
@@ -170,3 +171,21 @@ price yet and inventing one was ruled out. The slide says so in its source line.
 The five testing companies and the Dale Carnegie Poland pilot sit underneath the
 tiers as the beachhead proof, with the "testing, not yet paying" line intact.
 They are evidence for the obtainable market, not the SOM figure itself.
+
+## Business model slide
+
+Slide 12 states the model as two revenue lines, a one-time setup fee charged for
+a live onboarding call and a recurring subscription, and then argues retention
+from the product rather than from contract terms.
+
+The retention panel makes the LTV case with the deck's own moat: context
+accumulates, so the cost of leaving rises every month the system runs. The bars
+are months elapsed at true linear scale, 1, 12 and 24, and the slide says so, so
+nothing on it can be read as a revenue projection.
+
+No prices, no LTV figure and no CAC appear, since none were supplied and
+inventing them was ruled out at the brief. The slide states that pricing is being
+set with the founding members, which is a position rather than a gap.
+
+The subscription is described as growing with the team, which assumes per-seat
+pricing. Confirm before presenting.
