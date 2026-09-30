@@ -99,21 +99,26 @@ deck's layouts. Usage: `python3 render.py deck.pptx outdir`.
 ## Cost slide sources
 
 Slide 02 sizes the annual cost of the work the agents take over, for a
-ten-person sales team. Checked September 2026.
+five-person sales team at a Polish B2B company. Polish market basis, since that
+is the initial ICP. Checked September 2026.
 
 | Component | Basis | Per year |
 |---|---|---|
-| Tool licences | HubSpot Sales Hub Pro $90, Apollo Pro $79, Outreach $100 (reported), Fireflies Business $19, per seat per month at annual billing, ten seats | $34,560 |
-| One operations hire | Sales operations manager, US market average salary, one assumed per ten-seat team | $112,000 |
-| Rep hours on admin | B2B reps spend about a quarter of the week on admin and data entry, applied to ten reps at $60,000 base | $150,000 |
-| **Total** | | **$296,560** |
+| Tool licences | HubSpot Sales Hub Pro $90, Apollo Basic $49, Fireflies Business $19 per seat per month at annual billing, five seats, converted at 3.85 PLN to the dollar | PLN 36,500 |
+| Half an operations role | Sales operations manager at the Polish market average, counted as half a role since a team this size rarely has a full-time CRM owner | PLN 85,000 |
+| Rep hours on admin | Polish B2B sales salary average, five reps, a quarter of the week on admin and data entry | PLN 163,000 |
+| **Total** | | **PLN 284,500** |
 
-Licence prices are the cheapest credible tier deliberately, so the figure cannot
-be accused of stacking. The slide notes that swapping in Salesforce, ZoomInfo
-and Gong triples the licence line.
+About $74,000. An earlier version used US salaries, a ten-person team and
+enterprise tooling, which produced $296,560 and did not reflect the market
+ValenOS actually sells into.
 
-Every assumption is printed on the slide itself in the source line. The
-arithmetic is checked programmatically against the rendered text, not just
-asserted.
+Deliberately conservative throughout: mid-tier licences rather than enterprise,
+half an operations role rather than one, and the cheapest credible tool tiers.
+The slide carries a second line noting that twenty seats on enterprise tooling
+passes 1.5 million by the same arithmetic.
 
-No savings figure is claimed anywhere, because ValenOS has no price yet.
+Every assumption is printed on the slide itself. The arithmetic is checked
+programmatically against the rendered text rather than asserted.
+
+No savings figure is claimed, because ValenOS has no price yet.
