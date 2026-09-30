@@ -54,11 +54,15 @@ No screenshot slots anywhere. The ValenOS interface is drawn as vectors in the
 deck itself, the same way the old V&P deck drew its product views. Nothing to
 paste in, and every pixel stays editable.
 
-- **Slide 01** carries the context manifold: a row of source pills (Gmail,
-  Outlook, Google Calendar, Google Meet, Slack, Apollo, calls and recordings,
-  and a dashed "and more") each dropping a hairline into a shared spine, the
-  spine feeding one line down into a single dark ValenOS node reading "one
-  context layer, read by every agent". Many places in, one layer out.
+- **Slide 01** carries the context orbit: eight source tiles beaded on a dashed
+  ring with gold flow dots between them (Gmail, Outlook, Calendar, Meet, Slack,
+  Apollo, Calls, and a dashed "+ more"), with an arrow out of the ring into a
+  dark gold-bordered ValenOS node reading "one context layer, read by every
+  agent". All eight sources are live integrations.
+
+  The tiles currently hold names, not logos. Each is named `logo:<Source>` so a
+  real mark can be dropped straight in; supply the files and they can be
+  uploaded as assets and swapped without touching the layout.
 - **Slide 06** is a dark slide carrying the full app window (sidebar, Companies
   to work table with ICP score pills) with the Follow-up agent draft card
   breaking out over the table, lit by a radial gold glow.
