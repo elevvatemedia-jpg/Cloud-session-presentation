@@ -2,7 +2,7 @@
 
 **Live deck:** https://www.figma.com/slides/nZCVLnHAeYLKMJNc6748ay
 
-Eleven slides, English, built in Figma Slides in the Valen & Partners design
+Thirteen slides, English, built in Figma Slides in the Valen & Partners design
 language extracted from the previous V&P pitch deck.
 
 ## Design system
@@ -32,19 +32,24 @@ Slides are 1920 x 1080. Margin 120px, content width 1680px.
 
 ## Structure
 
+Some slides are built as progressive reveals across several grid frames and
+share one header number, so the grid holds 18 frames for 13 logical slides.
+
 | # | Slide | Purpose |
 |---|---|---|
-| 01 | Revenue, not records | Positioning, with the Home window cropped off the bottom |
-| 02 | Not a CRM problem, a context problem | Problem |
-| 03 | Not buildable three years ago | Why now |
-| 04 | AI agents live inside the CRM | The shift (dark) |
-| 05 | Same agent, same prospect | The proof, two email cards with source chips |
-| 06 | Your pipeline is already filled | Product (dark), full app window |
-| 07 | Agents hand work to each other | The chain, with the human approval step |
-| 08 | The moat is the context | Defensibility |
-| 09 | Early, and already validated | Traction |
-| 10 | Two founders | Team |
-| 11 | $95,000 | The ask (dark) |
+| 01 | Revenue, not records | Positioning, with the context orbit |
+| 02 | What one sales seat costs | The wallet being replaced |
+| 03 | Not a CRM problem, a context problem | Problem, five-step reveal |
+| 04 | Not buildable three years ago | Why now |
+| 05 | AI agents live inside the CRM | The shift (dark), two-step reveal |
+| 06 | Same agent, same prospect | The proof, two email cards with source chips |
+| 07 | Your pipeline is already filled | Product (dark), full app window |
+| 08 | Agents hand work to each other | The chain, with the human approval step |
+| 09 | The moat is the context | Defensibility |
+| 10 | Early, and already validated | Traction |
+| 11 | Two founders | Team |
+| 12 | We started with the CRM | Vision, three horizons (dark) |
+| 13 | $95,000 | The ask (dark) |
 
 Every slide carries speaker notes with timing cues for a five minute run.
 
@@ -90,3 +95,22 @@ sizing slide because no defensible figures were available.
 Rasterises any .pptx to HTML and PNG straight from its package XML. Written
 because LibreOffice cannot run in this container, and used here to study the old
 deck's layouts. Usage: `python3 render.py deck.pptx outdir`.
+
+## Cost slide sources
+
+Slide 02 uses published list prices at annual billing, checked September 2026.
+Outreach and ZoomInfo do not publish pricing, so those are reported entry rates
+and are labelled as such on the slide.
+
+| Category | Vendor | Per seat / month |
+|---|---|---|
+| CRM | HubSpot Sales Hub Professional | $90 |
+| Prospecting and data | Apollo Professional | $79 |
+| Sales engagement | Outreach (reported) | $100 |
+| Calls, transcripts, AI notes | Fireflies Business | $19 |
+| **Total** | | **$288** |
+
+The stack is deliberately the cheap configuration. The slide's second line notes
+that swapping in Salesforce, ZoomInfo and Gong passes $500 per seat per month.
+
+No savings figure is claimed anywhere, because ValenOS has no price yet.
