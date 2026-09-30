@@ -54,8 +54,11 @@ No screenshot slots anywhere. The ValenOS interface is drawn as vectors in the
 deck itself, the same way the old V&P deck drew its product views. Nothing to
 paste in, and every pixel stays editable.
 
-- **Slide 01** carries the Home view cropped off the bottom edge: the greeting,
-  the overnight summary and the assistant exchange.
+- **Slide 01** carries the context manifold: a row of source pills (Gmail,
+  Outlook, Google Calendar, Google Meet, Slack, Apollo, calls and recordings,
+  and a dashed "and more") each dropping a hairline into a shared spine, the
+  spine feeding one line down into a single dark ValenOS node reading "one
+  context layer, read by every agent". Many places in, one layer out.
 - **Slide 06** is a dark slide carrying the full app window (sidebar, Companies
   to work table with ICP score pills) with the Follow-up agent draft card
   breaking out over the table, lit by a radial gold glow.
@@ -83,14 +86,3 @@ sizing slide because no defensible figures were available.
 Rasterises any .pptx to HTML and PNG straight from its package XML. Written
 because LibreOffice cannot run in this container, and used here to study the old
 deck's layouts. Usage: `python3 render.py deck.pptx outdir`.
-
-## Staged, not yet applied
-
-`figma/slide01-context-graphic.js` replaces slide 01's hero window with a
-context-source manifold: a row of source pills across the content width, each
-dropping a hairline into a shared spine, the spine feeding one line down into a
-single dark ValenOS node. Many places in, one context layer out.
-
-It runs in one `use_figma` call once Figma's tools are re-enabled for the chat.
-`preview/s01-preview.png` is a geometry preview rendered locally; the type there
-is a substitute, so judge layout from it, not letterforms.
