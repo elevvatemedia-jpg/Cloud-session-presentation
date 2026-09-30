@@ -2,7 +2,7 @@
 
 **Live deck:** https://www.figma.com/slides/nZCVLnHAeYLKMJNc6748ay
 
-Thirteen slides, English, built in Figma Slides in the Valen & Partners design
+Fourteen slides, English, built in Figma Slides in the Valen & Partners design
 language extracted from the previous V&P pitch deck.
 
 ## Design system
@@ -33,25 +33,31 @@ Slides are 1920 x 1080. Margin 120px, content width 1680px.
 ## Structure
 
 Some slides are built as progressive reveals across several grid frames and
-share one header number, so the grid holds 18 frames for 13 logical slides.
+share one header number, so the grid holds 28 frames for 14 logical slides.
 
 | # | Slide | Purpose |
 |---|---|---|
 | 01 | Revenue, not records | Positioning, with the context orbit |
-| 02 | You are already paying for this | The full cost of the work the agents take over |
-| 03 | Not a CRM problem, a context problem | Problem, five-step reveal |
-| 04 | Not buildable three years ago | Why now |
+| 02 | Not a CRM problem, a context problem | Problem, five-step reveal |
+| 03 | Not buildable three years ago | Why now, four-step reveal |
+| 04 | You are already paying for this | The cost of the work, five-step reveal |
 | 05 | AI agents live inside the CRM | The shift (dark), two-step reveal |
-| 06 | Same agent, same prospect | The proof, two email cards with source chips |
+| 06 | Same agent, same prospect | The proof, three-step reveal |
 | 07 | Your pipeline is already filled | Product (dark), full app window |
 | 08 | Agents hand work to each other | The chain, with the human approval step |
 | 09 | Everyone can call a model | Defensibility, shown as an asymmetry |
-| 10 | Early, and already validated | Traction |
-| 11 | Two founders | Team |
-| 12 | We started with the CRM | Vision, three horizons (dark) |
-| 13 | $95,000 | The ask (dark) |
+| 10 | Two founders | Team |
+| 11 | We started with the CRM | Vision, three horizons (dark) |
+| 12 | $95,000, spent on three things | Use of funds |
+| 13 | Ready for a seed round | What the raise buys (dark) |
+| 14 | $95,000 | The ask (dark) |
 
-Every slide carries speaker notes with timing cues for a five minute run.
+Every slide carries speaker notes. Headers are numbered in play order.
+
+The traction slide was deleted on request. Its full content is preserved at
+`figma/RESTORE-traction-slide.js` and is one call to bring back. It was the only
+place in the deck carrying the five companies testing, the four months since the
+first commit, the Dale Carnegie Poland pilot and the "not yet paying" line.
 
 ## Product mockups
 
@@ -127,3 +133,20 @@ Every assumption is printed on the slide itself. The arithmetic is checked
 programmatically against the rendered text rather than asserted.
 
 No savings figure is claimed, because ValenOS has no price yet.
+
+## Use of funds
+
+Three buckets, stated in priority order and deliberately without a percentage
+split, since none was supplied and inventing one was ruled out from the start.
+
+| | | |
+|---|---|---|
+| 01 | Engineering | A third engineer. Two founders carry the whole product today. |
+| 02 | AI and infrastructure | Model spend and hosting. Every agent run costs money. |
+| 03 | Go to market | Converting the testers and finding the next twenty. |
+
+Founder salaries are explicitly not funded by the raise, and the slide says so.
+
+Slide 13 states the milestone as conditions that must be true rather than as
+predictions: paying customers, agents running deeper into the pipeline, and a
+third engineer shipping.
