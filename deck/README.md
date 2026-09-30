@@ -47,7 +47,7 @@ share one header number, so the grid holds 28 frames for 14 logical slides.
 | 08 | Agents hand work to each other | The chain, with the human approval step |
 | 09 | Everyone can call a model | Defensibility, shown as an asymmetry |
 | 10 | Two founders | Team |
-| 11 | Early, and already validated | Traction |
+| 11 | A large category, entered narrow | Market, with the beachhead proof |
 | 12 | $95,000, spent on three things | Use of funds |
 | 13 | Ready for a seed round | What the raise buys (dark) |
 | 14 | $95,000 | The ask, CTA and contact (dark) |
@@ -149,3 +149,24 @@ Founder salaries are explicitly not funded by the raise, and the slide says so.
 Slide 13 states the milestone as conditions that must be true rather than as
 predictions: paying customers, agents running deeper into the pipeline, and a
 third engineer shipping.
+
+## Market slide sources
+
+Slide 11 sizes the category. Checked September 2026.
+
+| Tier | Figure | Basis |
+|---|---|---|
+| TAM | $126bn | Global CRM software spend, 2026, from published industry forecasts |
+| SAM | $19.5bn | European share of that spend |
+| SOM | 113,000 | Small and medium enterprises in Poland: 95,785 small and 17,245 medium, Statistics Poland Q2 2026 |
+
+Published global CRM estimates range from roughly $21bn to $334bn depending on
+what each firm counts. The slide uses a mid-range figure and the speaker notes
+tell the presenter to name that variance before an investor does.
+
+SOM is a company count rather than a revenue figure, because ValenOS has no
+price yet and inventing one was ruled out. The slide says so in its source line.
+
+The five testing companies and the Dale Carnegie Poland pilot sit underneath the
+tiers as the beachhead proof, with the "testing, not yet paying" line intact.
+They are evidence for the obtainable market, not the SOM figure itself.
