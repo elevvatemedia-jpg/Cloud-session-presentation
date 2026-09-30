@@ -47,11 +47,23 @@ Slides are 1920 x 1080. Margin 120px, content width 1680px.
 
 Every slide carries speaker notes with timing cues for a five minute run.
 
+## Product mockups
+
+Slide 06 is no longer a screenshot slot. The ValenOS interface is drawn as
+vectors in the deck itself, the same way the old V&P deck drew its product
+views: a dark slide carrying the app window (sidebar, Companies to work table
+with ICP scores) with the Follow-up agent draft card breaking out over the
+table, lit by a radial gold glow. Nothing to paste in, and it stays editable.
+
+## Blocked
+
+Three further enhancements are written but not applied, because the Figma MCP
+server allows 20 tool calls per month on a Starter plan with a View seat. See
+`figma/PENDING.md`.
+
 ## Before presenting
 
-1. Slide 06 has a `SCREENSHOT SLOT` frame. Drop a real 1680 x 520 export in and
-   delete the placeholder labels.
-2. Confirm the contact address on slide 10.
+Confirm the contact address on slide 10.
 
 ## Constraints honoured
 
