@@ -2,7 +2,7 @@
 
 **Live deck:** https://www.figma.com/slides/nZCVLnHAeYLKMJNc6748ay
 
-Ten slides, English, built in Figma Slides in the Valen & Partners design
+Eleven slides, English, built in Figma Slides in the Valen & Partners design
 language extracted from the previous V&P pitch deck.
 
 ## Design system
@@ -34,36 +34,43 @@ Slides are 1920 x 1080. Margin 120px, content width 1680px.
 
 | # | Slide | Purpose |
 |---|---|---|
-| 01 | Revenue, not records | Positioning |
+| 01 | Revenue, not records | Positioning, with the Home window cropped off the bottom |
 | 02 | Not a CRM problem, a context problem | Problem |
 | 03 | Not buildable three years ago | Why now |
 | 04 | AI agents live inside the CRM | The shift (dark) |
-| 05 | Same agent, same prospect | The proof |
-| 06 | One environment | Product |
-| 07 | The moat is the context | Defensibility |
-| 08 | Early, and already validated | Traction |
-| 09 | Two founders | Team |
-| 10 | $95,000 | The ask (dark) |
+| 05 | Same agent, same prospect | The proof, two email cards with source chips |
+| 06 | Your pipeline is already filled | Product (dark), full app window |
+| 07 | Agents hand work to each other | The chain, with the human approval step |
+| 08 | The moat is the context | Defensibility |
+| 09 | Early, and already validated | Traction |
+| 10 | Two founders | Team |
+| 11 | $95,000 | The ask (dark) |
 
 Every slide carries speaker notes with timing cues for a five minute run.
 
 ## Product mockups
 
-Slide 06 is no longer a screenshot slot. The ValenOS interface is drawn as
-vectors in the deck itself, the same way the old V&P deck drew its product
-views: a dark slide carrying the app window (sidebar, Companies to work table
-with ICP scores) with the Follow-up agent draft card breaking out over the
-table, lit by a radial gold glow. Nothing to paste in, and it stays editable.
+No screenshot slots anywhere. The ValenOS interface is drawn as vectors in the
+deck itself, the same way the old V&P deck drew its product views. Nothing to
+paste in, and every pixel stays editable.
 
-## Blocked
+- **Slide 01** carries the Home view cropped off the bottom edge: the greeting,
+  the overnight summary and the assistant exchange.
+- **Slide 06** is a dark slide carrying the full app window (sidebar, Companies
+  to work table with ICP score pills) with the Follow-up agent draft card
+  breaking out over the table, lit by a radial gold glow.
+- **Slide 05** shows the same agent writing twice, as two email cards. The
+  contextual one carries gold facts and a row of source chips.
+- **Slide 07** draws the agent chain as a flow diagram with status pills, a
+  wrapping connector and the human approval step in gold.
 
-Three further enhancements are written but not applied, because the Figma MCP
-server allows 20 tool calls per month on a Starter plan with a View seat. See
-`figma/PENDING.md`.
+Presentation devices (a card breaking out of its frame, layered shadows, a glow
+behind the product) follow the Attio reference, applied inside the V&P palette
+and type system rather than replacing it.
 
 ## Before presenting
 
-Confirm the contact address on slide 10.
+Confirm the contact address on slide 11.
 
 ## Constraints honoured
 
