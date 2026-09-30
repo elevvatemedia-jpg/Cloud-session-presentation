@@ -83,3 +83,14 @@ sizing slide because no defensible figures were available.
 Rasterises any .pptx to HTML and PNG straight from its package XML. Written
 because LibreOffice cannot run in this container, and used here to study the old
 deck's layouts. Usage: `python3 render.py deck.pptx outdir`.
+
+## Staged, not yet applied
+
+`figma/slide01-context-graphic.js` replaces slide 01's hero window with a
+context-source manifold: a row of source pills across the content width, each
+dropping a hairline into a shared spine, the spine feeding one line down into a
+single dark ValenOS node. Many places in, one context layer out.
+
+It runs in one `use_figma` call once Figma's tools are re-enabled for the chat.
+`preview/s01-preview.png` is a geometry preview rendered locally; the type there
+is a substitute, so judge layout from it, not letterforms.
