@@ -45,7 +45,7 @@ share one header number, so the grid holds 18 frames for 13 logical slides.
 | 06 | Same agent, same prospect | The proof, two email cards with source chips |
 | 07 | Your pipeline is already filled | Product (dark), full app window |
 | 08 | Agents hand work to each other | The chain, with the human approval step |
-| 09 | The moat is the context | Defensibility |
+| 09 | Everyone can call a model | Defensibility, shown as an asymmetry |
 | 10 | Early, and already validated | Traction |
 | 11 | Two founders | Team |
 | 12 | We started with the CRM | Vision, three horizons (dark) |
@@ -75,6 +75,11 @@ paste in, and every pixel stays editable.
   contextual one carries gold facts and a row of source chips.
 - **Slide 07** draws the agent chain as a flow diagram with status pills, a
   wrapping connector and the human approval step in gold.
+- **Slide 09** makes the moat visual rather than asserted: a small, nearly empty
+  prompt card for what a bolt-on assistant works from, against a large dark
+  panel listing eight sources of context ValenOS already holds on one
+  relationship. The size difference between the two objects is the argument.
+  The record is illustrative and the slide says so.
 
 Presentation devices (a card breaking out of its frame, layered shadows, a glow
 behind the product) follow the Attio reference, applied inside the V&P palette
