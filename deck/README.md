@@ -47,17 +47,16 @@ share one header number, so the grid holds 28 frames for 14 logical slides.
 | 08 | Agents hand work to each other | The chain, with the human approval step |
 | 09 | Everyone can call a model | Defensibility, shown as an asymmetry |
 | 10 | Two founders | Team |
-| 11 | We started with the CRM | Vision, three horizons (dark) |
+| 11 | Early, and already validated | Traction |
 | 12 | $95,000, spent on three things | Use of funds |
 | 13 | Ready for a seed round | What the raise buys (dark) |
-| 14 | $95,000 | The ask (dark) |
+| 14 | $95,000 | The ask, CTA and contact (dark) |
 
 Every slide carries speaker notes. Headers are numbered in play order.
 
-The traction slide was deleted on request. Its full content is preserved at
-`figma/RESTORE-traction-slide.js` and is one call to bring back. It was the only
-place in the deck carrying the five companies testing, the four months since the
-first commit, the Dale Carnegie Poland pilot and the "not yet paying" line.
+The closing sequence runs team, traction, use of funds, milestone, ask, so the
+two reasons to believe the founders come before the money, and the deck ends on
+the invitation rather than on the next round.
 
 ## Product mockups
 
