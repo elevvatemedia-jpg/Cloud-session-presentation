@@ -8,7 +8,7 @@
  */
 import { build } from "esbuild";
 import { execFileSync } from "node:child_process";
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -32,7 +32,11 @@ await build({
   target: ["es2020"],
   jsx: "automatic",
   outfile: resolve(dist, "app.js"),
-  define: { "process.env.NODE_ENV": '"production"' },
+  define: {
+    "process.env.NODE_ENV": '"production"',
+    // Next serves /public at the root; the artifact serves files beside the page.
+    "process.env.NEXT_PUBLIC_MARK_SRC": '"vp-mark.png"',
+  },
   loader: { ".tsx": "tsx", ".ts": "ts" },
   // baseUrl + paths live in preview/tsconfig.build.json so esbuild resolves
   // the "@/" alias the same way Next does, extensions included.
@@ -43,7 +47,10 @@ await build({
   },
 });
 
-// 3. The artifact shell. No doctype/html/head/body — the platform wraps it.
+// 3. Assets the page references by relative path.
+copyFileSync(resolve(root, "public/vp-mark.png"), resolve(dist, "vp-mark.png"));
+
+// 4. The artifact shell. No doctype/html/head/body — the platform wraps it.
 const css = readFileSync(resolve(dist, "app.css"), "utf8");
 writeFileSync(
   resolve(dist, "index.html"),

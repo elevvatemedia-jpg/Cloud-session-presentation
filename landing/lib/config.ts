@@ -31,6 +31,40 @@ export const company = {
   year: 2026,
 } as const;
 
+/**
+ * Legal identification and policy links.
+ *
+ * REQUIRED BEFORE THE FORM GOES LIVE. The form collects a name, a company and
+ * a work email, which is personal data under GDPR, so the page has to name the
+ * controller and link a privacy policy at the point of collection.
+ *
+ * Take these from valen-partners.com rather than writing new ones: one policy,
+ * on the canonical domain, linked from here. Two copies of a privacy policy
+ * drift apart, and the one that is wrong is the one you get asked about.
+ *
+ * Any field left empty is simply not rendered, so the page stays clean until
+ * the real values are in.
+ */
+export const legal = {
+  /** Registered company name, e.g. "Valen & Partners sp. z o.o." */
+  entity: "",
+  /** Registered address, one line. */
+  address: "",
+  /** Polish tax id. */
+  nip: "",
+  /** Companies-register number, if the entity has one. */
+  krs: "",
+  /** Absolute URLs on valen-partners.com. */
+  privacyUrl: "",
+  termsUrl: "",
+  cookiesUrl: "",
+} as const;
+
+/** True once there is enough to render the footer's legal row. */
+export const hasLegal = Boolean(
+  legal.entity || legal.address || legal.nip || legal.privacyUrl,
+);
+
 export const founders = [
   {
     initials: "MM",

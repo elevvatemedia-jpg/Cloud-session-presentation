@@ -51,6 +51,7 @@ Almost nothing requires touching a component.
 | You want to change | File |
 |---|---|
 | Whether applications are open, and the cap wording | `lib/config.ts` |
+| Legal entity, address, NIP, policy links | `lib/config.ts` (`legal`) |
 | Founder names, roles, contact | `lib/config.ts` |
 | Any wording anywhere | `lib/content.ts` |
 | Colour, type scale, motion easing | `app/globals.css` (`@theme`) |
@@ -80,6 +81,32 @@ Put credentials in `.env.local`. See `.env.example`.
 `preview/dist` — same code, no server. Used to publish a shareable preview
 without deploying. The form resolves locally there instead of hitting the API
 route, and the page says so at the bottom.
+
+## Legal
+
+`legal` in `lib/config.ts` holds the company identification and the policy
+links. **Every field is empty and has to be filled before the form goes live.**
+The form collects a name, a company and a work email, which is personal data
+under GDPR, so the page has to name the controller and link a privacy policy at
+the point of collection. The notice under the submit button and the footer's
+legal row both read from that object, and any field left empty is not rendered,
+so nothing invented reaches the page.
+
+Link the policies on valen-partners.com rather than copying them here. Two
+copies of a privacy policy drift apart, and the one that is wrong is the one you
+get asked about.
+
+The page currently loads no analytics, no pixel and sets no cookies, so it needs
+no consent banner. Adding a Meta Pixel or LinkedIn Insight Tag for the campaign
+changes that: both need consent before they fire.
+
+## Logo
+
+`public/vp-mark.png` is the Valen & Partners mark, navy `#09213D` and grey
+`#717272`. One asset at 428×160 covers every placement, the largest of which
+renders at 24px. `components/ui/Wordmark.tsx` wraps it and reserves its space so
+nothing shifts while it loads. Replace it with an SVG when one is available and
+nothing else needs to change.
 
 ## Type
 

@@ -39,6 +39,7 @@ more. They remain in `deck/README.md` for the pitch.
 | **"Five companies are testing it on their own pipelines"** | Chapter 06, "Today" | The deck says five are testing and not paying. "On their own pipelines" is slightly stronger — confirm or soften. |
 | **"Five people should cover the ground of twenty"** | Chapter 06, the ambition | A statement of intent, not a measured claim. Fine as ambition; say so if you would rather not put a ratio on it. |
 | **founders@valen-partners.com** | `lib/config.ts` | Placeholder. |
+| **Legal identification and policy links** | Footer, and the notice under the form | All empty in `lib/config.ts`, so nothing renders. Required before the form collects a single real application. |
 | **© 2026 Valen & Partners** | Footer | Matches the site; check at new year. |
 | **valenos.com** | `NEXT_PUBLIC_SITE_URL`, OG tags | Placeholder domain. |
 

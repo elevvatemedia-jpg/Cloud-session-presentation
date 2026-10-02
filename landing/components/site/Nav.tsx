@@ -3,6 +3,7 @@
 import { motion, useScroll, useSpring, useMotionValueEvent } from "motion/react";
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
+import { Wordmark } from "@/components/ui/Wordmark";
 import { navLinks } from "@/lib/content";
 import { clsx } from "@/lib/clsx";
 
@@ -39,9 +40,7 @@ export function Nav() {
               className="flex min-h-11 shrink-0 items-center gap-3 sm:gap-4"
               aria-label="ValenOS, by Valen and Partners — back to top"
             >
-              <span className="font-serif text-xl leading-none tracking-tight text-ink sm:text-[1.35rem]">
-                V&amp;P.
-              </span>
+<Wordmark height={21} alt="" className="sm:!h-[23px]" />
               <span aria-hidden className="h-4 w-px bg-line-strong" />
               <span className="text-[0.95rem] font-medium tracking-[-0.015em] text-ink sm:text-base">
                 ValenOS

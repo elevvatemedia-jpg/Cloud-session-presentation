@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
 import { Button } from "@/components/ui/Button";
 import { AppWindow, Avatar, Chip } from "@/components/ui/AppWindow";
+import { Wordmark } from "@/components/ui/Wordmark";
 import {
   ArrowDownIcon,
   BoardIcon,
@@ -206,9 +207,7 @@ function HomeMock() {
         {/* Sidebar — desktop only; on a phone the app is the content */}
         <aside className="hidden w-[208px] shrink-0 flex-col border-r border-line bg-paper-warm/60 p-3 lg:flex">
           <div className="flex items-center gap-2.5 px-2 py-2.5">
-            <span className="font-serif text-[0.95rem] leading-none text-ink">
-              V&amp;P.
-            </span>
+<Wordmark height={14} alt="" />
             <span className="text-[0.8125rem] font-medium text-ink">ValenOS</span>
           </div>
           <div className="mt-2 space-y-0.5">

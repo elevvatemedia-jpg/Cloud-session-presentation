@@ -7,7 +7,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { CheckIcon } from "@/components/ui/Icons";
 import { apply } from "@/lib/content";
-import { founding } from "@/lib/config";
+import { founding, company, legal } from "@/lib/config";
 import { submitApplication } from "@/lib/submit";
 import { clsx } from "@/lib/clsx";
 import { easeOutSoft } from "@/lib/motion";
@@ -258,6 +258,25 @@ export function Apply() {
 
                   <p className="mt-4 text-center text-[0.8125rem] text-white/60">
                     {apply.reassure}
+                  </p>
+
+                  {/* Named controller and a policy link, at the point the
+                      personal data is actually collected. */}
+                  <p className="mt-3 text-center text-[0.75rem] leading-relaxed text-white/45">
+                    Your details go to {legal.entity || company.parent} so we can
+                    reply about ValenOS, and nowhere else.
+                    {legal.privacyUrl && (
+                      <>
+                        {" "}
+                        <a
+                          href={legal.privacyUrl}
+                          className="text-white/70 underline underline-offset-4 transition-colors hover:text-white"
+                        >
+                          Privacy policy
+                        </a>
+                        .
+                      </>
+                    )}
                   </p>
                 </motion.form>
               )}

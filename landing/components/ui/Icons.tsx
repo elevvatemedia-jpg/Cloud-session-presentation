@@ -122,13 +122,6 @@ export const ChevronIcon = (p: IconProps) => (
   </Svg>
 );
 
-/** The V&P monogram used in the app-window mockups. */
-export const WordMark = ({ className }: { className?: string }) => (
-  <span className={className}>
-    <span className="font-serif tracking-tight">V&amp;P.</span>
-  </span>
-);
-
 export const SOURCE_ICONS = {
   email: MailIcon,
   meeting: CalendarIcon,
