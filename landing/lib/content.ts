@@ -13,6 +13,9 @@ export const hero = {
   trust: "Built in Warsaw. Five companies are testing it now.",
 };
 
+/** The line that bridges the product chapter into the ambition. */
+export const turnToAmbition = "That is the first version.";
+
 /* ------------------------------------------------------------- 02 · week */
 
 export const week = {
@@ -66,29 +69,32 @@ export const idea = {
   more: "Four worth naming. There are more behind them, and more every month.",
 };
 
-export const workflow = {
-  railTitle: "The context layer",
-  railBody: "Every email, meeting, note and signal about a company, in one place.",
-  /**
-   * Deliberately not a fixed set. Each step is one thing the agents do off the
-   * same context, and the list ends open because it keeps growing.
-   */
-  steps: [
-    { act: "Spots a signal", detail: "Careers page: hiring four account managers.", id: "signal" },
-    { act: "Researches the company", detail: "Six that fit your best customers, two of them hiring.", id: "lead" },
-    { act: "Writes the first email", detail: "From what was actually said, not a template.", id: "followup" },
-    { act: "Follows up", detail: "On its own schedule, until somebody answers.", id: "assistant" },
-    { act: "Stops the moment they reply", detail: "Marta answered at 07:42. Nothing chased her again.", id: "note" },
-    { act: "Moves the deal", detail: "Contacted to Replied, without you touching it.", id: "pipeline" },
-    { act: "Prepares your call", detail: "A brief built from every thread with that company.", id: "meeting" },
+export const acts = {
+  /** The one product moment worth showing at size. */
+  featured: {
+    title: "A reply moves the deal.",
+    body: "The agent watches the thread. When Marta answers, the deal moves itself and the sequence stops. Nobody updates a stage by hand.",
+  },
+  /** Said plainly and briefly; the board above is the proof. */
+  cards: [
+    {
+      id: "lead",
+      title: "Your list fills itself",
+      body: "Companies shaped like the ones you already sell to, with the reason each one was picked.",
+    },
+    {
+      id: "followup",
+      title: "The follow-up knows the last call",
+      body: "Written from what was actually said, with the source behind every line.",
+    },
+    {
+      id: "assistant",
+      title: "Ask how to close a deal",
+      body: "Answered from every email, meeting and note with that company.",
+    },
   ],
-  open: "And whatever the founding members ask for next.",
+  more: "And more behind them, added as founding members ask for them.",
 };
-
-/** The line that bridges the product chapter into the ambition. */
-export const turnToAmbition = "That is the first version.";
-
-/* --------------------------------------------------------------- context */
 
 export const context = {
   chapter: { n: "02", name: "How it works" },

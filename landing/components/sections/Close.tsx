@@ -144,9 +144,12 @@ export function Close() {
             </ol>
           </Reveal>
 
-          <p className="mt-7 inline-flex items-center gap-2.5 rounded-full border border-white/12 bg-white/5 px-4 py-2 text-[0.8125rem] text-white/70">
-            <span aria-hidden className="size-1.5 rounded-full bg-gold" />
-            {membership.headline} {membership.lead}
+          <p className="mt-7 flex items-start gap-3 text-[0.875rem] leading-relaxed text-white/55">
+            <span aria-hidden className="mt-1.5 size-1.5 shrink-0 rounded-full bg-gold" />
+            <span>
+              <span className="text-white/80">{membership.headline}</span>{" "}
+              {membership.lead}
+            </span>
           </p>
         </Reveal>
 

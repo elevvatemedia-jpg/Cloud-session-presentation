@@ -114,14 +114,14 @@ export function ContextDemo() {
       <Reveal className="max-w-[46rem]">
         <Chapter {...context.chapter} />
         <h2 className="text-h1 text-ink">
-          One context layer.
+          Nothing it does
           <br className="hidden sm:block" />{" "}
-          <span className="text-muted">Agents that work from it.</span>
+          <span className="text-muted">starts from zero.</span>
         </h2>
         <p className="mt-6 max-w-[54ch] text-lead text-body">
           ValenOS connects your inbox, your calendar and your tools, and keeps
-          one living picture of every company you sell to. Everything the agents
-          do, they do from that picture.
+          one living picture of every company you sell to. Every agent reads
+          that same picture before it does anything.
         </p>
       </Reveal>
 
@@ -131,8 +131,9 @@ export function ContextDemo() {
       </Reveal>
 
       <Reveal className="mt-14 max-w-[42rem] sm:mt-20">
-        <h3 className="text-h2 text-ink">{context.headline[0]} {context.headline[1]}</h3>
-        <p className="mt-4 text-lead text-body">{context.lead}</p>
+        <h3 className="text-h2 text-ink">
+          {context.headline[0]} {context.headline[1]}
+        </h3>
       </Reveal>
 
       {/* -------------------------------------------------------- toggle */}

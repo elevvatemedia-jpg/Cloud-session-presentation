@@ -52,7 +52,7 @@ export function Hero() {
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-0 h-[70vh] bg-[radial-gradient(60%_60%_at_50%_0%,rgba(200,169,110,.17),transparent_70%)]"
       />
-      <div aria-hidden className="dot-grid pointer-events-none absolute inset-0 opacity-55" />
+      <div aria-hidden className="dot-grid pointer-events-none absolute inset-0 opacity-40" />
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-paper"

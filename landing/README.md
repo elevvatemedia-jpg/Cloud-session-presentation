@@ -24,7 +24,7 @@ Seven chapters, read top to bottom, each numbered and named on the page.
 | 01 | The hook | Says what this is in one line and offers the one action |
 | 02 | How it works | Sources converging into one context layer, then the email that proves it |
 | 03 | The week | The problem as the buyer's own week, not as a cost model |
-| 04 | It acts | The work itself, as an open-ended sequence off the context layer |
+| 04 | It acts | The pipeline board at size, then three lines for the rest |
 | 05 | Where this goes | Today, next, and the ambition — each labelled honestly |
 | 06 | The people | Mario and Bruno, in their own words from the site |
 | 07 | The invitation | The offer, the four steps and the form, in one chapter |
@@ -42,10 +42,9 @@ ambition.
 There are many more than the page names, so nothing may imply a count.
 
 Chapter 02's diagram names four agents because those are the four worth naming,
-and the line under them says exactly that. Chapter 04 carries the weight: the
-work is a spine of actions branching off the context layer, ending open on
-"and whatever the founding members ask for next". It replaced four named tabs
-that read as though four were the whole product.
+and the line under them says exactly that. Chapter 04 shows one thing at size —
+a reply moving a deal across the board — then gives three short lines and ends
+on "and more behind them". No count, and nothing that reads as a complete set.
 
 ## Where to edit
 

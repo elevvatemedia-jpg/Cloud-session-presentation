@@ -38,7 +38,7 @@ export function ContextFlow() {
   return (
     <div className="relative overflow-hidden rounded-[16px] bg-ink-dark px-4 py-10 sm:px-8 sm:py-14">
       <div aria-hidden className="warm-glow pointer-events-none absolute inset-0" />
-      <div aria-hidden className="dot-grid-dark pointer-events-none absolute inset-0 opacity-40" />
+      <div aria-hidden className="dot-grid-dark pointer-events-none absolute inset-0 opacity-25" />
       <div className="relative">
         <div ref={ref} className="mt-9 sm:mt-12">
           {/* What it reads */}
