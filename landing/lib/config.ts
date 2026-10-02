@@ -46,12 +46,12 @@ export const company = {
  * the real values are in.
  */
 export const legal = {
-  /** Registered company name, e.g. "Valen & Partners sp. z o.o." */
-  entity: "",
-  /** Registered address, one line. */
-  address: "",
+  /** Registered company name. */
+  entity: "Valen & Partners Sp. z o.o.",
+  /** Registered address. Street and postcode still to add. */
+  address: "Warszawa",
   /** Polish tax id. */
-  nip: "",
+  nip: "5214136320",
   /** Companies-register number, if the entity has one. */
   krs: "",
   /** Absolute URLs on valen-partners.com. */

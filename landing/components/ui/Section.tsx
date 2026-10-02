@@ -41,7 +41,7 @@ export function Section({
         <div
           className={clsx(
             "px-5 sm:px-8 lg:px-14",
-            !flush && "py-20 sm:py-24 lg:py-32",
+            !flush && "py-14 sm:py-18 lg:py-24",
           )}
         >
           {children}

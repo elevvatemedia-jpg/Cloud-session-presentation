@@ -22,15 +22,15 @@ export function Founders() {
         </Reveal>
 
         <div>
-          <RevealGroup tall stagger={0.1} className="space-y-5">
+          <RevealGroup tall stagger={0.1} className="space-y-4">
             {foundersCopy.paragraphs.map((p) => (
               <RevealItem key={p.slice(0, 24)}>
-                <p className="text-lead text-body">{p}</p>
+                <p className="text-[1.0625rem] leading-relaxed text-body">{p}</p>
               </RevealItem>
             ))}
           </RevealGroup>
 
-          <RevealGroup tall stagger={0.12} className="mt-10 grid gap-5 sm:grid-cols-2">
+          <RevealGroup tall stagger={0.12} className="mt-8 grid gap-5 sm:grid-cols-2">
             {founders.map((f) => (
               <RevealItem key={f.name} className="flex items-start gap-3.5">
                 <Avatar initials={f.initials} className="size-11 text-xs" />

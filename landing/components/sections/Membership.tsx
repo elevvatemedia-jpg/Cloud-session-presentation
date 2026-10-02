@@ -53,9 +53,6 @@ export function Membership() {
               <p className="mt-3 text-[0.9375rem] leading-relaxed text-white/60">
                 {membership.statusNote}
               </p>
-              <p className="mt-5 border-t border-white/10 pt-4 text-[0.875rem] text-white/60">
-                {membership.statusFoot}
-              </p>
             </div>
           </Reveal>
         </div>
@@ -64,12 +61,12 @@ export function Membership() {
         <RevealGroup
           tall
           stagger={0.09}
-          className="mt-12 grid gap-px overflow-hidden rounded-[14px] border border-white/10 bg-white/10 sm:mt-16 sm:grid-cols-2"
+          className="mt-9 grid gap-px overflow-hidden rounded-[14px] border border-white/10 bg-white/10 sm:mt-12 sm:grid-cols-2"
         >
           {membership.benefits.map((b, i) => (
             <RevealItem
               key={b.title}
-              className="group bg-ink-dark/90 p-6 transition-colors duration-300 hover:bg-white/[0.045] sm:p-8"
+              className="group bg-ink-dark/90 p-5 transition-colors duration-300 hover:bg-white/[0.045] sm:p-7"
             >
               <p className="font-serif text-[0.9rem] text-gold/70 tabular-nums">
                 {String(i + 1).padStart(2, "0")}
@@ -83,7 +80,7 @@ export function Membership() {
         </RevealGroup>
 
         {/* ------------------------------------------------- what we ask */}
-        <Reveal className="mt-12 flex flex-col gap-8 border-t border-white/10 pt-10 sm:mt-16 lg:flex-row lg:items-center lg:justify-between">
+        <Reveal className="mt-9 flex flex-col gap-7 border-t border-white/10 pt-8 sm:mt-12 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <h3 className="text-h3 text-white">{membership.askTitle}</h3>
             <ul className="mt-4 space-y-2.5">

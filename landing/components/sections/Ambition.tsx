@@ -42,7 +42,7 @@ export function Ambition() {
         </h2>
       </Reveal>
 
-      <div className="relative mt-12 sm:mt-16">
+      <div className="relative mt-9 sm:mt-12">
         {/* One line running the length of the three horizons */}
         <motion.span
           aria-hidden
@@ -54,7 +54,7 @@ export function Ambition() {
           className="absolute top-3 bottom-3 left-[7px] w-px bg-gradient-to-b from-gold/60 via-gold/35 to-transparent sm:left-[9px]"
         />
 
-        <ol className="space-y-12 sm:space-y-14">
+        <ol className="space-y-9 sm:space-y-11">
           {ambition.horizons.map((h, i) => {
             const style = STATE_STYLE[h.state];
             return (
@@ -86,16 +86,18 @@ export function Ambition() {
                     {style.text}
                   </span>
                 </div>
-                <h3 className="mt-3 max-w-[22ch] text-h2 text-ink">{h.title}</h3>
-                <p className="mt-3 max-w-[54ch] text-lead text-muted">{h.body}</p>
+                <h3 className="mt-2.5 max-w-[26ch] text-h3 text-ink">{h.title}</h3>
+                <p className="mt-2.5 max-w-[56ch] text-[1rem] leading-relaxed text-muted">
+                  {h.body}
+                </p>
               </motion.li>
             );
           })}
         </ol>
       </div>
 
-      <Reveal className="mt-14 border-t border-line pt-10 sm:mt-20">
-        <p className="max-w-[36ch] text-h2 text-ink">{ambition.close}</p>
+      <Reveal className="mt-10 border-t border-line pt-8 sm:mt-14">
+        <p className="max-w-[40ch] text-h3 text-ink">{ambition.close}</p>
       </Reveal>
     </Section>
   );

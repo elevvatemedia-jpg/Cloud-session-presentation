@@ -319,14 +319,6 @@ export const faq = {
       q: "How big does our sales team need to be?",
       a: "It pays for itself fastest from about three salespeople up. Below that you usually do not have the volume for the agents to work with yet.",
     },
-    {
-      q: "How long is setup?",
-      a: "One call to connect your inbox, calendar and tools and to build the first workflow with you. You are running on live deals the same week.",
-    },
-    {
-      q: "What if it is not for us?",
-      a: "Then you tell us on the call and we part as friends. We would rather have eight companies that use it than ten that signed up.",
-    },
   ],
 };
 

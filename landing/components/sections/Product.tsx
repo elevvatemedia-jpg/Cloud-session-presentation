@@ -55,7 +55,7 @@ export function Product() {
         onMouseLeave={() => setPaused(false)}
         onFocusCapture={() => setPaused(true)}
         onBlurCapture={() => setPaused(false)}
-        className="mt-10 grid gap-6 sm:mt-14 lg:grid-cols-[minmax(0,.78fr)_minmax(0,1.22fr)] lg:gap-14"
+        className="mt-8 grid gap-6 sm:mt-11 lg:grid-cols-[minmax(0,.78fr)_minmax(0,1.22fr)] lg:gap-14"
       >
         {/* ------------------------------------------------------- tabs */}
         <Reveal tall className="min-w-0">

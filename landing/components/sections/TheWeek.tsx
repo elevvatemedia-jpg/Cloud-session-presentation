@@ -20,7 +20,7 @@ export function TheWeek() {
         <p className="mt-6 text-lead text-muted">{week.lead}</p>
       </Reveal>
 
-      <ol className="relative mt-12 sm:mt-16">
+      <ol className="relative mt-9 sm:mt-12">
         {/* The week as a line being drawn, left on mobile, top on desktop */}
         <motion.span
           aria-hidden

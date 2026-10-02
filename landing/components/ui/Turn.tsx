@@ -34,7 +34,7 @@ export function Turn({
       >
         <p
           className={clsx(
-            "mx-auto max-w-[22ch] px-5 py-20 text-center text-h1 sm:px-8 sm:py-28 lg:px-14 lg:py-36",
+            "mx-auto max-w-[22ch] px-5 py-14 text-center text-h1 sm:px-8 sm:py-20 lg:px-14 lg:py-24",
             tone === "dark" ? "text-white" : "text-ink",
           )}
         >

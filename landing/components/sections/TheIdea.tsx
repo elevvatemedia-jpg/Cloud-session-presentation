@@ -51,7 +51,7 @@ export function TheIdea() {
         </Reveal>
 
         {/* ------------------------------------------------------ diagram */}
-        <div ref={ref} className="mt-12 sm:mt-16">
+        <div ref={ref} className="mt-9 sm:mt-12">
           {/* What it reads */}
           <Reveal tall>
             <p className="mb-3.5 text-center text-[0.75rem] font-medium tracking-[0.16em] text-white/45 uppercase">
@@ -134,9 +134,6 @@ export function TheIdea() {
             </div>
           </Reveal>
 
-          <Reveal className="mt-12 text-center sm:mt-14">
-            <p className="mx-auto max-w-[32ch] text-h3 text-white">{idea.close}</p>
-          </Reveal>
         </div>
       </div>
     </Section>
