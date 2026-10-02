@@ -42,6 +42,30 @@ export const week = {
 
 /* ------------------------------------------------------------- 03 · idea */
 
+export const idea = {
+  sources: [
+    { id: "email", label: "Gmail" },
+    { id: "email", label: "Outlook" },
+    { id: "meeting", label: "Calendar" },
+    { id: "meeting", label: "Meetings" },
+    { id: "note", label: "Your notes" },
+    { id: "note", label: "Call notes" },
+    { id: "signal", label: "Web signals" },
+    { id: "signal", label: "Your tools" },
+  ],
+  layerTitle: "One context layer",
+  layerBody:
+    "Every email, meeting, note and signal about a company, in one place, kept current.",
+  agentLabels: [
+    { id: "lead", label: "Lead" },
+    { id: "followup", label: "Follow-up" },
+    { id: "pipeline", label: "CRM" },
+    { id: "assistant", label: "Assistant" },
+  ],
+  /** Says plainly that the four named above are examples, not the whole set. */
+  more: "Four worth naming. There are more behind them, and more every month.",
+};
+
 export const workflow = {
   railTitle: "The context layer",
   railBody: "Every email, meeting, note and signal about a company, in one place.",
@@ -148,36 +172,6 @@ export const agents = {
   chapter: { n: "04", name: "It acts" },
   headline: "Agents hand work to each other.",
   lead: "Every one of them reads the same context, and they pass the deal down the line between them. Nothing goes out without you.",
-  tabs: [
-    {
-      id: "lead",
-      tab: "Your list fills itself",
-      title: "Your list fills itself.",
-      body: "The lead agent looks for companies shaped like the ones you already sell to, and puts them in front of you with the reason it picked them.",
-      proof: "Found 6 companies that fit, 2 of them hiring salespeople.",
-    },
-    {
-      id: "followup",
-      tab: "The follow-up knows the last call",
-      title: "The follow-up knows the last call.",
-      body: "Every email is written from what was actually said on the call and in the thread. Select any line and it shows you the source.",
-      proof: "Sent 9 first emails. Marta Wilczyńska replied at 07:42.",
-    },
-    {
-      id: "pipeline",
-      tab: "Deals move when something happens",
-      title: "Deals move when something happens.",
-      body: "A reply moves the deal to Replied. A booked call moves it to Meeting. You stop updating stages by hand.",
-      proof: "Moved Wydmy Logistyka to Replied and booked Dębowa Kancelaria.",
-    },
-    {
-      id: "assistant",
-      tab: "Ask how to close a deal",
-      title: "Ask how to close a deal.",
-      body: "The assistant answers from every email, meeting and note with that company, and shows where each line came from.",
-      proof: "Budget is approved, so it comes down to timing and trust.",
-    },
-  ],
 };
 
 /* ------------------------------------------------------------ membership */

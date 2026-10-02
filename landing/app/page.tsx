@@ -8,7 +8,7 @@ import { Turn } from "@/components/ui/Turn";
 import { Hero } from "@/components/sections/Hero";
 import { ContextDemo } from "@/components/sections/ContextDemo";
 import { TheWeek } from "@/components/sections/TheWeek";
-import { Product } from "@/components/sections/Product";
+import { Acts } from "@/components/sections/Acts";
 import { Ambition } from "@/components/sections/Ambition";
 import { Founders } from "@/components/sections/Founders";
 import { Close } from "@/components/sections/Close";
@@ -35,7 +35,7 @@ export default function Page() {
         <TheWeek />
         {/* 03 -> 04: out of the week, into what takes it off you */}
         <Turn tone="paper">{week.turn}</Turn>
-        <Product />
+        <Acts />
         {/* 04 -> 05: out of what it does, into what it is for */}
         <Turn tone="warm">{turnToAmbition}</Turn>
         <Ambition />

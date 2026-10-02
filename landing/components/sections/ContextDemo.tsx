@@ -5,7 +5,7 @@ import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { Section, Chapter } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { Chip, Avatar } from "@/components/ui/AppWindow";
-import { Workflow } from "@/components/ui/Workflow";
+import { ContextFlow } from "@/components/ui/ContextFlow";
 import {
   SOURCE_ICONS,
   AGENT_ICONS,
@@ -127,7 +127,7 @@ export function ContextDemo() {
 
       {/* The mechanism first, then the proof of it underneath. */}
       <Reveal tall className="mt-9 sm:mt-12">
-        <Workflow />
+        <ContextFlow />
       </Reveal>
 
       <Reveal className="mt-14 max-w-[42rem] sm:mt-20">
