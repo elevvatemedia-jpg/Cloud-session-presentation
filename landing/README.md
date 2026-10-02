@@ -63,6 +63,13 @@ into ValenOS itself. Nothing in the UI changes.
 
 Put credentials in `.env.local`. See `.env.example`.
 
+## Hosted preview
+
+`node preview/build.mjs` bundles the real components into a static page in
+`preview/dist` — same code, no server. Used to publish a shareable preview
+without deploying. The form resolves locally there instead of hitting the API
+route, and the page says so at the bottom.
+
 ## Type
 
 **Mona Sans** for everything, **Fraunces** for the `V&P.` mark, both from Google
