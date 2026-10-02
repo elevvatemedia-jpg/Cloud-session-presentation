@@ -1,15 +1,13 @@
-import { founding, remaining } from "./config";
+import { founding } from "./config";
 
 /* ------------------------------------------------------------------ hero */
 
 export const hero = {
-  eyebrow:
-    remaining === 1
-      ? "One founding place left."
-      : `Launching soon. ${remaining} founding places open.`,
+  eyebrow: "Launching soon. Founding members wanted.",
   headline: ["Revenue,", "not records."],
   lead: "ValenOS finds the companies worth talking to, starts the conversations and keeps them alive until someone replies.",
-  support: `${founding.total} companies get it before anyone else, on terms set with them.`,
+  support:
+    "A capped number of companies get it before anyone else, on terms set with them.",
   primary: "Apply as a founding member",
   secondary: "See how it works",
   trust: "Built in Warsaw. Five companies are testing it now.",
@@ -164,8 +162,12 @@ export const agents = {
 
 export const membership = {
   eyebrow: "Founding members",
-  headline: `${founding.total} companies. Not eleven.`,
-  lead: founding.capReason,
+  headline: "The list is short.",
+  lead: "We would rather have a few companies using ValenOS properly than a long queue of names.",
+  statusLabel: "Right now",
+  statusTitle: "Applications are open.",
+  statusNote: founding.capReason,
+  statusFoot: "Mario and Bruno read every one.",
   benefits: [
     {
       title: "You get it first",

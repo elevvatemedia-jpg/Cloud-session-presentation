@@ -27,8 +27,7 @@ sign-off before the page is public.
 
 | Claim | Where | Why it needs you |
 |---|---|---|
-| **Ten founding places** | Hero pill, membership counter, sticky bar, form | You said the number is limited but not what it is. `lib/config.ts` → `founding.total`. Ten is my placeholder. |
-| **Ten still open** | Same | `founding.claimed` is 0, so the page says all ten are open. Set the real number — this is the one claim a visitor can feel cheated by. |
+| **"Applications are open"** | Membership status card | True today. Flip `founding.applicationsOpen` when it stops being true. |
 | **"Five companies are testing it now"** | Hero trust line | From the deck, which also says they are testing and *not paying*. Still true? |
 | **"Two people run every setup call"** | Membership lead | Implied by the deck, not stated. True? |
 | **Founding pricing stays yours as the price rises** | Membership benefit 02 | This is a commitment. The deck says terms are being set with members; it does not promise they are locked. Only promise this if you mean it. |
@@ -45,6 +44,9 @@ sign-off before the page is public.
 - No revenue, customer count or growth figures.
 - No named customer logos. Dale Carnegie Poland appears in the deck as a pilot,
   but you did not pick it as public social proof, so it is not on the page.
-- No countdown timer or fake urgency. The only scarcity is the places number,
-  which is real if you keep `config.ts` honest.
+- **No number of places.** The page says the list is short and the number is
+  capped, and never says what the number is. No counter, no "x of y left". That
+  was a deliberate call: a count is the one scarcity claim a visitor can later
+  discover was false, and it would lock you into a number before you want one.
+- No countdown timer or fake urgency of any kind.
 - No testimonials, because there are none yet.

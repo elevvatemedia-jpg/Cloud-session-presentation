@@ -7,7 +7,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { CheckIcon } from "@/components/ui/Icons";
 import { apply } from "@/lib/content";
-import { remaining, founding } from "@/lib/config";
+import { founding } from "@/lib/config";
 import { submitApplication } from "@/lib/submit";
 import { clsx } from "@/lib/clsx";
 import { easeOutSoft } from "@/lib/motion";
@@ -109,7 +109,7 @@ export function Apply() {
           <p className="mt-7 max-w-[40ch] text-lead text-white/65">{apply.lead}</p>
           <p className="mt-8 inline-flex items-center gap-2.5 rounded-full border border-white/12 bg-white/5 px-4 py-2 text-[0.8125rem] text-white/70">
             <span aria-hidden className="size-1.5 rounded-full bg-gold" />
-            {remaining} of {founding.total} places still open
+            {founding.capShort}
           </p>
         </Reveal>
 

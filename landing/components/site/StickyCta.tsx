@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { remaining, founding } from "@/lib/config";
+import { founding } from "@/lib/config";
 import { easeOutSoft } from "@/lib/motion";
 
 /**
@@ -52,10 +52,9 @@ export function StickyCta() {
         >
           <div className="flex items-center gap-3 rounded-[14px] border border-line bg-paper/97 p-2 pl-4 shadow-float backdrop-blur-xl">
             <p className="min-w-0 flex-1 text-[0.8125rem] leading-tight text-body">
-              <span className="font-medium text-ink">
-                {remaining} of {founding.total}
-              </span>{" "}
-              founding places open
+              <span className="font-medium text-ink">Founding members</span>
+              <br />
+              {founding.capShort.toLowerCase()}
             </p>
             <a
               href="#apply"

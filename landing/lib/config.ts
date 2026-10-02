@@ -5,25 +5,22 @@
 
 export const founding = {
   /**
-   * How many founding-member places exist in total.
-   * The page states this number in the hero, the membership section and the
-   * sticky bar. Change it in one place and it changes everywhere.
+   * The page says the number of places is capped. It deliberately never says
+   * what the number is — no counter, no "x of y left", nothing a visitor could
+   * later find out was untrue.
+   *
+   * Flip this to false when you stop taking applications and the page switches
+   * to a closed state on its own.
    */
-  total: 10,
+  applicationsOpen: true,
 
-  /**
-   * How many are already taken. SET THIS TO THE REAL NUMBER before the page
-   * goes live — it is rendered as a claim to visitors.
-   * Left at 0 the page reads "10 places open", which is true on day one and
-   * stays true until someone is accepted.
-   */
-  claimed: 0,
+  /** Why the number is capped. Shown in the founding-members section. */
+  capReason:
+    "Two people run every setup call and answer every message, so we cap the number rather than stretch ourselves thin.",
 
-  /** Shown as the reason the number is capped. */
-  capReason: "Two people run every setup call, so the number is small on purpose.",
+  /** The short version, used in the sticky bar and the form. */
+  capShort: "Places are capped",
 } as const;
-
-export const remaining = Math.max(founding.total - founding.claimed, 0);
 
 export const company = {
   name: "ValenOS",
@@ -48,6 +45,3 @@ export const founders = [
     line: "Ships what founding members ask for.",
   },
 ] as const;
-
-/** Where the form posts. Swap the body of submitApplication in lib/submit.ts. */
-export const applyEndpoint = "/api/apply";

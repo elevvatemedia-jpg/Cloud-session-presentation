@@ -39,14 +39,19 @@ Almost nothing requires touching a component.
 
 | You want to change | File |
 |---|---|
-| How many places, how many taken | `lib/config.ts` |
+| Whether applications are open, and the cap wording | `lib/config.ts` |
 | Founder names, roles, contact | `lib/config.ts` |
 | Any wording anywhere | `lib/content.ts` |
 | Colour, type scale, motion easing | `app/globals.css` (`@theme`) |
 | Where the form posts | `app/api/apply/route.ts` |
 
-`lib/config.ts` drives the number in the hero pill, the membership counter, the
-sticky bar and the form. Change `total` and `claimed` in one place.
+The page says the number of founding places is **capped** and deliberately never
+says what that number is. There is no counter and no "x of y left", so nothing
+on the page can age into a claim that turns out to be untrue, and you are free
+to take nine companies or twelve without rewriting anything.
+
+`founding.applicationsOpen` in `lib/config.ts` is the switch for when you stop
+taking applications.
 
 ## The form is a stub
 

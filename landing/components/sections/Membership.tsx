@@ -1,76 +1,71 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import { Section, Eyebrow } from "@/components/ui/Section";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { CheckIcon } from "@/components/ui/Icons";
 import { membership } from "@/lib/content";
-import { founding, remaining } from "@/lib/config";
-import { clsx } from "@/lib/clsx";
-import { easeOutSoft, inView } from "@/lib/motion";
 
 export function Membership() {
+  const reduced = useReducedMotion();
+
   return (
-    <Section id="founding" tone="dark" label="What founding members get" className="overflow-hidden">
+    <Section
+      id="founding"
+      tone="dark"
+      label="What founding members get"
+      className="overflow-hidden"
+    >
       <div aria-hidden className="warm-glow pointer-events-none absolute inset-0" />
       <div aria-hidden className="dot-grid-dark pointer-events-none absolute inset-0 opacity-50" />
 
       <div className="relative">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,.85fr)] lg:items-end lg:gap-16">
-          <Reveal>
+          <Reveal className="min-w-0">
             <Eyebrow tone="dark">{membership.eyebrow}</Eyebrow>
             <h2 className="text-h1 text-white">{membership.headline}</h2>
-            <p className="mt-6 max-w-[42ch] text-lead text-white/65">{membership.lead}</p>
+            <p className="mt-6 max-w-[42ch] text-lead text-white/65">
+              {membership.lead}
+            </p>
           </Reveal>
 
-          {/* ------------------------------------------- places remaining */}
-          <Reveal>
+          {/* ------------------------------------------------ status card.
+              Deliberately no count: the page says the number is capped and
+              never says what it is, so nothing here can age into a lie. */}
+          <Reveal className="min-w-0">
             <div className="rounded-[14px] border border-white/10 bg-white/[0.04] p-5 backdrop-blur-sm sm:p-6">
-              <p className="text-[0.8125rem] tracking-[0.14em] text-white/60 uppercase">
-                Places remaining
-              </p>
-              <p className="mt-2 flex items-baseline gap-2 text-h1 text-white">
-                {remaining}
-                <span className="text-base font-medium tracking-normal text-white/60">
-                  of {founding.total}
+              <p className="flex items-center gap-2.5 text-[0.8125rem] tracking-[0.14em] text-white/60 uppercase">
+                <span aria-hidden className="relative flex size-2">
+                  <span className="absolute inset-0 rounded-full bg-gold" />
+                  {!reduced && (
+                    <motion.span
+                      className="absolute inset-0 rounded-full bg-gold"
+                      animate={{ scale: [1, 2.6], opacity: [0.6, 0] }}
+                      transition={{ duration: 2.4, repeat: Infinity, ease: "easeOut" }}
+                    />
+                  )}
                 </span>
+                {membership.statusLabel}
               </p>
 
-              <div
-                className="mt-5 flex flex-wrap gap-1.5"
-                role="img"
-                aria-label={`${remaining} of ${founding.total} founding places remaining`}
-              >
-                {Array.from({ length: founding.total }).map((_, i) => {
-                  const open = i >= founding.claimed;
-                  return (
-                    <motion.span
-                      key={i}
-                      initial={{ opacity: 0, scale: 0.4 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={inView}
-                      transition={{
-                        delay: 0.2 + i * 0.045,
-                        duration: 0.4,
-                        ease: easeOutSoft,
-                      }}
-                      className={clsx(
-                        "h-7 flex-1 rounded-[5px] border",
-                        open
-                          ? "border-gold/60 bg-gold/30"
-                          : "border-white/10 bg-white/[0.03]",
-                      )}
-                    />
-                  );
-                })}
-              </div>
+              <p className="mt-3 text-h2 text-white">{membership.statusTitle}</p>
+              <p className="mt-3 text-[0.9375rem] leading-relaxed text-white/60">
+                {membership.statusNote}
+              </p>
+              <p className="mt-5 border-t border-white/10 pt-4 text-[0.875rem] text-white/60">
+                {membership.statusFoot}
+              </p>
             </div>
           </Reveal>
         </div>
 
         {/* ------------------------------------------------------ benefits */}
-        <RevealGroup tall stagger={0.09} className="mt-12 grid gap-px overflow-hidden rounded-[14px] border border-white/10 bg-white/10 sm:mt-16 sm:grid-cols-2">
+        <RevealGroup
+          tall
+          stagger={0.09}
+          className="mt-12 grid gap-px overflow-hidden rounded-[14px] border border-white/10 bg-white/10 sm:mt-16 sm:grid-cols-2"
+        >
           {membership.benefits.map((b, i) => (
             <RevealItem
               key={b.title}
@@ -93,14 +88,22 @@ export function Membership() {
             <h3 className="text-h3 text-white">{membership.askTitle}</h3>
             <ul className="mt-4 space-y-2.5">
               {membership.asks.map((ask) => (
-                <li key={ask} className="flex items-start gap-3 text-[0.9375rem] text-white/65">
+                <li
+                  key={ask}
+                  className="flex items-start gap-3 text-[0.9375rem] text-white/65"
+                >
                   <CheckIcon className="mt-1 size-4 shrink-0 text-gold" />
                   {ask}
                 </li>
               ))}
             </ul>
           </div>
-          <Button href="#apply" variant="gold" size="lg" className="shrink-0 self-start lg:self-auto">
+          <Button
+            href="#apply"
+            variant="gold"
+            size="lg"
+            className="shrink-0 self-start lg:self-auto"
+          >
             Apply as a founding member
           </Button>
         </Reveal>
