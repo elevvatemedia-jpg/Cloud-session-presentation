@@ -5,6 +5,7 @@ import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { Section, Chapter } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { Chip, Avatar } from "@/components/ui/AppWindow";
+import { Workflow } from "@/components/ui/Workflow";
 import {
   SOURCE_ICONS,
   AGENT_ICONS,
@@ -113,11 +114,25 @@ export function ContextDemo() {
       <Reveal className="max-w-[46rem]">
         <Chapter {...context.chapter} />
         <h2 className="text-h1 text-ink">
-          {context.headline[0]}
+          One context layer.
           <br className="hidden sm:block" />{" "}
-          <span className="text-muted">{context.headline[1]}</span>
+          <span className="text-muted">Agents that work from it.</span>
         </h2>
-        <p className="mt-6 max-w-[52ch] text-lead text-body">{context.lead}</p>
+        <p className="mt-6 max-w-[54ch] text-lead text-body">
+          ValenOS connects your inbox, your calendar and your tools, and keeps
+          one living picture of every company you sell to. Everything the agents
+          do, they do from that picture.
+        </p>
+      </Reveal>
+
+      {/* The mechanism first, then the proof of it underneath. */}
+      <Reveal tall className="mt-9 sm:mt-12">
+        <Workflow />
+      </Reveal>
+
+      <Reveal className="mt-14 max-w-[42rem] sm:mt-20">
+        <h3 className="text-h2 text-ink">{context.headline[0]} {context.headline[1]}</h3>
+        <p className="mt-4 text-lead text-body">{context.lead}</p>
       </Reveal>
 
       {/* -------------------------------------------------------- toggle */}

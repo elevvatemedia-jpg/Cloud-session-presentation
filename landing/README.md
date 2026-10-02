@@ -17,32 +17,32 @@ no configuration; set `NEXT_PUBLIC_SITE_URL` so the Open Graph tags resolve.
 
 ## The page, in order
 
-Eleven chapters, read top to bottom. Each one is numbered and named on the page
-itself, because the page really is a sequence and the reader is meant to feel
-that.
+Seven chapters, read top to bottom, each numbered and named on the page.
 
 | # | Chapter | What it is doing |
 |---|---------|------------------|
 | 01 | The hook | Says what this is in one line and offers the one action |
-| 02 | The week | The problem as the buyer's own week, not as a cost model |
-| 03 | The idea | One context layer, drawn as a live diagram |
-| 04 | It knows | The with/without-context email, with source connectors |
-| 05 | It acts | Four agents as auto-advancing tabs, each with its own mockup |
-| 06 | Where this goes | Today, next, and the ambition — each labelled honestly |
-| 07 | The people | Mario and Bruno, in their own words from the site |
-| 08 | The invitation | The offer and what is asked in return |
-| 09 | What happens next | The four steps after applying |
-| 10 | Questions | The objections that stop a cold visitor applying |
-| 11 | The ask | The form, on dark, with the reassurance line |
+| 02 | How it works | The workflow off one context layer, then the email that proves it |
+| 03 | The week | The problem as the buyer's own week, not as a cost model |
+| 04 | It acts | The agents as auto-advancing tabs, each with its own mockup |
+| 05 | Where this goes | Today, next, and the ambition — each labelled honestly |
+| 06 | The people | Mario and Bruno, in their own words from the site |
+| 07 | The invitation | The offer, the four steps and the form, in one chapter |
 
-Between chapters 02 and 03, and again between 05 and 06, a **turn** — one
-sentence alone on the page — carries the argument forward. There are only two,
-at the two real pivots: out of the problem into the idea, and out of what the
-product does into what it is for.
+Someone arriving from a story wants to see the thing before they will sit
+through why it matters, so the mechanism comes straight after the hook and the
+week follows as the reason it matters.
 
-Tone alternates paper / warm so no two neighbouring chapters feel the same. The
-three dark chapters land on the beats the deck reserves them for: the turn (03),
-the offer (08) and the close (11).
+Two **turns** — one sentence alone on the page — carry the argument across its
+pivots: out of the week into the product, and out of the product into the
+ambition.
+
+### Never say how many agents
+
+The workflow in chapter 02 is a spine with actions branching off it, and it ends
+open. An earlier version drew eight sources feeding four named agents, which
+read as though four were all there were. There are many more, and the page must
+not imply a number — in the diagram, in a heading, or anywhere else.
 
 ## Where to edit
 

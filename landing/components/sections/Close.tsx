@@ -3,11 +3,12 @@
 import { useRef, useState, type FormEvent } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Section, Chapter } from "@/components/ui/Section";
+import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
-import { CheckIcon } from "@/components/ui/Icons";
-import { apply } from "@/lib/content";
-import { founding, company, legal } from "@/lib/config";
+import { CheckIcon, ArrowRightIcon } from "@/components/ui/Icons";
+import { apply, membership, process } from "@/lib/content";
+import { company, legal } from "@/lib/config";
 import { submitApplication } from "@/lib/submit";
 import { trackApplication } from "@/components/site/Analytics";
 import { clsx } from "@/lib/clsx";
@@ -36,7 +37,7 @@ function validate(field: Field, value: string): string | undefined {
   return undefined;
 }
 
-export function Apply() {
+export function Close() {
   const [values, setValues] = useState({ name: "", company: "", email: "" });
   const [pains, setPains] = useState<string[]>([]);
   const [errors, setErrors] = useState<Errors>({});
@@ -97,22 +98,55 @@ export function Apply() {
   );
 
   return (
-    <Section id="apply" tone="dark" label="Apply to become a founding member" className="overflow-hidden">
+    <Section id="apply" tone="dark" label="Become a founding member" className="overflow-hidden">
       <div aria-hidden className="warm-glow pointer-events-none absolute inset-0" />
 
-      <div className="relative grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:items-center lg:gap-20">
-        {/* ---------------------------------------------------- the pitch */}
-        <Reveal>
+      <div className="relative grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:items-center lg:gap-20">        {/* --------------------------------------------- the offer.
+            The membership, the four steps and the form used to be three
+            separate chapters asking for the same thing three times. */}
+        <Reveal className="min-w-0">
           <Chapter {...apply.chapter} tone="dark" />
-          <h2 className="text-display text-white">
-            {apply.headline[0]}
-            <br />{" "}
-            {apply.headline[1]}
+          <h2 className="text-h1 text-white">
+            {apply.headline[0]} {apply.headline[1]}
           </h2>
-          <p className="mt-7 max-w-[40ch] text-lead text-white/65">{apply.lead}</p>
-          <p className="mt-8 inline-flex items-center gap-2.5 rounded-full border border-white/12 bg-white/5 px-4 py-2 text-[0.8125rem] text-white/70">
+          <p className="mt-5 max-w-[42ch] text-lead text-white/65">{apply.lead}</p>
+
+          <RevealGroup tall stagger={0.07} className="mt-9 space-y-3.5">
+            {membership.benefits.map((b) => (
+              <RevealItem key={b.title} className="flex items-start gap-3">
+                <CheckIcon className="mt-1 size-4 shrink-0 text-gold" />
+                <p className="text-[0.9375rem] leading-relaxed text-white/75">
+                  <span className="font-medium text-white">{b.title}.</span>{" "}
+                  {b.body}
+                </p>
+              </RevealItem>
+            ))}
+          </RevealGroup>
+
+          <Reveal className="mt-8 border-t border-white/10 pt-7">
+            <p className="text-[0.75rem] font-medium tracking-[0.16em] text-white/45 uppercase">
+              After you apply
+            </p>
+            <ol className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2.5">
+              {process.steps.map((step, i) => (
+                <li key={step.title} className="flex items-center gap-2">
+                  <span className="text-[0.875rem] text-white/70">
+                    <span className="mr-1.5 font-serif text-gold/70 tabular-nums">
+                      {i + 1}
+                    </span>
+                    {step.title}
+                  </span>
+                  {i < process.steps.length - 1 && (
+                    <ArrowRightIcon aria-hidden className="size-3.5 text-white/25" />
+                  )}
+                </li>
+              ))}
+            </ol>
+          </Reveal>
+
+          <p className="mt-7 inline-flex items-center gap-2.5 rounded-full border border-white/12 bg-white/5 px-4 py-2 text-[0.8125rem] text-white/70">
             <span aria-hidden className="size-1.5 rounded-full bg-gold" />
-            {founding.capShort}
+            {membership.headline} {membership.lead}
           </p>
         </Reveal>
 

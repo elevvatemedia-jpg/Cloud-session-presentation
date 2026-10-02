@@ -16,7 +16,7 @@ export const hero = {
 /* ------------------------------------------------------------- 02 · week */
 
 export const week = {
-  chapter: { n: "02", name: "The week" },
+  chapter: { n: "03", name: "The week" },
   headline: "Nobody grew up wanting to update a CRM.",
   lead: "This is the week your team actually has.",
   days: [
@@ -42,39 +42,32 @@ export const week = {
 
 /* ------------------------------------------------------------- 03 · idea */
 
-export const idea = {
-  chapter: { n: "03", name: "The idea" },
-  headline: ["One layer", "that knows everything."],
-  lead: "ValenOS connects your inbox, your calendar and your tools, and keeps one living picture of every company you sell to. Four agents read that picture, and act on it. That is the whole idea.",
-  sources: [
-    { id: "email", label: "Gmail" },
-    { id: "email", label: "Outlook" },
-    { id: "meeting", label: "Calendar" },
-    { id: "meeting", label: "Meetings" },
-    { id: "note", label: "Your notes" },
-    { id: "note", label: "Call notes" },
-    { id: "signal", label: "Web signals" },
-    { id: "signal", label: "Your tools" },
+export const workflow = {
+  railTitle: "The context layer",
+  railBody: "Every email, meeting, note and signal about a company, in one place.",
+  /**
+   * Deliberately not a fixed set. Each step is one thing the agents do off the
+   * same context, and the list ends open because it keeps growing.
+   */
+  steps: [
+    { act: "Spots a signal", detail: "Careers page: hiring four account managers.", id: "signal" },
+    { act: "Researches the company", detail: "Six that fit your best customers, two of them hiring.", id: "lead" },
+    { act: "Writes the first email", detail: "From what was actually said, not a template.", id: "followup" },
+    { act: "Follows up", detail: "On its own schedule, until somebody answers.", id: "assistant" },
+    { act: "Stops the moment they reply", detail: "Marta answered at 07:42. Nothing chased her again.", id: "note" },
+    { act: "Moves the deal", detail: "Contacted to Replied, without you touching it.", id: "pipeline" },
+    { act: "Prepares your call", detail: "A brief built from every thread with that company.", id: "meeting" },
   ],
-  layerTitle: "One context layer",
-  layerBody:
-    "Every email, meeting, note and signal about a company, in one place, kept current.",
-  agentLabels: [
-    { id: "lead", label: "Lead" },
-    { id: "followup", label: "Follow-up" },
-    { id: "pipeline", label: "CRM" },
-    { id: "assistant", label: "Assistant" },
-  ],
-  close: "Not a database you fill in. A system that already knows.",
+  open: "And whatever the founding members ask for next.",
 };
 
-/** The single line that bridges the product chapters into the ambition. */
+/** The line that bridges the product chapter into the ambition. */
 export const turnToAmbition = "That is the first version.";
 
 /* --------------------------------------------------------------- context */
 
 export const context = {
-  chapter: { n: "04", name: "It knows" },
+  chapter: { n: "02", name: "How it works" },
   headline: ["It reads your inbox", "before it writes a word."],
   lead: "Connect Gmail or Outlook and your calendar. ValenOS goes through every conversation you have had, so each agent knows the history before it sends anything.",
   hint: "Select any line to see where it came from.",
@@ -152,9 +145,9 @@ export const context = {
 /* ---------------------------------------------------------------- agents */
 
 export const agents = {
-  chapter: { n: "05", name: "It acts" },
-  headline: "Four agents, one context layer.",
-  lead: "They hand work to each other, and every one of them reads the same history. Nothing gets sent without you.",
+  chapter: { n: "04", name: "It acts" },
+  headline: "Agents hand work to each other.",
+  lead: "Every one of them reads the same context, and they pass the deal down the line between them. Nothing goes out without you.",
   tabs: [
     {
       id: "lead",
@@ -190,13 +183,8 @@ export const agents = {
 /* ------------------------------------------------------------ membership */
 
 export const membership = {
-  chapter: { n: "08", name: "The invitation" },
   headline: "The list is short.",
-  lead: "We would rather have a few companies using ValenOS properly than a long queue of names.",
-  statusLabel: "Right now",
-  statusTitle: "Applications are open.",
-  statusNote: founding.capReason,
-  statusFoot: "Mario and Bruno read every one.",
+  lead: founding.capReason,
   benefits: [
     {
       title: "You get it first",
@@ -226,7 +214,7 @@ export const membership = {
 /* --------------------------------------------------------- 06 · ambition */
 
 export const ambition = {
-  chapter: { n: "06", name: "Where this goes" },
+  chapter: { n: "05", name: "Where this goes" },
   headline: ["A CRM records what happened.", "We want one that makes it happen."],
   horizons: [
     {
@@ -255,7 +243,7 @@ export const ambition = {
 /* --------------------------------------------------------------- founders */
 
 export const foundersCopy = {
-  chapter: { n: "07", name: "The people" },
+  chapter: { n: "06", name: "The people" },
   headline: ["Two friends from Warsaw,", "building the CRM we wanted."],
   paragraphs: [
     "We have known each other since we were kids. Mario runs sales and strategy. Bruno builds the product.",
@@ -297,35 +285,10 @@ export const process = {
   ],
 };
 
-/* -------------------------------------------------------------------- faq */
-
-export const faq = {
-  chapter: { n: "10", name: "Questions" },
-  headline: "Before you apply",
-  items: [
-    {
-      q: "Do we have to leave our current CRM?",
-      a: "Not on day one. Start with one pipeline running next to what you use today, and move the rest once the agents are doing more than your old CRM was.",
-    },
-    {
-      q: "What happens to our email?",
-      a: "It stays yours. ValenOS reads your inbox to build the context the agents work from. Nothing goes out without a person approving it, and we will walk you through exactly what is stored on the call.",
-    },
-    {
-      q: "What does it cost?",
-      a: "There is a one-time setup, done live with us, and a subscription after it. The numbers are being set with the founding members, and you will see them on the call before you commit to anything.",
-    },
-    {
-      q: "How big does our sales team need to be?",
-      a: "It pays for itself fastest from about three salespeople up. Below that you usually do not have the volume for the agents to work with yet.",
-    },
-  ],
-};
-
 /* ------------------------------------------------------------------ apply */
 
 export const apply = {
-  chapter: { n: "11", name: "The ask" },
+  chapter: { n: "07", name: "The invitation" },
   headline: ["Build it", "with us."],
   lead: `Founding members get ValenOS first, on better terms than anyone after them, with the two people who build it on the other end of every message.`,
   painLabel: "Where does your sales lose the most time?",
@@ -347,7 +310,7 @@ export const apply = {
 /* ----------------------------------------------------------------- nav */
 
 export const navLinks = [
-  { label: "The idea", href: "#idea" },
+  { label: "How it works", href: "#context" },
   { label: "The product", href: "#product" },
   { label: "Founding members", href: "#founding" },
 ];
