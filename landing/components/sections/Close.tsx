@@ -127,7 +127,7 @@ export function Close() {
             <p className="text-[0.75rem] font-medium tracking-[0.16em] text-white/45 uppercase">
               After you apply
             </p>
-            <ol className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2.5">
+            <ol className="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-2 sm:gap-y-2.5">
               {process.steps.map((step, i) => (
                 <li key={step.title} className="flex items-center gap-2">
                   <span className="text-[0.875rem] text-white/70">
@@ -137,7 +137,10 @@ export function Close() {
                     {step.title}
                   </span>
                   {i < process.steps.length - 1 && (
-                    <ArrowRightIcon aria-hidden className="size-3.5 text-white/25" />
+                    <ArrowRightIcon
+                      aria-hidden
+                      className="hidden size-3.5 text-white/25 sm:block"
+                    />
                   )}
                 </li>
               ))}
@@ -258,7 +261,7 @@ export function Close() {
                       {apply.painLabel}{" "}
                       <span className="font-normal text-white/60">Optional</span>
                     </legend>
-                    <div className="mt-3.5 flex flex-wrap gap-2">
+                    <div className="mt-3.5 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap">
                       {apply.painOptions.map((option) => {
                         const on = pains.includes(option);
                         return (
@@ -272,7 +275,7 @@ export function Close() {
                               )
                             }
                             className={clsx(
-                              "min-h-11 cursor-pointer rounded-full border px-4 text-[0.875rem] transition-colors duration-200",
+                              "flex min-h-11 cursor-pointer items-center justify-center rounded-full border px-3 text-center text-[0.8125rem] leading-tight transition-colors duration-200 sm:justify-start sm:px-4 sm:text-[0.875rem]",
                               on
                                 ? "border-gold/55 bg-gold/20 text-white"
                                 : "border-white/12 bg-white/[0.03] text-white/65 hover:border-white/25 hover:text-white",

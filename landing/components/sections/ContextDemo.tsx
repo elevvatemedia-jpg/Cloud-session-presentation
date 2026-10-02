@@ -292,7 +292,9 @@ export function ContextDemo() {
                         }}
                         aria-hidden
                         className={clsx(
-                          "mt-4 size-2 shrink-0 self-start rounded-full transition-colors duration-300",
+                          // Anchors the desktop connector curve. There is no
+                          // curve below lg, so there is no dot either.
+                          "mt-4 hidden size-2 shrink-0 self-start rounded-full transition-colors duration-300 lg:block",
                           withContext ? "bg-gold" : "bg-line-strong",
                         )}
                       />

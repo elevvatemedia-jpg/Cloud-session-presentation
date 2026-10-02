@@ -28,8 +28,11 @@ export function Wordmark({
       alt={alt}
       width={Math.round(height * RATIO)}
       height={height}
-      style={{ height, width: "auto" }}
-      className={clsx("block shrink-0 select-none", className)}
+      /* An explicit width, not auto: inside a column flex container the
+         default align-items:stretch resizes an auto width to the full
+         container, which blew the mark up to 350px on a phone. */
+      style={{ height, width: Math.round(height * RATIO) }}
+      className={clsx("block shrink-0 self-start select-none", className)}
       draggable={false}
     />
   );

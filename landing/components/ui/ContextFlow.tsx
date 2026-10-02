@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView, useReducedMotion } from "motion/react";
 import { Reveal } from "@/components/ui/Reveal";
-import { SOURCE_ICONS, AGENT_ICONS, LayersIcon } from "@/components/ui/Icons";
+import { SOURCE_ICONS, AGENT_ICONS, LayersIcon, ArrowDownIcon } from "@/components/ui/Icons";
 import { idea } from "@/lib/content";
 import { clsx } from "@/lib/clsx";
 import { easeOutSoft, inView } from "@/lib/motion";
@@ -36,7 +36,7 @@ export function ContextFlow() {
   }, [visible, reduced]);
 
   return (
-    <div className="relative overflow-hidden rounded-[16px] bg-ink-dark px-4 py-10 sm:px-8 sm:py-14">
+    <div className="relative overflow-hidden rounded-[16px] bg-ink-dark px-4 py-8 sm:px-8 sm:py-14">
       <div aria-hidden className="warm-glow pointer-events-none absolute inset-0" />
       <div aria-hidden className="dot-grid-dark pointer-events-none absolute inset-0 opacity-25" />
       <div className="relative">
@@ -80,7 +80,7 @@ export function ContextFlow() {
             </div>
           </Reveal>
 
-          <Flow direction="in" lanes={[25, 75]} className="sm:hidden" />
+          <Hop />
           <Flow direction="in" lanes={[12.5, 37.5, 62.5, 87.5]} className="hidden sm:block" />
 
           {/* The layer */}
@@ -100,7 +100,7 @@ export function ContextFlow() {
             </div>
           </Reveal>
 
-          <Flow direction="out" lanes={[25, 75]} className="sm:hidden" />
+          <Hop />
           <Flow direction="out" lanes={[12.5, 37.5, 62.5, 87.5]} className="hidden sm:block" />
 
           {/* Who reads it */}
@@ -128,6 +128,15 @@ export function ContextFlow() {
 
         </div>
       </div>
+    </div>
+  );
+}
+
+/** Phone-sized stand-in for the connector curves: one arrow, no smudge. */
+function Hop() {
+  return (
+    <div aria-hidden className="flex justify-center py-5 sm:hidden">
+      <ArrowDownIcon className="size-4 text-gold/55" />
     </div>
   );
 }
