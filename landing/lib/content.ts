@@ -13,9 +13,6 @@ export const hero = {
   trust: "Built in Warsaw. Five companies are testing it now.",
 };
 
-/** The line that bridges the product chapter into the ambition. */
-export const turnToAmbition = "That is the first version.";
-
 /* ------------------------------------------------------------- 02 · week */
 
 export const week = {
@@ -67,33 +64,6 @@ export const idea = {
   ],
   /** Says plainly that the four named above are examples, not the whole set. */
   more: "Four worth naming. There are more behind them, and more every month.",
-};
-
-export const acts = {
-  /** The one product moment worth showing at size. */
-  featured: {
-    title: "A reply moves the deal.",
-    body: "The agent watches the thread. When Marta answers, the deal moves itself and the sequence stops. Nobody updates a stage by hand.",
-  },
-  /** Said plainly and briefly; the board above is the proof. */
-  cards: [
-    {
-      id: "lead",
-      title: "Your list fills itself",
-      body: "Companies shaped like the ones you already sell to, with the reason each one was picked.",
-    },
-    {
-      id: "followup",
-      title: "The follow-up knows the last call",
-      body: "Written from what was actually said, with the source behind every line.",
-    },
-    {
-      id: "assistant",
-      title: "Ask how to close a deal",
-      body: "Answered from every email, meeting and note with that company.",
-    },
-  ],
-  more: "And more behind them, added as founding members ask for them.",
 };
 
 export const context = {
@@ -178,12 +148,6 @@ export const context = {
 
 /* ---------------------------------------------------------------- agents */
 
-export const agents = {
-  chapter: { n: "04", name: "It acts" },
-  headline: "Agents hand work to each other.",
-  lead: "Every one of them reads the same context, and they pass the deal down the line between them. Nothing goes out without you.",
-};
-
 /* ------------------------------------------------------------ membership */
 
 export const membership = {
@@ -218,7 +182,7 @@ export const membership = {
 /* --------------------------------------------------------- 06 · ambition */
 
 export const ambition = {
-  chapter: { n: "05", name: "Where this goes" },
+  chapter: { n: "04", name: "Where this goes" },
   headline: ["A CRM records what happened.", "We want one that makes it happen."],
   horizons: [
     {
@@ -247,7 +211,7 @@ export const ambition = {
 /* --------------------------------------------------------------- founders */
 
 export const foundersCopy = {
-  chapter: { n: "06", name: "The people" },
+  chapter: { n: "05", name: "The people" },
   headline: ["Two friends from Warsaw,", "building the CRM we wanted."],
   paragraphs: [
     "We watched sales teams, ours included, lose their days to research, first emails and CRM updates, with little time left for buyers. We think software should do that work now, and people should get the conversations back.",
@@ -291,7 +255,7 @@ export const process = {
 /* ------------------------------------------------------------------ apply */
 
 export const apply = {
-  chapter: { n: "07", name: "The invitation" },
+  chapter: { n: "06", name: "The invitation" },
   headline: ["Build it", "with us."],
   lead: `Founding members get ValenOS first, on better terms than anyone after them, with the two people who build it on the other end of every message.`,
   painLabel: "Where does your sales lose the most time?",
@@ -312,6 +276,6 @@ export const apply = {
 
 export const navLinks = [
   { label: "How it works", href: "#context" },
-  { label: "The product", href: "#product" },
-  { label: "Founding members", href: "#founding" },
+  { label: "Where this goes", href: "#ambition" },
+  { label: "Founding members", href: "#apply" },
 ];

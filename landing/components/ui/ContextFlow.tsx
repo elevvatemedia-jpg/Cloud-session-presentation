@@ -36,11 +36,22 @@ export function ContextFlow() {
   }, [visible, reduced]);
 
   return (
-    <div className="relative overflow-hidden rounded-[16px] bg-ink-dark px-4 py-8 sm:px-8 sm:py-14">
+    // A dark rounded card dropped on a light page is a rectangle with four
+    // corners to notice. This runs the full width of the frame with no radius,
+    // and the page fades into it and back out, so there is no edge.
+    <div className="relative -mx-5 overflow-hidden bg-ink-dark px-5 py-16 sm:-mx-8 sm:px-8 sm:py-24 lg:-mx-14 lg:px-14">
       <div aria-hidden className="warm-glow pointer-events-none absolute inset-0" />
       <div aria-hidden className="dot-grid-dark pointer-events-none absolute inset-0 opacity-25" />
-      <div className="relative">
-        <div ref={ref} className="mt-9 sm:mt-12">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-paper-warm to-transparent sm:h-32"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-paper-warm to-transparent sm:h-32"
+      />
+      <div className="relative mx-auto max-w-[44rem]">
+        <div ref={ref}>
           {/* What it reads */}
           <Reveal tall>
             <p className="mb-3.5 text-center text-[0.75rem] font-medium tracking-[0.16em] text-white/45 uppercase">

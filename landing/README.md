@@ -17,25 +17,19 @@ no configuration; set `NEXT_PUBLIC_SITE_URL` so the Open Graph tags resolve.
 
 ## The page, in order
 
-Seven chapters, read top to bottom, each numbered and named on the page.
+Six chapters, read top to bottom, each numbered and named on the page.
 
 | # | Chapter | What it is doing |
 |---|---------|------------------|
 | 01 | The hook | Says what this is in one line and offers the one action |
 | 02 | How it works | Sources converging into one context layer, then one email written from it |
 | 03 | The week | The problem as the buyer's own week, not as a cost model |
-| 04 | It acts | The pipeline board at size, then three lines for the rest |
-| 05 | Where this goes | Today, next, and the ambition — each labelled honestly |
-| 06 | The people | Mario and Bruno, in their own words from the site |
-| 07 | The invitation | The offer in four lines, then the form |
+| 04 | Where this goes | Today, next, and the ambition — each labelled honestly |
+| 05 | The people | Mario and Bruno, in their own words from the site |
+| 06 | The invitation | The offer in four lines, then the form |
 
-Someone arriving from a story wants to see the thing before they will sit
-through why it matters, so the mechanism comes straight after the hook and the
-week follows as the reason it matters.
-
-Two **turns** — one sentence alone on the page — carry the argument across its
-pivots: out of the week into the product, and out of the product into the
-ambition.
+One **turn** — a single sentence alone on the page — carries the argument out
+of the week and into what it is all for.
 
 ### One thing per screen
 
@@ -52,12 +46,9 @@ process is one sentence under the offer.
 
 ### Never say how many agents
 
-There are many more than the page names, so nothing may imply a count.
-
-Chapter 02's diagram names four agents because those are the four worth naming,
-and the line under them says exactly that. Chapter 04 shows one thing at size —
-a reply moving a deal across the board — then gives three short lines and ends
-on "and more behind them". No count, and nothing that reads as a complete set.
+There are many more than the page names, so nothing may imply a count. The
+diagram in chapter 02 names four because those four are worth naming, and the
+line under them says exactly that.
 
 ## Where to edit
 

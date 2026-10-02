@@ -52,12 +52,12 @@ export function ContextDemo() {
         </p>
       </Reveal>
 
-      <Reveal tall className="mt-9 sm:mt-12">
+      <Reveal tall className="mt-4 sm:mt-6">
         <ContextFlow />
       </Reveal>
 
       {/* ------------------------------------------------- the same email */}
-      <Reveal className="mt-16 max-w-[46rem] sm:mt-24">
+      <Reveal className="mt-6 max-w-[46rem] sm:mt-10">
         <h3 className="text-h2 text-ink">
           {context.headline[0]} {context.headline[1]}
         </h3>

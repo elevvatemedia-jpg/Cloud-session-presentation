@@ -8,17 +8,16 @@ import { Turn } from "@/components/ui/Turn";
 import { Hero } from "@/components/sections/Hero";
 import { ContextDemo } from "@/components/sections/ContextDemo";
 import { TheWeek } from "@/components/sections/TheWeek";
-import { Acts } from "@/components/sections/Acts";
 import { Ambition } from "@/components/sections/Ambition";
 import { Founders } from "@/components/sections/Founders";
 import { Close } from "@/components/sections/Close";
-import { week, turnToAmbition } from "@/lib/content";
+import { week } from "@/lib/content";
 
 /**
  * Seven chapters.
  *
- * 01 the hook · 02 how it works · 03 the week · 04 it acts
- * 05 where this goes · 06 the people · 07 the invitation
+ * 01 the hook · 02 how it works · 03 the week
+ * 04 where this goes · 05 the people · 06 the invitation
  *
  * Someone arriving from a story wants to see the thing before they will sit
  * through why it matters, so the mechanism comes straight after the hook and
@@ -33,11 +32,8 @@ export default function Page() {
         <Hero />
         <ContextDemo />
         <TheWeek />
-        {/* 03 -> 04: out of the week, into what takes it off you */}
+        {/* 03 -> 04: out of the week, into what it is all for */}
         <Turn tone="paper">{week.turn}</Turn>
-        <Acts />
-        {/* 04 -> 05: out of what it does, into what it is for */}
-        <Turn tone="warm">{turnToAmbition}</Turn>
         <Ambition />
         <Founders />
         <Close />
