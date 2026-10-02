@@ -100,7 +100,7 @@ export const context = {
   chapter: { n: "02", name: "How it works" },
   headline: ["It reads your inbox", "before it writes a word."],
   lead: "Connect Gmail or Outlook and your calendar. ValenOS goes through every conversation you have had, so each agent knows the history before it sends anything.",
-  hint: "Select any line to see where it came from.",
+  hint: "Every line carries where it came from.",
   company: { name: "Wydmy Logistyka", person: "Marta Wilczyńska, Sales Director" },
   sources: [
     {
@@ -149,21 +149,25 @@ export const context = {
   with: [
     {
       source: "email",
+      chip: "Marta's email",
       text: "You need all four people selling by March, so the plan works back from that date.",
       mark: "selling by March",
     },
     {
       source: "meeting",
+      chip: "Discovery call",
       text: "As we agreed on Tuesday, we fill two roles in Gdańsk first and then the other two.",
       mark: "two roles in Gdańsk",
     },
     {
       source: "note",
+      chip: "Kamil's note",
       text: "I will send your procurement team two references this week, so nothing holds up the start.",
       mark: "two references",
     },
     {
       source: "signal",
+      chip: "Careers page",
       text: "We commit to having the four account managers you are hiring on board by March.",
       mark: "four account managers",
     },
@@ -188,19 +192,19 @@ export const membership = {
   benefits: [
     {
       title: "You get it first",
-      body: "ValenOS runs on your live deals before anyone outside this group can buy it.",
+      body: "Live deals, before anyone outside this group can buy it.",
     },
     {
       title: "Terms set with you, and kept",
-      body: "Founding pricing is agreed on your call and stays yours as the price moves up behind you.",
+      body: "Agreed on your call, and yours as the price moves up behind you.",
     },
     {
       title: "The two of us, directly",
-      body: "Mario and Bruno run your setup and answer when you write. No support queue, no account manager.",
+      body: "No support queue, no account manager.",
     },
     {
       title: "You decide what gets built",
-      body: "Tell us what is missing. It goes on the roadmap, and you see it ship.",
+      body: "Tell us what is missing, and watch it ship.",
     },
   ],
   askTitle: "What we ask back",
@@ -246,7 +250,6 @@ export const foundersCopy = {
   chapter: { n: "06", name: "The people" },
   headline: ["Two friends from Warsaw,", "building the CRM we wanted."],
   paragraphs: [
-    "We have known each other since we were kids. Mario runs sales and strategy. Bruno builds the product.",
     "We watched sales teams, ours included, lose their days to research, first emails and CRM updates, with little time left for buyers. We think software should do that work now, and people should get the conversations back.",
     "We are early. The first version works, and we are shaping the rest with our first companies. Join now and you get the two of us: we set it up with you, we answer when you write, and we build what you tell us is missing.",
   ],
@@ -294,11 +297,9 @@ export const apply = {
   painLabel: "Where does your sales lose the most time?",
   painOptions: [
     "Finding the right companies",
-    "Researching leads",
     "Writing first emails",
     "Following up",
     "Keeping the CRM updated",
-    "Something else",
   ],
   submit: "Apply as a founding member",
   reassure: "Mario and Bruno read every application and reply themselves.",

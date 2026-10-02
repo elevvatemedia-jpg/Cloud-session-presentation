@@ -6,7 +6,7 @@ import { Section, Chapter } from "@/components/ui/Section";
 import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
-import { CheckIcon, ArrowRightIcon } from "@/components/ui/Icons";
+import { CheckIcon } from "@/components/ui/Icons";
 import { apply, membership, process } from "@/lib/content";
 import { company, legal } from "@/lib/config";
 import { submitApplication } from "@/lib/submit";
@@ -111,11 +111,11 @@ export function Close() {
           </h2>
           <p className="mt-5 max-w-[42ch] text-lead text-white/65">{apply.lead}</p>
 
-          <RevealGroup tall stagger={0.07} className="mt-9 space-y-3.5">
+          <RevealGroup tall stagger={0.07} className="mt-8 space-y-3">
             {membership.benefits.map((b) => (
               <RevealItem key={b.title} className="flex items-start gap-3">
-                <CheckIcon className="mt-1 size-4 shrink-0 text-gold" />
-                <p className="text-[0.9375rem] leading-relaxed text-white/75">
+                <CheckIcon className="mt-0.5 size-4 shrink-0 text-gold" />
+                <p className="text-[0.9375rem] leading-snug text-white/75">
                   <span className="font-medium text-white">{b.title}.</span>{" "}
                   {b.body}
                 </p>
@@ -124,30 +124,18 @@ export function Close() {
           </RevealGroup>
 
           <Reveal className="mt-8 border-t border-white/10 pt-7">
-            <p className="text-[0.75rem] font-medium tracking-[0.16em] text-white/45 uppercase">
-              After you apply
-            </p>
-            <ol className="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-2 sm:gap-y-2.5">
-              {process.steps.map((step, i) => (
-                <li key={step.title} className="flex items-center gap-2">
-                  <span className="text-[0.875rem] text-white/70">
-                    <span className="mr-1.5 font-serif text-gold/70 tabular-nums">
-                      {i + 1}
-                    </span>
-                    {step.title}
-                  </span>
-                  {i < process.steps.length - 1 && (
-                    <ArrowRightIcon
-                      aria-hidden
-                      className="hidden size-3.5 text-white/25 sm:block"
-                    />
-                  )}
-                </li>
+            <p className="text-[0.875rem] leading-relaxed text-white/55">
+              <span className="text-white/80">After you apply:</span>{" "}
+              {process.steps.slice(1).map((step, i, rest) => (
+                <span key={step.title}>
+                  {step.title.toLowerCase()}
+                  {i < rest.length - 1 ? ", then " : "."}
+                </span>
               ))}
-            </ol>
+            </p>
           </Reveal>
 
-          <p className="mt-7 flex items-start gap-3 text-[0.875rem] leading-relaxed text-white/55">
+          <p className="mt-4 flex items-start gap-3 text-[0.875rem] leading-relaxed text-white/55">
             <span aria-hidden className="mt-1.5 size-1.5 shrink-0 rounded-full bg-gold" />
             <span>
               <span className="text-white/80">{membership.headline}</span>{" "}

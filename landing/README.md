@@ -22,12 +22,12 @@ Seven chapters, read top to bottom, each numbered and named on the page.
 | # | Chapter | What it is doing |
 |---|---------|------------------|
 | 01 | The hook | Says what this is in one line and offers the one action |
-| 02 | How it works | Sources converging into one context layer, then the email that proves it |
+| 02 | How it works | Sources converging into one context layer, then one email written from it |
 | 03 | The week | The problem as the buyer's own week, not as a cost model |
 | 04 | It acts | The pipeline board at size, then three lines for the rest |
 | 05 | Where this goes | Today, next, and the ambition — each labelled honestly |
 | 06 | The people | Mario and Bruno, in their own words from the site |
-| 07 | The invitation | The offer, the four steps and the form, in one chapter |
+| 07 | The invitation | The offer in four lines, then the form |
 
 Someone arriving from a story wants to see the thing before they will sit
 through why it matters, so the mechanism comes straight after the hook and the
@@ -36,6 +36,19 @@ week follows as the reason it matters.
 Two **turns** — one sentence alone on the page — carry the argument across its
 pivots: out of the week into the product, and out of the product into the
 ambition.
+
+### One thing per screen
+
+The page is read on a phone, in one pass, by someone who arrived from a story.
+Two chapters were each carrying two full demos, and that was what made it feel
+packed — not the total length. Chapter 02 had the diagram *and* an email beside
+a card listing its sources, joined by measured SVG curves that only existed
+from lg up. Chapter 07 had the offer, a numbered process block and the form,
+each asking for attention.
+
+Both now carry one object. The email names its own sources inline, which is the
+same claim in a quarter of the space and behaves identically on a phone. The
+process is one sentence under the offer.
 
 ### Never say how many agents
 
