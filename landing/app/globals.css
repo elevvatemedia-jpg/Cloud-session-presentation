@@ -1,0 +1,223 @@
+@import "tailwindcss";
+
+/* ============================================================
+   ValenOS — design tokens
+   Sampled from the live ValenOS site (localhost:4400).
+   Change a value here and it changes everywhere.
+   ============================================================ */
+@theme {
+  /* Surfaces — warm paper, never pure white as a page background */
+  --color-paper: #faf9f6;
+  --color-paper-warm: #f4f1ea;
+  --color-card: #ffffff;
+  --color-ink-dark: #0d0c0a;
+  --color-ink-dark-soft: #17150f;
+
+  /* Text */
+  --color-ink: #14110e;
+  --color-body: #3d3933;
+  --color-muted: #6b665e;
+  /* 4.67:1 on paper — the old #9c978d was 2.76:1 and failed AA */
+  --color-faint: #767169;
+
+  /* Gold — the single accent. Used for emphasis, never for body text. */
+  --color-gold: #c8a96e;
+  --color-gold-deep: #a07e43;
+  /* Gold legible as text: 5.1:1 on paper, 4.7:1 on paper-warm.
+     --color-gold-deep stays for icons and borders, which need only 3:1. */
+  --color-gold-text: #856634;
+  --color-gold-soft: #e4d2ab;
+  --color-gold-wash: #f6ead1;
+
+  /* Lines */
+  --color-line: rgba(20, 17, 14, 0.09);
+  --color-line-strong: rgba(20, 17, 14, 0.16);
+  --color-line-dark: rgba(255, 255, 255, 0.1);
+
+  /* Status — muted, never saturated */
+  --color-signal-green: #3f8f5c;
+  --color-signal-green-wash: #e8f1ea;
+  --color-signal-blue: #5d82ad;
+  --color-signal-amber: #c08944;
+  --color-signal-rose: #b06a5e;
+
+  /* Type */
+  --font-sans: "Mona Sans", ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+  --font-serif: "Fraunces", "Iowan Old Style", Georgia, serif;
+
+  /* Fluid display sizes — mobile first, no media queries needed */
+  --text-display: clamp(2.6rem, 8vw, 5rem);
+  --text-display--line-height: 0.94;
+  --text-display--letter-spacing: -0.035em;
+
+  --text-h1: clamp(2rem, 5.4vw, 3.5rem);
+  --text-h1--line-height: 1.02;
+  --text-h1--letter-spacing: -0.032em;
+
+  --text-h2: clamp(1.6rem, 4.2vw, 2.5rem);
+  --text-h2--line-height: 1.1;
+  --text-h2--letter-spacing: -0.025em;
+
+  --text-h3: clamp(1.15rem, 2.4vw, 1.5rem);
+  --text-h3--line-height: 1.25;
+  --text-h3--letter-spacing: -0.018em;
+
+  --text-lead: clamp(1.05rem, 2.2vw, 1.375rem);
+  --text-lead--line-height: 1.55;
+  --text-lead--letter-spacing: -0.012em;
+
+  /* Motion — one easing family, three speeds */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out-soft: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --shadow-card: 0 1px 2px rgba(20, 17, 14, 0.04),
+    0 8px 24px -8px rgba(20, 17, 14, 0.08);
+  --shadow-lift: 0 2px 4px rgba(20, 17, 14, 0.04),
+    0 18px 44px -12px rgba(20, 17, 14, 0.14);
+  --shadow-float: 0 4px 10px rgba(20, 17, 14, 0.06),
+    0 32px 70px -18px rgba(20, 17, 14, 0.22);
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    /* Keeps anchor targets clear of the fixed header */
+    scroll-padding-top: 5.5rem;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-body);
+    font-family: var(--font-sans);
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Stops iOS rubber-band from revealing a white strip under the dark footer */
+    overscroll-behavior-y: none;
+  }
+
+  h1, h2, h3, h4 {
+    color: var(--color-ink);
+    font-weight: 600;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background-color: var(--color-gold-soft);
+    color: var(--color-ink);
+  }
+
+  /* One focus ring for the whole site. Never removed, only restyled. */
+  :focus-visible {
+    outline: 2px solid var(--color-gold-deep);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  button, a, [role="button"] {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  input, textarea, select {
+    font: inherit;
+    color: inherit;
+  }
+
+  /* iOS zooms any input under 16px on focus. Never let that happen. */
+  input, textarea {
+    font-size: max(16px, 1rem);
+  }
+}
+
+/* ============================================================
+   Utilities
+   ============================================================ */
+@utility dot-grid {
+  background-image: radial-gradient(
+    circle at center,
+    rgba(20, 17, 14, 0.085) 1px,
+    transparent 1px
+  );
+  background-size: 22px 22px;
+}
+
+@utility dot-grid-dark {
+  background-image: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.08) 1px,
+    transparent 1px
+  );
+  background-size: 22px 22px;
+}
+
+/* The warm halo behind the dark sections */
+@utility warm-glow {
+  background:
+    radial-gradient(
+      68% 52% at 50% 106%,
+      rgba(200, 169, 110, 0.3) 0%,
+      rgba(160, 126, 67, 0.12) 38%,
+      transparent 72%
+    );
+}
+
+/* Gold gradient fill used on the primary CTA */
+@utility gold-fill {
+  background-image: linear-gradient(176deg, #dcc08d 0%, #c8a96e 48%, #b8974f 100%);
+}
+
+@utility text-highlight {
+  /* Padding rather than a ring: a box-shadow leaves a visible hairline edge */
+  background-color: var(--color-gold-wash);
+  padding: 0.12em 0.16em;
+  margin: 0 -0.08em;
+  border-radius: 3px;
+}
+
+/* ============================================================
+   Motion — every animation is off when the OS asks for less
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes caret-blink {
+  0%, 45% { opacity: 1; }
+  50%, 95% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes marquee-drift {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Hide scrollbars on the horizontal mobile rails without losing scroll */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
