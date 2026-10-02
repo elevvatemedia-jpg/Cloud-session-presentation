@@ -13,39 +13,68 @@ export const hero = {
   trust: "Built in Warsaw. Five companies are testing it now.",
 };
 
-/* --------------------------------------------------------------- problem */
+/* ------------------------------------------------------------- 02 · week */
 
-export const problem = {
-  eyebrow: "The problem",
-  headline: "You are already paying for this.",
-  lead: "Not in licences. In the hours your team gives to work that software should be doing.",
-  rows: [
+export const week = {
+  chapter: { n: "02", name: "The week" },
+  headline: "Nobody grew up wanting to update a CRM.",
+  lead: "This is the week your team actually has.",
+  days: [
     {
-      label: "Tool licences",
-      note: "CRM, prospecting and call notes. Five seats, mid-tier, billed annually.",
-      amount: 36_500,
+      day: "Monday",
+      text: "You research twelve companies and send four emails.",
     },
     {
-      label: "Half an operations role",
-      note: "Someone has to own the CRM. Usually nobody does, so everybody does a little.",
-      amount: 85_000,
+      day: "Tuesday",
+      text: "A good call. You spend the evening writing it up.",
     },
     {
-      label: "Rep hours on admin",
-      note: "Five reps, a quarter of the week on research and data entry.",
-      amount: 163_000,
+      day: "Wednesday",
+      text: "Someone replies, in a thread you had already forgotten.",
+    },
+    {
+      day: "Thursday",
+      text: "The CRM still says the deal is New.",
     },
   ],
-  total: 284_500,
-  totalLabel: "a year, for a five-person sales team in Poland",
-  footnote:
-    "Mid-tier tools, half a role rather than one, conservative hours. Twenty seats on enterprise tooling passes 1.5 million by the same arithmetic.",
+  turn: "None of that was selling.",
 };
+
+/* ------------------------------------------------------------- 03 · idea */
+
+export const idea = {
+  chapter: { n: "03", name: "The idea" },
+  headline: ["One layer", "that knows everything."],
+  lead: "ValenOS connects your inbox, your calendar and your tools, and keeps one living picture of every company you sell to. Four agents read that picture, and act on it. That is the whole idea.",
+  sources: [
+    { id: "email", label: "Gmail" },
+    { id: "email", label: "Outlook" },
+    { id: "meeting", label: "Calendar" },
+    { id: "meeting", label: "Meetings" },
+    { id: "note", label: "Your notes" },
+    { id: "note", label: "Call notes" },
+    { id: "signal", label: "Web signals" },
+    { id: "signal", label: "Your tools" },
+  ],
+  layerTitle: "One context layer",
+  layerBody:
+    "Every email, meeting, note and signal about a company, in one place, kept current.",
+  agentLabels: [
+    { id: "lead", label: "Lead" },
+    { id: "followup", label: "Follow-up" },
+    { id: "pipeline", label: "CRM" },
+    { id: "assistant", label: "Assistant" },
+  ],
+  close: "Not a database you fill in. A system that already knows.",
+};
+
+/** The single line that bridges the product chapters into the ambition. */
+export const turnToAmbition = "That is the first version.";
 
 /* --------------------------------------------------------------- context */
 
 export const context = {
-  eyebrow: "Context",
+  chapter: { n: "04", name: "It knows" },
   headline: ["It reads your inbox", "before it writes a word."],
   lead: "Connect Gmail or Outlook and your calendar. ValenOS goes through every conversation you have had, so each agent knows the history before it sends anything.",
   hint: "Select any line to see where it came from.",
@@ -123,7 +152,7 @@ export const context = {
 /* ---------------------------------------------------------------- agents */
 
 export const agents = {
-  eyebrow: "The product",
+  chapter: { n: "05", name: "It acts" },
   headline: "Four agents, one context layer.",
   lead: "They hand work to each other, and every one of them reads the same history. Nothing gets sent without you.",
   tabs: [
@@ -161,7 +190,7 @@ export const agents = {
 /* ------------------------------------------------------------ membership */
 
 export const membership = {
-  eyebrow: "Founding members",
+  chapter: { n: "08", name: "The invitation" },
   headline: "The list is short.",
   lead: "We would rather have a few companies using ValenOS properly than a long queue of names.",
   statusLabel: "Right now",
@@ -194,9 +223,39 @@ export const membership = {
   ],
 };
 
+/* --------------------------------------------------------- 06 · ambition */
+
+export const ambition = {
+  chapter: { n: "06", name: "Where this goes" },
+  headline: ["A CRM records what happened.", "We want one that makes it happen."],
+  horizons: [
+    {
+      when: "Today",
+      title: "It finds, writes, chases and moves the deal.",
+      body: "The first version works. Five companies are testing it on their own pipelines, and telling us what is missing.",
+      state: "live" as const,
+    },
+    {
+      when: "Next",
+      title: "Deeper into the pipeline.",
+      body: "Preparing the call before you take it. Drafting the proposal from what was agreed. Noticing the deal that went quiet before you do.",
+      state: "building" as const,
+    },
+    {
+      when: "The ambition",
+      title: "A small team that sells like a large one.",
+      body: "Five people in Warsaw should be able to cover the ground of twenty, because the work that never needed a person no longer has one.",
+      state: "horizon" as const,
+    },
+  ],
+  close:
+    "We are not trying to make the admin faster. We are trying to take it off your team entirely.",
+};
+
 /* --------------------------------------------------------------- founders */
 
 export const foundersCopy = {
+  chapter: { n: "07", name: "The people" },
   headline: ["Two friends from Warsaw,", "building the CRM we wanted."],
   paragraphs: [
     "We have known each other since we were kids. Mario runs sales and strategy. Bruno builds the product.",
@@ -208,6 +267,7 @@ export const foundersCopy = {
 /* ---------------------------------------------------------------- process */
 
 export const process = {
+  chapter: { n: "09", name: "What happens next" },
   headline: "What happens after you apply",
   steps: [
     {
@@ -240,6 +300,7 @@ export const process = {
 /* -------------------------------------------------------------------- faq */
 
 export const faq = {
+  chapter: { n: "10", name: "Questions" },
   headline: "Before you apply",
   items: [
     {
@@ -272,6 +333,7 @@ export const faq = {
 /* ------------------------------------------------------------------ apply */
 
 export const apply = {
+  chapter: { n: "11", name: "The ask" },
   headline: ["Build it", "with us."],
   lead: `Founding members get ValenOS first, on better terms than anyone after them, with the two people who build it on the other end of every message.`,
   painLabel: "Where does your sales lose the most time?",
@@ -293,7 +355,7 @@ export const apply = {
 /* ----------------------------------------------------------------- nav */
 
 export const navLinks = [
-  { label: "Product", href: "#product" },
-  { label: "Context", href: "#context" },
+  { label: "The idea", href: "#idea" },
+  { label: "The product", href: "#product" },
   { label: "Founding members", href: "#founding" },
 ];

@@ -17,21 +17,32 @@ no configuration; set `NEXT_PUBLIC_SITE_URL` so the Open Graph tags resolve.
 
 ## The page, in order
 
-| # | Section | What it is doing |
-|---|---------|------------------|
-| 1 | Hero | Says what this is in one line, states the cap, offers the one action |
-| 2 | Problem | The cost of the work today, counted up as you scroll |
-| 3 | Context | The with/without-context email, with live source connectors |
-| 4 | Product | Four agents as auto-advancing tabs, each with its own mockup |
-| 5 | Founding members | The offer, the places counter, what is asked in return |
-| 6 | Founders | Mario and Bruno, in their own words from the site |
-| 7 | Process | The four steps after applying |
-| 8 | FAQ | The objections that stop a cold visitor applying |
-| 9 | Apply | The form, on dark, with the reassurance line |
+Eleven chapters, read top to bottom. Each one is numbered and named on the page
+itself, because the page really is a sequence and the reader is meant to feel
+that.
 
-Problem → proof → product → offer → people → process → objections → ask. The
-dark sections are the offer and the close, following the deck's own rule that
-dark is reserved for the turn and the close.
+| # | Chapter | What it is doing |
+|---|---------|------------------|
+| 01 | The hook | Says what this is in one line and offers the one action |
+| 02 | The week | The problem as the buyer's own week, not as a cost model |
+| 03 | The idea | One context layer, drawn as a live diagram |
+| 04 | It knows | The with/without-context email, with source connectors |
+| 05 | It acts | Four agents as auto-advancing tabs, each with its own mockup |
+| 06 | Where this goes | Today, next, and the ambition — each labelled honestly |
+| 07 | The people | Mario and Bruno, in their own words from the site |
+| 08 | The invitation | The offer and what is asked in return |
+| 09 | What happens next | The four steps after applying |
+| 10 | Questions | The objections that stop a cold visitor applying |
+| 11 | The ask | The form, on dark, with the reassurance line |
+
+Between chapters 02 and 03, and again between 05 and 06, a **turn** — one
+sentence alone on the page — carries the argument forward. There are only two,
+at the two real pivots: out of the problem into the idea, and out of what the
+product does into what it is for.
+
+Tone alternates paper / warm so no two neighbouring chapters feel the same. The
+three dark chapters land on the beats the deck reserves them for: the turn (03),
+the offer (08) and the close (11).
 
 ## Where to edit
 

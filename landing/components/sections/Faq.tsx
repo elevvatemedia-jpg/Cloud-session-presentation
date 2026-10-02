@@ -2,7 +2,7 @@
 
 import { useId, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { Section } from "@/components/ui/Section";
+import { Section, Chapter } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { ChevronIcon } from "@/components/ui/Icons";
 import { faq } from "@/lib/content";
@@ -14,9 +14,10 @@ export function Faq() {
   const uid = useId();
 
   return (
-    <Section label="Questions people ask before applying">
+    <Section tone="warm" label="Questions people ask before applying">
       <div className="grid gap-10 lg:grid-cols-[minmax(0,.62fr)_minmax(0,1fr)] lg:gap-20">
         <Reveal>
+          <Chapter {...faq.chapter} />
           <h2 className="text-h1 text-ink">{faq.headline}</h2>
           <p className="mt-5 max-w-[34ch] text-lead text-muted">
             If yours is not here, ask it in the form. We answer every one.

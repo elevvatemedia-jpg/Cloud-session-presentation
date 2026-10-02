@@ -1,4 +1,4 @@
-import { Section } from "@/components/ui/Section";
+import { Section, Chapter } from "@/components/ui/Section";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { Avatar } from "@/components/ui/AppWindow";
 import { foundersCopy } from "@/lib/content";
@@ -6,9 +6,10 @@ import { founders, company } from "@/lib/config";
 
 export function Founders() {
   return (
-    <Section label="Who builds ValenOS">
+    <Section tone="warm" label="Who builds ValenOS">
       <div className="grid gap-10 lg:grid-cols-2 lg:gap-20">
         <Reveal>
+          <Chapter {...foundersCopy.chapter} />
           <h2 className="text-h1 text-ink">
             {foundersCopy.headline[0]}
             <br className="hidden sm:block" />{" "}

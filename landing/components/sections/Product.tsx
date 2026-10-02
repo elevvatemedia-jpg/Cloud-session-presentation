@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useInView, useReducedMotion } from "motion/react";
-import { Section, Eyebrow } from "@/components/ui/Section";
+import { Section, Chapter } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { Chip, Avatar } from "@/components/ui/AppWindow";
 import {
@@ -44,7 +44,7 @@ export function Product() {
   return (
     <Section id="product" tone="warm" label="What the agents do">
       <Reveal className="max-w-[46rem]">
-        <Eyebrow>{agents.eyebrow}</Eyebrow>
+        <Chapter {...agents.chapter} />
         <h2 className="text-h1 text-ink">{agents.headline}</h2>
         <p className="mt-6 max-w-[52ch] text-lead text-body">{agents.lead}</p>
       </Reveal>

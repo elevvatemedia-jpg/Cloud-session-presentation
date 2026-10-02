@@ -11,9 +11,6 @@ sign-off before the page is public.
 
 | Claim | Source |
 |---|---|
-| PLN 36,500 tool licences, 85,000 half an ops role, 163,000 rep hours, 284,500 total | `deck/README.md`, "Cost slide sources" — Polish market, checked Sept 2026 |
-| "Twenty seats on enterprise tooling passes 1.5 million" | Same section, stated verbatim there |
-| Mid-tier tools, half a role, conservative hours | Same section |
 | One-time setup fee on a live call, plus a subscription | `deck/README.md`, "Business model slide" |
 | Pricing is being set with the founding members | Same — stated as a position, not a gap |
 | Mario runs sales and strategy, Bruno builds the product | Founders section of valenos.com |
@@ -25,6 +22,10 @@ sign-off before the page is public.
 
 ## CONFIRM before launch
 
+The cost chapter is gone, so none of the PLN figures appear on the page any
+more. They remain in `deck/README.md` for the pitch.
+
+
 | Claim | Where | Why it needs you |
 |---|---|---|
 | **"Applications are open"** | Membership status card | True today. Flip `founding.applicationsOpen` when it stops being true. |
@@ -34,6 +35,9 @@ sign-off before the page is public.
 | **"Not on day one" on leaving your current CRM** | FAQ 1 | Nothing in the deck says ValenOS runs alongside an existing CRM. If it cannot, cut this answer. |
 | **"It pays for itself from about three salespeople up"** | FAQ 4 | My inference from the five-person cost model. No source. |
 | **"You are running on live deals the same week"** | FAQ 5 | Implied by a one-call setup. Confirm it is realistic. |
+| **"Deeper into the pipeline"** — preparing calls, drafting proposals, spotting quiet deals | Chapter 06, "Next" | This is a roadmap. It is labelled "Being built" rather than shipped, but only you know whether it is actually being built. |
+| **"Five companies are testing it on their own pipelines"** | Chapter 06, "Today" | The deck says five are testing and not paying. "On their own pipelines" is slightly stronger — confirm or soften. |
+| **"Five people should cover the ground of twenty"** | Chapter 06, the ambition | A statement of intent, not a measured claim. Fine as ambition; say so if you would rather not put a ratio on it. |
 | **founders@valen-partners.com** | `lib/config.ts` | Placeholder. |
 | **© 2026 Valen & Partners** | Footer | Matches the site; check at new year. |
 | **valenos.com** | `NEXT_PUBLIC_SITE_URL`, OG tags | Placeholder domain. |

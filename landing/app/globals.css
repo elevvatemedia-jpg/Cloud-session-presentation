@@ -221,3 +221,9 @@
     display: none;
   }
 }
+
+/* The travelling dashes on the context-layer diagram */
+@keyframes flow-dash {
+  from { stroke-dashoffset: 8; }
+  to { stroke-dashoffset: 0; }
+}

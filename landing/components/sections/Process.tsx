@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Section } from "@/components/ui/Section";
+import { Section, Chapter } from "@/components/ui/Section";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { Chip, Avatar } from "@/components/ui/AppWindow";
 import { CheckIcon } from "@/components/ui/Icons";
@@ -10,9 +10,10 @@ import { easeOutSoft, inView } from "@/lib/motion";
 
 export function Process() {
   return (
-    <Section tone="warm" label="What happens after you apply">
+    <Section label="What happens after you apply">
       <Reveal>
-        <h2 className="text-h2 text-ink">{process.headline}</h2>
+        <Chapter {...process.chapter} />
+        <h2 className="text-h1 text-ink">{process.headline}</h2>
       </Reveal>
 
       <div className="relative mt-10 sm:mt-14">
@@ -43,7 +44,7 @@ export function Process() {
         >
           {process.steps.map((step, i) => (
             <RevealItem key={step.title} className="relative pl-10 sm:pl-0">
-              <span className="absolute top-0 left-0 grid size-[27px] place-items-center rounded-full border border-gold/55 bg-paper-warm text-[0.8125rem] font-medium text-ink tabular-nums sm:relative sm:mb-6">
+              <span className="absolute top-0 left-0 grid size-[27px] place-items-center rounded-full border border-gold/55 bg-paper text-[0.8125rem] font-medium text-ink tabular-nums sm:relative sm:mb-6">
                 {i + 1}
               </span>
 

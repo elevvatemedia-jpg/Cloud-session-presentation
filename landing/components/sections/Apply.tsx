@@ -2,7 +2,7 @@
 
 import { useRef, useState, type FormEvent } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { Section } from "@/components/ui/Section";
+import { Section, Chapter } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { CheckIcon } from "@/components/ui/Icons";
@@ -101,6 +101,7 @@ export function Apply() {
       <div className="relative grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:items-center lg:gap-20">
         {/* ---------------------------------------------------- the pitch */}
         <Reveal>
+          <Chapter {...apply.chapter} tone="dark" />
           <h2 className="text-display text-white">
             {apply.headline[0]}
             <br />{" "}

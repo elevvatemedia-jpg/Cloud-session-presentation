@@ -122,27 +122,6 @@ export const ChevronIcon = (p: IconProps) => (
   </Svg>
 );
 
-export const ClockIcon = (p: IconProps) => (
-  <Svg {...p}>
-    <circle cx="12" cy="12" r="8.5" />
-    <path d="M12 7.2V12l3.2 2" />
-  </Svg>
-);
-
-export const CoinIcon = (p: IconProps) => (
-  <Svg {...p}>
-    <circle cx="12" cy="12" r="8.5" />
-    <path d="M14.5 9.3a3 3 0 0 0-4.8.6c-.7 1.4.5 2.3 2.3 2.6s3 1.2 2.3 2.6a3 3 0 0 1-4.8.6M12 6.6v1.5M12 15.9v1.5" />
-  </Svg>
-);
-
-export const PersonIcon = (p: IconProps) => (
-  <Svg {...p}>
-    <circle cx="12" cy="8" r="3.6" />
-    <path d="M4.8 20c.8-3.4 3.7-5.4 7.2-5.4s6.4 2 7.2 5.4" />
-  </Svg>
-);
-
 /** The V&P monogram used in the app-window mockups. */
 export const WordMark = ({ className }: { className?: string }) => (
   <span className={className}>

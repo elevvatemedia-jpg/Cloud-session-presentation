@@ -51,21 +51,29 @@ export function Section({
   );
 }
 
-/** Small caps label that opens most sections. */
-export function Eyebrow({
-  children,
+/**
+ * The chapter marker that opens each section. The number is not decoration:
+ * the page is read in order and each section is a step in one argument.
+ */
+export function Chapter({
+  n,
+  name,
   tone = "light",
 }: {
-  children: ReactNode;
+  n: string;
+  name: string;
   tone?: "light" | "dark";
 }) {
   return (
     <p
       className={clsx(
-        "mb-5 flex items-center gap-2.5 text-[0.7rem] font-medium tracking-[0.16em] uppercase",
+        "mb-5 flex items-center gap-3 text-[0.7rem] font-medium tracking-[0.16em] uppercase",
         tone === "dark" ? "text-gold-soft" : "text-gold-text",
       )}
     >
+      <span className="font-serif text-[1.05rem] leading-none tracking-normal tabular-nums">
+        {n}
+      </span>
       <span
         aria-hidden
         className={clsx(
@@ -73,7 +81,7 @@ export function Eyebrow({
           tone === "dark" ? "bg-gold-soft/50" : "bg-gold/60",
         )}
       />
-      {children}
+      {name}
     </p>
   );
 }

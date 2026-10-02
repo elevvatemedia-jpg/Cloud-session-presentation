@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import { Section, Eyebrow } from "@/components/ui/Section";
+import { Section, Chapter } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { Chip, Avatar } from "@/components/ui/AppWindow";
 import {
@@ -111,7 +111,7 @@ export function ContextDemo() {
     <Section id="context" label="How ValenOS builds context" className="overflow-hidden">
       {/* ------------------------------------------------------- heading */}
       <Reveal className="max-w-[46rem]">
-        <Eyebrow>{context.eyebrow}</Eyebrow>
+        <Chapter {...context.chapter} />
         <h2 className="text-h1 text-ink">
           {context.headline[0]}
           <br className="hidden sm:block" />{" "}

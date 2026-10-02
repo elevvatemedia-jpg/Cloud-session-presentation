@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "motion/react";
-import { Section, Eyebrow } from "@/components/ui/Section";
+import { Section, Chapter } from "@/components/ui/Section";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { CheckIcon } from "@/components/ui/Icons";
@@ -23,7 +23,7 @@ export function Membership() {
       <div className="relative">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,.85fr)] lg:items-end lg:gap-16">
           <Reveal className="min-w-0">
-            <Eyebrow tone="dark">{membership.eyebrow}</Eyebrow>
+            <Chapter {...membership.chapter} tone="dark" />
             <h2 className="text-h1 text-white">{membership.headline}</h2>
             <p className="mt-6 max-w-[42ch] text-lead text-white/65">
               {membership.lead}
