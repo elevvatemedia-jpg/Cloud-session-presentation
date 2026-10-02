@@ -96,9 +96,28 @@ Link the policies on valen-partners.com rather than copying them here. Two
 copies of a privacy policy drift apart, and the one that is wrong is the one you
 get asked about.
 
-The page currently loads no analytics, no pixel and sets no cookies, so it needs
-no consent banner. Adding a Meta Pixel or LinkedIn Insight Tag for the campaign
-changes that: both need consent before they fire.
+### Pixels and consent
+
+`tracking` in `lib/config.ts` holds the Meta Pixel and LinkedIn Insight ids.
+Both are empty, so today the page loads no tracker, sets no cookie, and shows
+no banner — there is nothing to ask about. Put an id in and the consent banner
+turns itself on, because that is the moment consent starts being required.
+
+Nothing loads before the visitor accepts. Decline and Accept are the same size
+and weight, the choice is remembered, and `Cookie settings` in the footer lets
+anyone change it. A successful application fires the conversion event, and only
+if consent was given.
+
+Measured with a test pixel id in place: no choice → 0 tracker requests; decline
+→ 0 requests and remembered across reload; accept → the pixel loads and is
+remembered.
+
+### Policy pages
+
+`/privacy`, `/cookies` and `/terms` render from `lib/legal-content.ts`. Every
+document is `null`, so each route returns **404** and its footer link stays
+hidden — an empty page with a legal-sounding title is worse than no page. Paste
+the real text in and all three light up at once.
 
 ## Logo
 

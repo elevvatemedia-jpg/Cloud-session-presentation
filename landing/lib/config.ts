@@ -65,6 +65,28 @@ export const hasLegal = Boolean(
   legal.entity || legal.address || legal.nip || legal.privacyUrl,
 );
 
+/**
+ * Advertising pixels.
+ *
+ * Both are empty, so today the page loads no tracker and sets no cookie, and
+ * the consent banner does not appear at all. Put an id in and the banner turns
+ * itself on, because that is the point at which consent is actually required.
+ *
+ * Nothing here loads before the visitor accepts. That is not a preference, it
+ * is what GDPR requires of a pixel: consent first, then the script.
+ */
+export const tracking = {
+  /** Meta (Facebook/Instagram) pixel id, digits only. */
+  metaPixelId: "",
+  /** LinkedIn Insight Tag partner id, digits only. */
+  linkedInPartnerId: "",
+} as const;
+
+/** No ids means no cookies, which means no banner is owed to anyone. */
+export const hasTracking = Boolean(
+  tracking.metaPixelId || tracking.linkedInPartnerId,
+);
+
 export const founders = [
   {
     initials: "MM",

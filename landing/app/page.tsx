@@ -1,6 +1,9 @@
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { StickyCta } from "@/components/site/StickyCta";
+import { ConsentProvider } from "@/components/site/Consent";
+import { ConsentBanner } from "@/components/site/ConsentBanner";
+import { Analytics } from "@/components/site/Analytics";
 import { Turn } from "@/components/ui/Turn";
 import { Hero } from "@/components/sections/Hero";
 import { TheWeek } from "@/components/sections/TheWeek";
@@ -28,7 +31,7 @@ import { week, turnToAmbition } from "@/lib/content";
  */
 export default function Page() {
   return (
-    <>
+    <ConsentProvider>
       <Nav />
       <main id="main">
         <Hero />
@@ -49,6 +52,8 @@ export default function Page() {
       </main>
       <Footer />
       <StickyCta />
-    </>
+      <ConsentBanner />
+      <Analytics />
+    </ConsentProvider>
   );
 }

@@ -1,12 +1,16 @@
-import { company, legal, hasLegal } from "@/lib/config";
+import { company, legal, hasLegal, hasTracking } from "@/lib/config";
 import { navLinks } from "@/lib/content";
 import { Wordmark } from "@/components/ui/Wordmark";
+import { CookieSettings } from "@/components/site/CookieSettings";
+import { legalDocs } from "@/lib/legal-content";
 
 /** Only the policy links that actually have a URL. */
+/* A policy hosted here wins; otherwise fall back to the one on the main
+   domain. A policy with neither is simply not shown. */
 const POLICIES = [
-  { label: "Privacy policy", href: legal.privacyUrl },
-  { label: "Terms", href: legal.termsUrl },
-  { label: "Cookies", href: legal.cookiesUrl },
+  { label: "Privacy policy", href: legalDocs.privacy ? "/privacy" : legal.privacyUrl },
+  { label: "Terms", href: legalDocs.terms ? "/terms" : legal.termsUrl },
+  { label: "Cookies", href: legalDocs.cookies ? "/cookies" : legal.cookiesUrl },
 ].filter((p) => p.href);
 
 export function Footer() {
@@ -38,7 +42,7 @@ export function Footer() {
         {/* ------------------------------------------------- legal row.
             Renders only what lib/config.ts actually holds, so nothing
             invented ever reaches the page. */}
-        {(hasLegal || POLICIES.length > 0) && (
+        {(hasLegal || POLICIES.length > 0 || hasTracking) && (
           <div className="flex flex-col gap-4 border-t border-line px-5 py-7 sm:px-8 lg:flex-row lg:items-start lg:justify-between lg:px-14">
             <div className="space-y-1 text-[0.8125rem] leading-relaxed text-faint">
               {legal.entity && <p className="text-muted">{legal.entity}</p>}
@@ -53,6 +57,7 @@ export function Footer() {
             </div>
 
             <div className="flex flex-col items-start gap-x-6 gap-y-1 sm:flex-row sm:items-center">
+              <CookieSettings />
               {POLICIES.map((policy) => (
                 <a
                   key={policy.label}

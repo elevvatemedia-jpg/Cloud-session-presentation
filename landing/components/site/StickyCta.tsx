@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { founding } from "@/lib/config";
+import { useConsent } from "@/components/site/Consent";
 import { easeOutSoft } from "@/lib/motion";
 
 /**
@@ -10,6 +11,7 @@ import { easeOutSoft } from "@/lib/motion";
  * over the form, so it never covers the thing it is pointing at.
  */
 export function StickyCta() {
+  const { asking } = useConsent();
   const [show, setShow] = useState(false);
   const atFormRef = useRef(false);
 
@@ -42,7 +44,7 @@ export function StickyCta() {
 
   return (
     <AnimatePresence>
-      {show && (
+      {show && !asking && (
         <motion.div
           initial={{ y: "120%" }}
           animate={{ y: 0 }}

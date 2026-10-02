@@ -9,6 +9,7 @@ import { CheckIcon } from "@/components/ui/Icons";
 import { apply } from "@/lib/content";
 import { founding, company, legal } from "@/lib/config";
 import { submitApplication } from "@/lib/submit";
+import { trackApplication } from "@/components/site/Analytics";
 import { clsx } from "@/lib/clsx";
 import { easeOutSoft } from "@/lib/motion";
 
@@ -81,6 +82,7 @@ export function Apply() {
     const result = await submitApplication({ ...values, pains });
 
     if (result.ok) {
+      trackApplication();
       setState("sent");
       requestAnimationFrame(() => successRef.current?.focus());
     } else {
