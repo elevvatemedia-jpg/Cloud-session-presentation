@@ -198,3 +198,55 @@ print(f"  runway to break-even at 3 founding clients (~month 3 of the plan): {B*
 print(f"  the raise:                                                        {t:6d} PLN")
 print(f"  surplus over the minimum:                                         {t-B*3:6d} PLN "
       f"= {(t-B*3)/B:.1f} extra months of cover")
+FX = 3.85
+# ---- agent/context DEVELOPMENT inference: the line I under-budgeted ----
+# Tuning an agent means re-running it over real batches to see variance, so dev
+# cost is driven by iteration count, not by feature count.
+day = {
+  "Enrichment agent: 25 companies x 8 batches at $0.30 (extraction not yet tuned)": 200*0.30,
+  "Lead agent: 200 candidates x 4 batches at $0.03":                                800*0.03,
+  "Follow-up agent: 100 emails at $0.04 (copy iteration)":                           100*0.04,
+  "Context layer: embedding and retrieval re-runs":                                  10.0,
+}
+D = sum(day.values())
+for k,v in day.items(): print(f"  {k:70s} ${v:6.2f}")
+print(f"  {'full-intensity development day':70s} ${D:6.2f} = {D*FX:6.0f} PLN\n")
+
+phases = [("Intensive build, 14 working days, 100% intensity", 14, 1.00),
+          ("Tuning, months 1-3, 40% intensity",                66, 0.40),
+          ("Refinement, months 4-6, 20% intensity",            66, 0.20)]
+tot = 0
+for lbl, days, inten in phases:
+    c = D*inten*days
+    tot += c
+    print(f"  {lbl:50s} ${c:8.0f} = {c*FX:7.0f} PLN")
+print(f"  {'6-month development inference':50s} ${tot:8.0f} = {tot*FX:7.0f} PLN")
+
+print("\n--- REVISED USE OF FUNDS: CRM shipped, agents and context in build ---")
+uof = [("Agent and context development: model inference",                      19000),
+       ("Agent and context development: Apollo credits and search API",         3500),
+       ("Go to market: own outbound stack, 6 months at 2,000",                 12000),
+       ("Platform infrastructure, 6 months",                                    4600),
+       ("Product design: front end to a price-defensible standard",             5000),
+       ("Operations: accounting, tooling, client compliance documents, 6 mo",   4400),
+       ("Buffer",                                                               1500)]
+t = sum(v for _,v in uof)
+for k,v in uof: print(f"  {k:68s} {v:6d}  {100*v/t:4.1f}%")
+print(f"  {'TOTAL':68s} {t:6d}")
+build = 19000+3500+4600+5000
+print(f"\n  software build share: {build} = {100*build/t:.0f}%   (was 43% on the six-month-build budget)")
+print(f"  recurring burn: outbound 2000 + infra 767 + ops 733 = {2000+767+733} PLN/month")
+print(f"  buffer as share of round: {100*1500/t:.1f}%  <-- thin")
+
+print("\n--- THE NEW DOMINANT RISK: dev inference overrun ---")
+for mult, lbl in ((1, "as planned"), (2, "twice the iteration"), (3, "three times the iteration")):
+    c = tot*FX*mult
+    print(f"  {lbl:28s} dev inference {c:7.0f} PLN = {100*c/t:5.1f}% of the round"
+          + ("  <-- round exhausted" if c > t*0.75 else ""))
+
+print("\n--- WHAT SLIDE 6 HAS LEFT WITHOUT DALE CARNEGIE ---")
+print(f"  Own outbound: ~2,000 PLN/mo -> ~26 meetings = ~{2000/26:.0f} PLN per meeting")
+print(f"  Same, with Mario's 40h priced at 50 PLN/h  = ~{4000/26:.0f} PLN per meeting")
+print("  CRM substrate shipped")
+print("  Founding-member conversations: COUNT UNKNOWN")
+print("  Third-party client evidence: NONE")

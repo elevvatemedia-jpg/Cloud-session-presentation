@@ -186,60 +186,96 @@ should not be guessed.
 
 ---
 
-## 1b. What the money actually buys, given a two-week ship
+## 1b. What the money actually buys
 
-The six-month build budget is gone. If the product ships in two weeks, the
-50,000 PLN is not a build budget at all. It is **operating runway from a product
-that already works**, which is a materially better thing to be raising for.
+**Correction to what I wrote before.** I argued that the raise could not honestly
+be described as "almost entirely to finish building the software", on the basis
+that a two-week ship meant none of the money was a build budget. That was wrong,
+and it was wrong because I had the wrong picture of what is left to build. The
+CRM substrate is shipped. **What remains is the agents and the context layer,
+which is the expensive part**, and it is expensive for a reason I under-budgeted
+by a factor of four: tuning an agent means re-running it over real batches of
+real companies, so development cost is driven by **iteration count**, not by
+feature count.
 
-Monthly burn with no salaries and the product live:
+### Why agent development actually costs money
 
-| | PLN |
+A full-intensity development day, with four agents and a context layer in active
+tuning: [forecast, and the per-unit token costs are the same ones used in
+section 2a]
+
+| | Per day |
 |---|---|
-| Own outbound stack: Apollo, sending, verification, domains | 2,000 |
-| Platform infrastructure | 770 |
-| Accounting | 600 |
-| Founder tooling | 400 |
-| Bank, domains, miscellaneous | 150 |
-| **Total per month** | **3,920** |
+| Enrichment agent: 25 companies per batch, 8 batches, at $0.30 each with extraction not yet tuned | $60.00 |
+| Lead agent: 200 candidates per batch, 4 batches, at $0.03 each | $24.00 |
+| Follow-up agent: 100 emails of copy iteration at $0.04 | $4.00 |
+| Context layer: embedding and retrieval re-runs | $10.00 |
+| **Total** | **$98, about 377 PLN** |
 
-Which means 50,000 PLN is **nine months of runway with 14,700 PLN left over for
-one-off work.** Allocated:
+| Phase | Cost |
+|---|---|
+| Intensive build, 14 working days at full intensity | 5,282 PLN |
+| Tuning, months one to three, 40% intensity | 9,961 PLN |
+| Refinement, months four to six, 20% intensity | 4,980 PLN |
+| **Six months of development inference** | **20,223 PLN** |
 
-| Line | PLN | Share | What it is |
-|---|---|---|---|
-| Go to market: Apollo, sending infrastructure, data, 9 months | 18,000 | 36% | The exact channel that produced 26 meetings for 2,000 PLN a month, kept running for nine months. This is the line with measured evidence behind it. |
-| Product: design and front end to a price-defensible standard | 10,000 | 20% | A fixed-scope designer. You are charging 5,000 PLN a month against Attio-class expectations. |
-| Model inference and infrastructure, 9 months | 9,000 | 18% | 770 PLN a month of platform plus roughly 2,000 PLN of build-sprint and tuning inference. |
-| Operations: accounting, tooling, client compliance documentation | 9,000 | 18% | 600 plus 400 a month, plus the DPA and privacy documentation every client's lawyer will ask for. |
-| Buffer | 4,000 | 8% | |
-| **Total** | **50,000** | | |
+That is 40% of the round, on its own, and it is a real cost rather than a
+notional one. It is also the honest answer to "what costs 50,000 PLN when the
+founders take no salary", which is the question I could not answer before.
 
-**The milestone it reaches:** product live and selling, four founding members
-signed, ValenOS running Valen's own outbound, unit economics measured rather
-than modelled, break-even passed with seven months of cover still in the bank.
+### The revised allocation
 
-**The uncomfortable arithmetic, which has to be dealt with rather than hidden.**
-Break-even with no salaries is three clients (section 3). Nine months of runway
-costs 35,280 PLN. **Runway to the point where three clients cover costs is about
-11,760 PLN.** So 50,000 PLN is roughly 38,000 PLN, nearly ten months, *more*
-than the minimum the plan requires.
+| Line | PLN | Share |
+|---|---|---|
+| Agent and context development: model inference | 19,000 | 38% |
+| Agent and context development: Apollo credits and search API for testing | 3,500 | 7% |
+| Go to market: own outbound stack, 6 months at 2,000 | 12,000 | 24% |
+| Platform infrastructure, 6 months | 4,600 | 9% |
+| Product design: front end to a price-defensible standard | 5,000 | 10% |
+| Operations: accounting, tooling, client compliance documents, 6 months | 4,400 | 9% |
+| Buffer | 1,500 | 3% |
+| **Total** | **50,000** | |
 
-That is not a reason to raise less. It is a reason to stop describing the raise
-as a necessity and start describing it as what it is, which is section 1c.
+**Software build is now 32,100 PLN, 64% of the round**, against 43% on the
+budget I built before. So "almost entirely to finish building the software" is
+roughly defensible, and the use-of-funds slide can say so without a reader
+catching an inconsistency. Recurring burn is 3,500 PLN a month.
 
-One sentence of pushback on the compliance line and then I drop it, because
-Mario has already ruled it off the slides and that is the right call for the
-slides. Polish cold-email consent under PKE is not an investor question, it is a
-**client** question: the first mid-market prospect with an in-house lawyer will
-ask, and the answer has to exist before that meeting rather than after it. It is
-4,000 PLN inside the operations line, it gates the first standard-price sale, and
-it is invisible on the deck. That is the whole of my position on it.
+**The milestone it reaches:** four agents and the context layer live and tuned on
+real data, ValenOS running Valen's own outbound, four founding members signed,
+unit economics measured rather than modelled, break-even passed.
 
-## 1c. The actual investment case, which is better than "we need the money"
+### The new dominant risk, which is sharper and more useful than the old ones
 
-Here is the argument the arithmetic supports, and it is checkable from the
-numbers in section 2c rather than asserted.
+Development inference scales with **how many iterations the agents need**, and
+nobody knows that number until they are in it.
+
+| | Dev inference | Share of the round |
+|---|---|---|
+| As planned | 20,223 PLN | 40% |
+| Twice the iteration | 40,447 PLN | **81%, round exhausted** |
+| Three times the iteration | 60,670 PLN | **121%, round exhausted** |
+
+**At two to three times the planned iteration, inference alone consumes the
+entire raise and there is nothing to show for it.** That is now the single
+largest execution risk in the plan, ahead of everything in section 6, and it has
+a cheap control: instrument token spend per test run from day one, set a weekly
+inference budget, and get text extraction working early, because extraction is
+the difference between $0.30 and $0.12 per enrichment run and it compounds across
+every iteration that follows. Section 5, assumption three, becomes the first
+engineering task rather than a measurement to take later.
+
+The buffer at 3% is thin, and that is a consequence of the allocation rather than
+an oversight. Say it plainly if asked: the round is fully committed, the
+contingency is the design contractor, and that line gets cut first if inference
+runs hot.
+
+## 1c. The second half of the investment case
+
+Section 1b gives the build argument, which is now the primary one. This is the
+second argument, and it stands beside rather than instead of it. It is checkable
+from the numbers in section 2c rather than asserted, which makes it useful in a
+room.
 
 Each founding member costs **78,000 PLN over three years**: 2,000 PLN a month of
 forgone subscription for 36 months, plus the 6,000 PLN setup fee you waive.
@@ -726,19 +762,26 @@ ask the lawyer specifically about a limited pełnomocnictwo for the commercial
 acts Mario needs before 18; and plan the next round's timing around his
 birthday rather than discovering the constraint during it.
 
-### 6b. Concentration in one network
+### 6b. No third-party client evidence at all
 
-Dale Carnegie is both the proof point and, if the first clients come through it,
-the whole pipeline. Two distinct failure modes. The relationship cools and new
-business stops, with no second channel proven. Or the first five clients are all
-trainers and consultancies, in which case you have built a vertical product
-while telling the investor you built a horizontal one, and the second vertical
-costs as much as the first.
+This risk inverted. It was concentration: if the first clients all came through
+one relationship, you would have a vertical product and a single point of
+failure. With Dale Carnegie out of the presentation, the problem is the opposite
+and sharper. **Slide 6 now carries no third-party client evidence whatsoever.**
 
-*Mitigation:* a stated cap on any single referral source, say 40% of new
-clients, and a requirement that **at least two of the first five come from cold
-outbound you ran yourself.** That is also the only honest way to prove the
-acquisition channel works, so it costs nothing you were not going to spend.
+What is left is Valen's own outbound numbers, which prove the channel works and
+that Mario can sell, and a shipped CRM substrate. Both are real. Neither is a
+customer saying ValenOS did something for them.
+
+*Mitigation, and it is a slide decision rather than a business one.* State it
+first, in your own words, before the angel works it out: the approach is proven,
+the channel is measured, the product is two weeks from running it, and the
+founding-member cohort exists precisely to produce the evidence that is missing.
+An angel who hears that said plainly reads it as self-awareness. An angel who
+discovers a traction slide with no customer on it reads it as concealment. The
+underlying concentration risk still applies to whoever the first clients turn out
+to be, so the section 4 discipline stands: at least two of the first five from
+cold outbound you ran yourself.
 
 ### 6c. PKE art. 398 and Polish cold-email consent
 
@@ -802,8 +845,13 @@ funds as a dated month three to four milestone. It is the product proof, the
 sales asset and the cheapest QA available, all in one line item. Saying this
 before the investor does converts the weakest slide into a credible one.
 
-### 6f. Four more worth naming
+### 6f. Five more worth naming
 
+- **Development inference overrun, which is now the largest of them.** Section
+  1b. At two to three times the planned iteration count, model spend alone
+  consumes the round. Control it with per-run instrumentation and a weekly
+  budget from day one, and get text extraction working before the tuning phase
+  rather than during it.
 - **Deliverability as a systemic single point of failure.** If shared sending
   infrastructure takes a reputation hit, every client's campaign degrades at
   once. Clients sending from their own domains mitigates this and the consent
@@ -822,107 +870,100 @@ before the investor does converts the weakest slide into a credible one.
 
 ---
 
-## 7. The conclusion, restated for a two-week ship
+## 7. The conclusion, restated again
 
-The two-week answer did not weaken the earlier conclusion, it sharpened it.
+The picture changed twice, and the second change was the important one.
 
-**Before:** 50,000 PLN was six months of build runway, 43% of it software, and
-break-even arrived in month two of selling. **Now:** the product ships in a
-fortnight, so none of the 50,000 PLN is build runway, break-even arrives sooner
-still, and the gap between what the plan needs (about 11,760 PLN) and what is
-being raised (50,000 PLN) is roughly ten months of cover.
+**What I had wrong.** I budgeted six months of build, then rebuilt it as nine
+months of runway from a finished product, and argued from both that the raise
+could not honestly be called a build budget. With the CRM shipped and the agents
+and context still to build, the right answer was neither: **the raise is a build
+budget, and the thing it buys is iteration on the agents.** 64% of it is software.
+The original framing in the brief was closer to correct than my revision of it.
 
-So "we need 50,000 PLN to finish the software" is now not merely imprecise, it
-is **contradicted by your own ship date on the previous slide.** Any angel who
-reads slide 5 (the product is two weeks out) and then slide 9 (we need the money
-to build it) has caught an inconsistency, and that is the kind of catch that ends
-a meeting for a reason unrelated to the quality of the business.
+**What still holds.** Break-even is three clients with no salaries and ten paying
+both founders. The twelve-month plan turns cash-positive in month two. Each
+founding member costs 78,000 PLN over three years, so the money also buys the
+option to cap that cohort at three or four rather than taking as many discounted
+members as cash flow demands, which is worth roughly four times the raise. None
+of that moved.
 
-The replacement is section 1c, and it is a better pitch on its own merits:
+**So the case to put to the angel has two halves and both are true.** The money
+funds the hard part of the build, which is agent iteration, and the arithmetic
+for that is on the slide. And it buys the option not to discount, which is the
+reason the figure is 50,000 rather than 20,000. A strategic angel gets a third
+reason that matters more than either: on this plan their introductions into
+Polish mid-market sales organisations are worth more than their cash, and the
+deck should ask for both in the same breath rather than treating the
+introductions as a bonus.
 
-> The product ships in two weeks. Break-even is three clients. We are not
-> raising to build it. We are raising so that the size of the founding-member
-> cohort is a marketing decision instead of a cash-flow decision, because every
-> member we do not have to discount is worth 78,000 PLN over three years.
-
-That framing does three things the old one could not. It makes the 50,000 PLN
-figure look deliberate rather than arbitrary. It gives the angel a return
-argument built from the company's own price list rather than from a forecast. And
-it is robust to the obvious challenge, because the honest answer to "do you need
-this money?" becomes "no, and that is the point: we want it on terms we choose
-rather than terms a customer dictates when we are short."
-
-**Two things follow, and they are the same two as before.** If the angel is
-strategic, someone with distribution into Polish mid-market sales organisations,
-take the money and do not negotiate hard over the cap, because their introductions
-are worth more than the cash. If the angel is purely financial, the arithmetic
-genuinely does not require them, and taking three founding members instead is
-the alternative to weigh rather than dismiss.
+**The risk register has reordered.** The dominant execution risk is no longer
+whether the product ships or whether the close rate holds. It is that
+development inference overruns and the round disappears into test runs. Two to
+three times the planned iteration exhausts it. That risk is cheap to control and
+expensive to ignore, and it is the one I would want a weekly number on.
 
 ## 8. What is still open
 
-Resolved by Mario: the old deck, the age and corporate-law material, the ship
-date, the approval gate. Remaining, ordered by whether they block the deck.
+**Settled:** the old deck is not a reference. Age and corporate-law material stay
+off the slides. The CRM substrate is shipped; agents and context are in build and
+are what the money funds. No approval gate by default, available per workflow.
+The ask is a convertible loan, 50,000 PLN, cap 2,000,000 PLN pre-money, 20%
+discount, converting at the next round, with a pro-rata right and a quarterly
+one-page report. The angel is strategic, so the deck asks for introductions as
+explicitly as for money. Dale Carnegie does not appear. Built in Figma Slides.
 
-**Settled since:**
+**Blocking:**
 
-1. **The ask is a convertible loan.** 50,000 PLN, cap 2,000,000 PLN pre-money,
-   20% discount, converting at the next round, with a pro-rata right and a
-   quarterly one-page report. Slide 10 carries the instrument and those terms
-   and nothing else.
-2. **The angel is strategic.** Which changes slide 10's emphasis: the deck asks
-   for the introductions as explicitly as it asks for the money, because on this
-   plan the introductions are worth more. Section 7's recommendation applies:
-   do not negotiate hard over the cap with this person. It also means the 1c
-   argument moves from being the whole case to being the proof that the figure
-   is deliberate, with the distribution ask carrying equal weight beside it.
+1. **The palette.** The network policy denied valen-partners.com, so the site
+   could not be read. Either allow the domain, or paste the hex values for paper,
+   ink, muted text, hairline and gold. Failing both, I build the master on Figma
+   variables with values chosen from the brief's description, so swapping the
+   real ones later is one edit rather than a redraw.
+2. **How many founding-member conversations are live, and at what stage?** With
+   Dale Carnegie out, this is the only forward-looking evidence slide 6 has, and
+   it is the difference between a slide that works and a slide that is empty.
 
-**Still blocking, because a slide cannot be written without them:**
+**Not blocking. Proceeding with a labelled assumption unless corrected:**
 
-3. **The real feature list, shipped versus two weeks out.** Slide 5 needs it and
-   I will not invent screens or capabilities. If there are screenshots, they
-   belong on the slide instead of bullets, per section 5 assumption two.
-4. **Traction, precisely.** Is Dale Carnegie a paying client, a pilot, or a
-   reference? How many founding-member conversations are live, and at what
-   stage? Slide 6 is the honesty slide and it needs facts I can stand behind
-   under a direct question.
+3. **Close rate on the 26 meetings.** The deck ships 6% to 12% marked forecast,
+   with the 4% downside row printed beside it.
+4. **Token spend per agent run, measured.** Until then the deck quotes 62% to 79%
+   gross margin rather than a point figure. Note that this measurement is now
+   also the control on the largest risk in the plan, per section 1b.
+5. **Client mailboxes or ours?** Assuming the client's own domains, which is
+   cheaper and better on liability.
 
-**Not blocking. I will proceed with a labelled assumption unless corrected:**
-
-5. **Close rate on the 26 meetings.** The most load-bearing number in section 4.
-   Without it the twelve-month plan ships with 6% to 12% on the slide, marked
-   forecast, plus the 4% downside row.
-6. **Has token spend per agent run been measured?** Collapses a 2.4x range in
-   COGS. Until then the deck quotes 62% to 79% gross margin rather than a point
-   figure.
-7. **Do clients send from their own mailboxes, or do we provide them?** Worth
-   150 PLN per client per month. I will assume the client's own domains, which
-   is both cheaper and the right answer on liability.
 ## 9. What this means for the twelve slides
 
-- **Slide 5 shows the product, it does not describe it.** Section 5, assumption
-  two. This is the highest-leverage design decision in the deck.
-- **Slide 9, use of funds, is nine months of runway from a shipped product.**
-  Four lines plus a buffer, from section 1b. It must not say "to build the
-  product", because slide 5 has just said the product is built.
-- **Slide 10 carries the 1c argument and the distribution ask together**, not a
-  funding-gap argument. 78,000 PLN per founding member, roughly 4x the raise in
-  preserved revenue, one table, no forecast in it; and beside it, in plain words,
-  the introductions being asked for. A strategic angel reads the second half as
-  the reason they specifically are being approached.
+Built in **Figma Slides**.
+
+- **Slide 5 shows the product, it does not describe it.** The CRM substrate is
+  shipped, so this slide is a real screen with real records, and the agents and
+  context layer are what the 50,000 finishes. That split is now the slide's whole
+  structure and it is a strong one: the unglamorous half is done, the money
+  finishes the half that is hard.
+- **Slide 9, use of funds, leads with agent and context development at 64% of the
+  round.** Section 1b. It can say the money finishes the software, because now it
+  does. The iteration-cost arithmetic belongs on the slide, because it is the
+  answer to "what costs 50,000 PLN when nobody takes a salary."
+- **Slide 10 carries the convertible terms, the 1c option-not-to-discount table,
+  and the distribution ask**, in that order of space. 78,000 PLN per founding
+  member, roughly 4x the raise in preserved revenue, no forecast in it.
+- **Slide 6 is the honest slide and it is thin.** No Dale Carnegie, no customer
+  outcome. It carries the 77 PLN per meeting figure, the 26 meetings, the shipped
+  substrate and the live founding-member conversations, and it says in one line
+  that the approach and channel are proven while the product outcome is not yet.
+  Section 6b.
 - **Slide 7 quotes 62% to 79% gross margin and does not quote LTV to CAC.** The
-  setup-fee-covers-acquisition-cost point is both stronger and true.
-- **Slide 8 carries the 4% close-rate row** beside the base case. A forecast
-  printed with its own downside reads as rigour rather than optimism.
-- **Slide 6 separates what the approach proved from what the product proved.**
-  Section 6e. The 130,000 PLN of pipeline and the 26 meetings were produced by
-  Mario and a tool stack, not by ValenOS, and saying so first is worth more than
-  hoping it is not asked.
+  setup-fee-covers-acquisition-cost point is stronger and true.
+- **Slide 8 carries the 4% close-rate row** beside the base case.
 - **Slide 3 states the gate in one line:** agents run unattended by default, an
-  approval step is available per workflow. Default carries the pitch, option
-  removes the objection.
+  approval step available per workflow.
 - **Slide 12 caps the founding cohort at three or four** and bounds "for life" to
-  the scope signed at go-live. Section 2c. At ten members the model in 1c inverts
-  and the discount becomes the reason the raise was needed.
-- **No legal or corporate-structure content on any slide.** Adopted.
-- **Twelve slides still holds**, with the brief's spine intact.
+  the scope signed at go-live, and names the inference-overrun risk rather than a
+  generic one, because a specific risk with a stated control reads as competence.
+- **No legal or corporate-structure content on any slide.**
+- **Twelve slides still holds.** With Dale Carnegie out, slide 6 is the one at
+  risk of being too thin to justify its place; if the founding-member
+  conversations are few, it folds into slide 8 and the deck runs to eleven.
