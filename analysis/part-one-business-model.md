@@ -580,27 +580,34 @@ per month. Cost per client 1,350 PLN early, falling to 1,100 PLN by month nine.
 Fixed costs 3,920 PLN. One delivery hire from month eight at 10,000 PLN. No
 founder salaries, which matters for reading the bottom line.
 
-| M | Close rate | Founding | Standard | Total | MRR | Setup | Revenue | COGS | Fixed | Hire | Net | Cumulative |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | 6% | 1.6 | 0.0 | 1.6 | 4,680 | 0 | 4,680 | 2,106 | 3,920 | 0 | -1,346 | -1,346 |
-| 2 | 6% | 3.1 | 0.0 | 3.1 | 9,173 | 0 | 9,173 | 4,128 | 3,920 | 0 | 1,125 | -221 |
-| 3 | 6% | 4.0 | 0.0 | 4.0 | 12,000 | 0 | 12,000 | 5,400 | 3,920 | 0 | 2,680 | 2,459 |
-| 4 | 8% | 3.8 | 2.1 | 5.9 | 21,920 | 12,480 | 34,400 | 7,104 | 3,920 | 0 | 23,376 | 25,835 |
-| 5 | 8% | 3.7 | 4.1 | 7.8 | 31,443 | 12,480 | 43,923 | 9,316 | 3,920 | 0 | 30,687 | 56,522 |
-| 6 | 8% | 3.5 | 6.0 | 9.5 | 40,585 | 12,480 | 53,065 | 11,439 | 3,920 | 0 | 37,706 | 94,229 |
-| 7 | 10% | 3.4 | 8.4 | 11.8 | 51,962 | 15,600 | 67,562 | 14,102 | 3,920 | 0 | 49,540 | 143,769 |
-| 8 | 10% | 3.3 | 10.6 | 13.9 | 62,884 | 15,600 | 78,484 | 16,658 | 3,920 | 10,000 | 47,906 | 191,675 |
-| 9 | 10% | 3.1 | 12.8 | 15.9 | 73,368 | 15,600 | 88,968 | 17,519 | 3,920 | 10,000 | 57,530 | 249,205 |
-| 10 | 12% | 3.0 | 15.4 | 18.4 | 86,033 | 18,720 | 104,753 | 20,250 | 3,920 | 10,000 | 70,584 | 319,788 |
-| 11 | 12% | 2.9 | 17.9 | 20.8 | 98,192 | 18,720 | 116,912 | 22,872 | 3,920 | 10,000 | 80,120 | 399,908 |
-| 12 | 12% | 2.8 | 20.3 | 23.1 | 109,864 | 18,720 | 128,584 | 25,389 | 3,920 | 10,000 | 89,275 | 489,184 |
+| M | Close rate | Founding | Standard | Total | MRR | Revenue | Net | Cumulative |
+|---|---|---|---|---|---|---|---|---|
+| 1 | 6% | 1.6 | 0.0 | 1.6 | 4,680 | 4,680 | -1,346 | -1,346 |
+| 2 | 6% | 3.1 | 0.0 | 3.1 | 9,173 | 9,173 | 1,125 | -221 |
+| 3 | 6% | 4.0 | 0.5 | 4.5 | 14,476 | 17,448 | 7,460 | 7,239 |
+| 4 | 8% | 3.8 | 2.6 | 6.4 | 24,297 | 36,777 | 25,183 | 32,421 |
+| 5 | 8% | 3.7 | 4.5 | 8.2 | 33,726 | 46,206 | 32,422 | 64,843 |
+| 6 | 8% | 3.5 | 6.4 | 10.0 | 42,777 | 55,257 | 39,371 | 104,215 |
+| 7 | 10% | 3.4 | 8.8 | 12.2 | 54,065 | 69,665 | 51,139 | 155,354 |
+| 8 | 10% | 3.3 | 11.0 | 14.3 | 64,903 | 80,503 | 49,441 | 204,794 |
+| 9 | 10% | 3.1 | 13.2 | 16.3 | 75,307 | 90,907 | 59,042 | 263,836 |
+| 10 | 12% | 3.0 | 15.8 | 18.8 | 87,894 | 106,614 | 72,035 | 335,871 |
+| 11 | 12% | 2.9 | 18.3 | 21.1 | 99,979 | 118,699 | 81,514 | 417,385 |
+| 12 | 12% | 2.8 | 20.7 | 23.4 | 111,580 | 130,300 | 90,613 | 507,998 |
 
-Month twelve: **23 clients, 110,000 PLN MRR, 1.32M PLN ARR run-rate.**
+Month twelve: **23 clients, 112,000 PLN MRR, 1.34M PLN ARR run-rate.**
 
-**Now the part that matters more than the table.** That cumulative 489,000 PLN
-is not profit, it is profit plus two unpaid salaries. Charge market founder
-comp of 24,100 PLN per month for twelve months and the real surplus is
-**200,000 PLN.** Use that number. The 489,000 one is true and misleading, which
+One correction against the first version of this table. The spreadsheet models
+demand beyond the founding cap converting at **standard** price, where my first
+script discarded it. The spreadsheet is right, so months three onward are
+slightly higher and the deck carries the spreadsheet's numbers. Every figure
+above is a live formula in `model-valenos.xlsx`, so changing an assumption
+changes the table.
+
+**Now the part that matters more than the table.** That cumulative 508,000 PLN
+is not profit, it is profit plus two unpaid salaries. Charge market founder comp
+of 24,100 PLN per month for twelve months and the real surplus is
+**219,000 PLN.** Use that number. The 508,000 one is true and misleading, which
 is the worst kind of number to put in front of an investor.
 
 **Sensitivity on the one assumption that carries everything.** Holding the close
