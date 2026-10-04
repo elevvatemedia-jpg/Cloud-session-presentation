@@ -864,37 +864,40 @@ the alternative to weigh rather than dismiss.
 Resolved by Mario: the old deck, the age and corporate-law material, the ship
 date, the approval gate. Remaining, ordered by whether they block the deck.
 
-**Blocking, because a slide cannot be written without them:**
+**Settled since:**
 
-1. **The structure of the ask.** Slide 10 is "the ask and the structure" and has
-   to say what the angel receives. Three choices: a named equity percentage, a
-   convertible with a cap, or a revenue-share loan. No legal detail goes on the
-   slide either way, just the instrument and the headline terms. My
-   recommendation remains the convertible, now for a simpler reason than before:
-   with the product shipping in two weeks, the next twelve months will set a
-   valuation far better than any number you could defend today.
-2. **The real feature list, shipped versus two weeks out.** Slide 5 needs it and
+1. **The ask is a convertible loan.** 50,000 PLN, cap 2,000,000 PLN pre-money,
+   20% discount, converting at the next round, with a pro-rata right and a
+   quarterly one-page report. Slide 10 carries the instrument and those terms
+   and nothing else.
+2. **The angel is strategic.** Which changes slide 10's emphasis: the deck asks
+   for the introductions as explicitly as it asks for the money, because on this
+   plan the introductions are worth more. Section 7's recommendation applies:
+   do not negotiate hard over the cap with this person. It also means the 1c
+   argument moves from being the whole case to being the proof that the figure
+   is deliberate, with the distribution ask carrying equal weight beside it.
+
+**Still blocking, because a slide cannot be written without them:**
+
+3. **The real feature list, shipped versus two weeks out.** Slide 5 needs it and
    I will not invent screens or capabilities. If there are screenshots, they
    belong on the slide instead of bullets, per section 5 assumption two.
-3. **Traction, precisely.** Is Dale Carnegie a paying client, a pilot, or a
+4. **Traction, precisely.** Is Dale Carnegie a paying client, a pilot, or a
    reference? How many founding-member conversations are live, and at what
    stage? Slide 6 is the honesty slide and it needs facts I can stand behind
    under a direct question.
 
 **Not blocking. I will proceed with a labelled assumption unless corrected:**
 
-4. **Close rate on the 26 meetings.** The most load-bearing number in section 4.
+5. **Close rate on the 26 meetings.** The most load-bearing number in section 4.
    Without it the twelve-month plan ships with 6% to 12% on the slide, marked
    forecast, plus the 4% downside row.
-5. **Has token spend per agent run been measured?** Collapses a 2.4x range in
+6. **Has token spend per agent run been measured?** Collapses a 2.4x range in
    COGS. Until then the deck quotes 62% to 79% gross margin rather than a point
    figure.
-6. **Do clients send from their own mailboxes, or do we provide them?** Worth
+7. **Do clients send from their own mailboxes, or do we provide them?** Worth
    150 PLN per client per month. I will assume the client's own domains, which
    is both cheaper and the right answer on liability.
-7. **Is the angel strategic or financial?** Changes the emphasis of slide 10,
-   not its content.
-
 ## 9. What this means for the twelve slides
 
 - **Slide 5 shows the product, it does not describe it.** Section 5, assumption
@@ -902,9 +905,11 @@ date, the approval gate. Remaining, ordered by whether they block the deck.
 - **Slide 9, use of funds, is nine months of runway from a shipped product.**
   Four lines plus a buffer, from section 1b. It must not say "to build the
   product", because slide 5 has just said the product is built.
-- **Slide 10 carries the 1c argument, not a funding-gap argument.** 78,000 PLN
-  per founding member, roughly 4x the raise in preserved revenue. One table, no
-  forecast in it.
+- **Slide 10 carries the 1c argument and the distribution ask together**, not a
+  funding-gap argument. 78,000 PLN per founding member, roughly 4x the raise in
+  preserved revenue, one table, no forecast in it; and beside it, in plain words,
+  the introductions being asked for. A strategic angel reads the second half as
+  the reason they specifically are being approached.
 - **Slide 7 quotes 62% to 79% gross margin and does not quote LTV to CAC.** The
   setup-fee-covers-acquisition-cost point is both stronger and true.
 - **Slide 8 carries the 4% close-rate row** beside the base case. A forecast
