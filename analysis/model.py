@@ -157,3 +157,44 @@ for n, gp, ch, cac in [("pessimistic",1096,0.05,3077),("base",1856,0.04,1923),("
 print("\nchurn -> average lifetime:", {f"{c:.0%}": round(1/c,1) for c in (0.02,0.03,0.04,0.05,0.07)})
 print("\ntrue cost per meeting if Mario's 40h/mo priced at 50 PLN/h:",
       f"{(2000+2000)/26:.0f} PLN vs the 77 PLN tools-only figure")
+# ---- monthly burn, no salaries, product already shipped ----
+burn = {"Own outbound stack": 2000, "Platform infrastructure": 770,
+        "Accounting": 600, "Founder tooling": 400, "Bank/domains/misc": 150}
+B = sum(burn.values())
+print(f"monthly burn, no salaries: {B} PLN")
+for m in (6, 9, 12):
+    print(f"  {m:2d} months of pure runway = {B*m:6d} PLN")
+
+print("\n--- USE OF FUNDS, 9 months, product ships in 2 weeks ---")
+uof = [("Go to market: Apollo, sending, data, 9 mo", 18000),
+       ("Product: design and front end to a price-defensible standard", 10000),
+       ("Model inference and infrastructure, 9 mo", 9000),
+       ("Operations: accounting, tooling, client compliance docs", 9000),
+       ("Buffer", 4000)]
+t = sum(v for _, v in uof)
+for k, v in uof: print(f"  {k:62s} {v:6d}  {100*v/t:4.1f}%")
+print(f"  {'TOTAL':62s} {t:6d}")
+print(f"  cross-check: outbound 2000x9={2000*9}, infra 770x9={770*9}+dev inference ~2000,")
+print(f"               accounting 600x9={600*9} + tooling 400x9={400*9} = {600*9+400*9}")
+
+print("\n--- THE INVESTMENT CASE: the raise buys the option not to discount ---")
+PER_MEMBER_3YR = 2000*36 + 6000
+print(f"cost of one founding member over 3 years: {2000*36} forgone MRR + 6000 forgone setup = {PER_MEMBER_3YR} PLN")
+for without, with_ in ((6, 2), (6, 3), (8, 4), (5, 3)):
+    saved = (without - with_) * PER_MEMBER_3YR
+    print(f"  cohort {without} without the raise -> {with_} with it: "
+          f"{without-with_} members not discounted = {saved:7d} PLN preserved, {saved/50000:.1f}x the raise")
+
+print("\n--- BREAK-EVEN RECAP (unchanged, but now reached in weeks not months) ---")
+GP3_F_d, GP3_F_u, GP3_S_d = 1662, 902, 3662
+import math
+for lbl, fx in (("two shareholders", B), ("single shareholder + ZUS", B+1900)):
+    for pn, gp in (("founding, disciplined", GP3_F_d), ("founding, undisciplined", GP3_F_u),
+                   ("standard, disciplined", GP3_S_d)):
+        print(f"  {lbl:26s} {pn:24s} {fx/gp:4.2f} -> {math.ceil(fx/gp)} clients")
+
+print("\n--- WHAT 50,000 ACTUALLY COVERS vs WHAT IS NEEDED ---")
+print(f"  runway to break-even at 3 founding clients (~month 3 of the plan): {B*3:6d} PLN")
+print(f"  the raise:                                                        {t:6d} PLN")
+print(f"  surplus over the minimum:                                         {t-B*3:6d} PLN "
+      f"= {(t-B*3)/B:.1f} extra months of cover")

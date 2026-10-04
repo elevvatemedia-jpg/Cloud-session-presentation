@@ -2,9 +2,7 @@
 
 For Mario and Bruno. English, since it is for us. Status: draft for correction.
 
-Conventions used throughout. FX is **3.85 PLN to the dollar**, the rate the
-previous V&P deck used and documented as checked September 2026, so the two
-documents stay consistent. Everything drawn from the approved facts list is
+Conventions used throughout. FX is **3.85 PLN to the dollar**. Everything drawn from the approved facts list is
 unmarked. Everything else is marked **[assumption]** or **[forecast]** at the
 point it is used. I am not a Polish lawyer or tax adviser; the corporate and
 tax sections are a brief for a one hour conversation with one, not a substitute
@@ -12,42 +10,32 @@ for it.
 
 ---
 
-## 0. First, three contradictions with what is already on record
+## 0. What Mario settled, and what it changed
 
-There is an existing deck in Figma, fifteen slides, English, at
-`figma.com/slides/nZCVLnHAeYLKMJNc6748ay`. Before anything else, it conflicts
-with this brief in ways that are substantive rather than cosmetic:
+Four decisions came back. Two of them changed the arithmetic.
 
-1. **The raise moved from $95,000 to 50,000 PLN.** At 3.85 that is $95,000 down
-   to roughly $13,000, a factor of seven. If that deck has been sent to anyone,
-   anyone who sees both will ask what happened. Decide the answer now. The
-   honest one is probably "we re-scoped to the minimum that finishes the
-   product", which is a good answer, but it needs to be said rather than
-   discovered.
-2. **The old deck draws a human approval step in gold on the agent-chain
-   slide.** This brief says everything runs fully automatically, no human
-   approval gate. That is a reversal of the product position, not a layout
-   change, and it is the single most commercially consequential sentence in the
-   brief. See section 5, assumption four, and section 6c.
-3. **The old deck says there is no price yet and that pricing is being set with
-   the founding members.** This brief has prices. Fine, that is progress, but
-   "locked for life" is now a number on paper and it needs the treatment in
-   section 2c before it goes anywhere near a customer.
+1. **The old deck is not a reference.** This is a new deck. Nothing is carried
+   over: not the design language, not the structure, not its figures. Its
+   284,500 PLN cost-of-work number is therefore also off the table as a given.
+   If the problem slide needs a cost-of-today figure, I build it from scratch and
+   label it an assumption on the slide, with the components printed.
+2. **Mario's age and the corporate-law detail stay out of the pitch.** Agreed and
+   adopted. One narrow carve-out below, because slide 10 in the brief's own spine
+   is "the ask and the structure", and "the structure" means naming the
+   instrument. That is commercial, not legal.
+3. **The MVP ships in two weeks, given the funds.** This is the big one. It
+   invalidates the six-month build budget I wrote and replaces it with something
+   better. Section 1b is rebuilt and section 1c is new.
+4. **No approval gate by default, available as configuration.** Settled, and it
+   is the commercially strongest version of the answer: the default carries the
+   pitch, the option removes the objection. Assumption four in section 5 is
+   resolved and the product slide can state both in one line.
 
-One more thing from the old deck is worth keeping rather than discarding: its
-slide 02 computed the annual cost of the sales admin work the agents take over
-for a five person Polish B2B sales team at **284,500 PLN per year**, with every
-component sourced and the arithmetic checked programmatically. That is the best
-material available for the problem slide, and ValenOS at 5,000 PLN per month is
-60,000 PLN per year against it. **Confirm you still stand behind that 284,500
-figure** and it goes on slide 2 as is.
-
-Also: the old deck's README mentions **five companies testing, not paying**. The
-facts list in this brief does not mention them. If those five are still live
-they are the most important thing on the traction slide. If they went quiet,
-that is worth knowing too.
-
----
+One thing I am noting once and then dropping, because it is a cost rather than a
+legal point. If Valen is a single-shareholder sp. z o.o., the sole-shareholder
+ZUS obligation is roughly **1,900 PLN per month, about 22,800 PLN a year.** That
+moves break-even from three clients to four. It belongs in the model as a toggle
+and nowhere near a slide. It stays in section 3 for that reason alone.
 
 ## 1a. What the angel actually gets for 50,000 PLN
 
@@ -151,11 +139,9 @@ follows from that.
 
 1. **It sets no valuation today.** You have no revenue. Any number you write
    down now is a guess that will be used against you in the next round.
-2. **It defers the minor-shareholder problem**, possibly past the point where it
-   exists. No cap table change at signing means no parental consent and no
-   guardianship court permission at signing. Mario is 17. If he turns 18 before
-   the conversion event, the whole structural problem becomes a timing problem.
-   **I need his date of birth to know whether this argument holds.**
+2. **It keeps the cap table still** until there is something to price it
+   against. With the product two weeks out, the next twelve months of selling
+   will produce a far better valuation than any number defensible today.
 3. **The transaction cost is 2,000 to 4,000 PLN instead of 5,000 to 12,000.** On
    a 50,000 PLN round, that difference is 10% to 16% of the money.
 4. **Bruno signs it alone**, as the sole member of the zarząd, with no notary
@@ -200,71 +186,86 @@ should not be guessed.
 
 ---
 
-## 1b. What the money actually buys
+## 1b. What the money actually buys, given a two-week ship
 
-The brief says "almost entirely to finish building the software." The line items
-do not support that sentence, and section 7 explains why saying it anyway is the
-most expensive mistake available here.
+The six-month build budget is gone. If the product ships in two weeks, the
+50,000 PLN is not a build budget at all. It is **operating runway from a product
+that already works**, which is a materially better thing to be raising for.
 
-Structured as **six months of runway to ship ValenOS and make it legally
-saleable.** That framing matches the build period, during which the twelve month
-plan in section 4 has not yet started.
+Monthly burn with no salaries and the product live:
+
+| | PLN |
+|---|---|
+| Own outbound stack: Apollo, sending, verification, domains | 2,000 |
+| Platform infrastructure | 770 |
+| Accounting | 600 |
+| Founder tooling | 400 |
+| Bank, domains, miscellaneous | 150 |
+| **Total per month** | **3,920** |
+
+Which means 50,000 PLN is **nine months of runway with 14,700 PLN left over for
+one-off work.** Allocated:
 
 | Line | PLN | Share | What it is |
 |---|---|---|---|
-| Own outbound stack, 6 months | 12,000 | 24% | Apollo seats, sending infrastructure, verification, domains. Keeps the pipeline warm through the build so month one of section 4 does not start from zero. |
-| Design contractor, fixed scope | 12,000 | 24% | Design system plus the core screens: companies, people, deals, lists, timeline, workflow builder. Two to three weeks at 120 to 200 PLN per hour. [assumption on rates] |
-| Platform infrastructure, 6 months | 4,600 | 9% | Postgres, app hosting, background workers, object storage, auth, monitoring, transactional email. Roughly 770 PLN per month. |
-| Development inference, 6 months | 4,800 | 10% | Agent test runs during the build. See the arithmetic below. |
-| Legal: convertible plus minor-shareholder opinion | 5,000 | 10% | The instrument itself, plus a specific written opinion on Mario's position. |
-| GDPR and PKE opinion, DPA template, policies | 4,000 | 8% | Section 6c. This gates the first sale. It is not optional and it is the line most founders delete. |
-| Accounting and corporate housekeeping, 6 months | 3,600 | 7% | 600 PLN per month. |
+| Go to market: Apollo, sending infrastructure, data, 9 months | 18,000 | 36% | The exact channel that produced 26 meetings for 2,000 PLN a month, kept running for nine months. This is the line with measured evidence behind it. |
+| Product: design and front end to a price-defensible standard | 10,000 | 20% | A fixed-scope designer. You are charging 5,000 PLN a month against Attio-class expectations. |
+| Model inference and infrastructure, 9 months | 9,000 | 18% | 770 PLN a month of platform plus roughly 2,000 PLN of build-sprint and tuning inference. |
+| Operations: accounting, tooling, client compliance documentation | 9,000 | 18% | 600 plus 400 a month, plus the DPA and privacy documentation every client's lawyer will ask for. |
 | Buffer | 4,000 | 8% | |
 | **Total** | **50,000** | | |
 
-**Development inference, where that 4,800 comes from.** [forecast] Roughly 40
-agent test runs per day during active development, 22 working days, averaging
-60,000 input and 8,000 output tokens per run with aggressive prompt caching. At
-Sonnet-class pricing with 80% cache hit rate on input that is about $0.17 per
-run, so roughly 880 runs per month at $150, or 578 PLN per month. Rounded up to
-800 PLN per month for the months where you are tuning the enrichment agent,
-which is the expensive one.
+**The milestone it reaches:** product live and selling, four founding members
+signed, ValenOS running Valen's own outbound, unit economics measured rather
+than modelled, break-even passed with seven months of cover still in the bank.
 
-**The honest read of this table.** Software build, meaning design plus
-infrastructure plus inference, is **21,400 PLN, 43% of the round.** Go to market
-is 24%. Legal and compliance is 18%. Admin is 7%. Buffer is 8%. So the raise is
-not "almost entirely development" and should not be described that way.
+**The uncomfortable arithmetic, which has to be dealt with rather than hidden.**
+Break-even with no salaries is three clients (section 3). Nine months of runway
+costs 35,280 PLN. **Runway to the point where three clients cover costs is about
+11,760 PLN.** So 50,000 PLN is roughly 38,000 PLN, nearly ten months, *more*
+than the minimum the plan requires.
 
-**Months bought and the milestone reached.** Six months, at an average burn of
-roughly 7,800 PLN per month once the one-off design, legal and compliance items
-are spread across it. The month six milestone, stated as conditions rather than
-predictions:
+That is not a reason to raise less. It is a reason to stop describing the raise
+as a necessity and start describing it as what it is, which is section 1c.
 
-- ValenOS shipped and **running Valen's own outbound**, which is simultaneously
-  the product proof, the sales asset and the cheapest QA you will ever run
-- Legally saleable in Poland: written PKE and GDPR position, DPA template,
-  consent and suppression mechanics in the product
-- Four founding members signed and live
-- **Unit economics measured rather than modelled**, which is to say every number
-  in section 2 of this document replaced with an observed one
+One sentence of pushback on the compliance line and then I drop it, because
+Mario has already ruled it off the slides and that is the right call for the
+slides. Polish cold-email consent under PKE is not an investor question, it is a
+**client** question: the first mid-market prospect with an in-house lawyer will
+ask, and the answer has to exist before that meeting rather than after it. It is
+4,000 PLN inside the operations line, it gates the first standard-price sale, and
+it is invisible on the deck. That is the whole of my position on it.
 
-**One decision this table forces.** If the 2,000 PLN per month outbound spend is
-already being funded from somewhere, that 12,000 PLN moves to either nine months
-of runway instead of six, or more contractor time. **Where does it come from
-today?**
+## 1c. The actual investment case, which is better than "we need the money"
 
-**One recommendation against the obvious.** Do not spend the 12,000 PLN on a
-contract engineer. At 140 to 160 PLN per hour it buys 75 to 85 hours, which is
-two weeks of one person who first has to be onboarded to Bruno's codebase by
-Bruno, whose review time then comes out of his own shipping. The net velocity of
-that is close to zero and plausibly negative. A **designer** on a fixed-scope
-engagement is different: the work is genuinely parallel, Bruno cannot do it as
-fast, and the output is a Figma system plus tokens that speeds him up for
-months. That is the call. It is also conditional on there not already being a
-UI, in which case a designer's output is a rewrite. **What exists in the product
-today, screen by screen?**
+Here is the argument the arithmetic supports, and it is checkable from the
+numbers in section 2c rather than asserted.
 
----
+Each founding member costs **78,000 PLN over three years**: 2,000 PLN a month of
+forgone subscription for 36 months, plus the 6,000 PLN setup fee you waive.
+
+Without 50,000 PLN in the bank, the size of the founding cohort is not a
+marketing decision, it is a **cash-flow decision.** You take as many 3,000 PLN
+for-life members as you need to make rent, and you take them early, when you
+have the least leverage and the weakest case studies. With the money in the
+bank, you cap the cohort at the number you actually need for social proof, which
+is three or four, and everyone after that pays 6,000 PLN setup plus 5,000 PLN a
+month.
+
+| Cohort without the raise | Cohort with it | Members not discounted | Revenue preserved over 3 years | Multiple of the raise |
+|---|---|---|---|---|
+| 6 | 3 | 3 | **234,000 PLN** | 4.7x |
+| 6 | 2 | 4 | 312,000 PLN | 6.2x |
+| 5 | 3 | 2 | 156,000 PLN | 3.1x |
+
+**50,000 PLN buys the option not to discount, and that option is worth roughly
+four times the raise.** [the cohort sizes are assumptions; the 78,000 PLN per
+member is arithmetic from the stated prices]
+
+This is the strongest honest framing available, for three reasons. It is true.
+It is checkable in front of the investor, on one slide, with no forecast in it.
+And it answers the question the angel is actually asking, which is not "can you
+build it" but "why does this need my money rather than a customer's."
 
 ## 2. Unit economics
 
@@ -642,20 +643,26 @@ start on Monday and it is the most valuable thing in this document.** It also
 has a second payoff: fifteen conversations at the real price tell you what to
 build.
 
-### 2. Bruno can ship a CRM plus four agents plus a workflow engine in six months, alone
+### 2. The two-week ship claim survives being stressed in the room
 
-A multi-tenant CRM with companies, people, deals, lists and a timeline, plus
-four agents, plus a workflow builder with triggers and chained steps, plus auth,
-email infrastructure, deliverability handling, consent mechanics and
-self-reporting, is a large amount of software for one engineer in six months.
-This gates every other assumption, and no amount of money at this round size
-fixes it.
+This replaces the six-month version, and the risk moved rather than disappeared.
+A multi-tenant CRM with companies, people, deals, lists and a timeline, plus four
+agents, plus a workflow engine with triggers and chained steps, plus auth, email
+infrastructure, deliverability and consent mechanics, **in two weeks**, is an
+extraordinary claim. It is either the strongest thing in the deck or the thing
+that ends the meeting, and which one depends entirely on whether it can be shown.
 
-**How to test it: write the MVP scope as one line per feature and then decide
-what is not in it.** The cheapest test available is deciding, on paper, that the
-workflow builder ships as config files rather than a UI, or that three agents
-ship instead of four. **Cost: an afternoon.** If the list does not shorten, the
-six month date is a wish.
+**How to test it: do not put the two-week claim on a slide as a bullet. Show the
+product.** A live demo, or failing that a screenshot grid of real screens with
+real records in them. An angel who sees the software working stops asking how
+long it took. An angel who reads "MVP in two weeks" as a promise discounts every
+other number on the page, and correctly, because that is the single least
+believable sentence available to a two-person team.
+
+**Cost: zero. It is a slide-design decision, not an experiment.** The corollary
+is that slide 5 in the brief's spine, what exists today versus what the 50,000
+finishes, has to be mostly "exists today", and I need the real feature list to
+write it without inventing anything.
 
 ### 3. Token cost per client stays under roughly 600 PLN per month
 
@@ -815,101 +822,102 @@ before the investor does converts the weakest slide into a credible one.
 
 ---
 
-## 7. The conclusion the arithmetic forces, which is not the one the brief assumes
+## 7. The conclusion, restated for a two-week ship
 
-Three things are true at once and they do not fit the stated pitch.
+The two-week answer did not weaken the earlier conclusion, it sharpened it.
 
-**One.** Break-even with no salaries is three clients. Break-even paying both
-founders is ten. The twelve-month plan turns cash-positive in month two and
-generates roughly 200,000 PLN of surplus in year one after charging market
-founder comp.
+**Before:** 50,000 PLN was six months of build runway, 43% of it software, and
+break-even arrived in month two of selling. **Now:** the product ships in a
+fortnight, so none of the 50,000 PLN is build runway, break-even arrives sooner
+still, and the gap between what the plan needs (about 11,760 PLN) and what is
+being raised (50,000 PLN) is roughly ten months of cover.
 
-**Two.** 50,000 PLN is six months of runway at planned burn, and only 43% of it
-is software.
+So "we need 50,000 PLN to finish the software" is now not merely imprecise, it
+is **contradicted by your own ship date on the previous slide.** Any angel who
+reads slide 5 (the product is two weeks out) and then slide 9 (we need the money
+to build it) has caught an inconsistency, and that is the kind of catch that ends
+a meeting for a reason unrelated to the quality of the business.
 
-**Three.** Therefore **the raise is not the hinge.** If the plan works you do not
-need the money. If it does not, 50,000 PLN does not save you. An angel with any
-experience will reach this conclusion in the meeting, and if the deck has said
-"we need 50,000 PLN to finish the software" they will conclude either that you
-have not done the arithmetic or that you are hiding something.
+The replacement is section 1c, and it is a better pitch on its own merits:
 
-**So reframe the raise, because there is a true version that is a better pitch.**
-What 50,000 PLN actually buys is four things worth buying: time before the first
-client, so you are not forced to sell a half-built product to make rent; the
-legal and compliance work you would otherwise skip and later regret, which is
-9,000 PLN of the round and gates the first sale; a designer, who makes Bruno
-faster for months; and **an angel on the cap table who can open doors into
-Polish mid-market sales organisations.** That last one is the actual reason to
-take outside money at this size, and it means the identity of the angel matters
-more than the terms.
+> The product ships in two weeks. Break-even is three clients. We are not
+> raising to build it. We are raising so that the size of the founding-member
+> cohort is a marketing decision instead of a cash-flow decision, because every
+> member we do not have to discount is worth 78,000 PLN over three years.
 
-Which produces a direct recommendation. **If the angel is strategic, someone
-with distribution into Polish SMEs, take the money and do not haggle over the
-cap.** They are worth more than the 50,000 PLN. **If the angel is purely
-financial, seriously consider not raising at all**, and instead taking deposits
-from the four founding members, which raises the same money, costs no equity and
-proves assumption one in section 5 at the same time. Either answer is defensible.
-Pretending the product cannot be built without the money is not, because section
-4 says it can.
+That framing does three things the old one could not. It makes the 50,000 PLN
+figure look deliberate rather than arbitrary. It gives the angel a return
+argument built from the company's own price list rather than from a forecast. And
+it is robust to the obvious challenge, because the honest answer to "do you need
+this money?" becomes "no, and that is the point: we want it on terms we choose
+rather than terms a customer dictates when we are short."
 
----
+**Two things follow, and they are the same two as before.** If the angel is
+strategic, someone with distribution into Polish mid-market sales organisations,
+take the money and do not negotiate hard over the cap, because their introductions
+are worth more than the cash. If the angel is purely financial, the arithmetic
+genuinely does not require them, and taking three founding members instead is
+the alternative to weigh rather than dismiss.
 
-## 8. What I need from you
+## 8. What is still open
 
-Ordered by how much they change the document.
+Resolved by Mario: the old deck, the age and corporate-law material, the ship
+date, the approval gate. Remaining, ordered by whether they block the deck.
 
-1. **When does Mario turn 18?** Determines whether section 6a is a structural
-   problem or a timing one, and whether the convertible argument holds.
-2. **When does the MVP actually ship?** Section 4 is dated from it and section
-   1b's six months assumes it.
-3. **Who holds the udziały today, and is it a single-shareholder company?** If
-   single, there may be 20,000 to 25,000 PLN a year of ZUS the plan has not
-   counted, with a straightforward fix.
-4. **Is there anything in writing between Mario and Bruno about equity?**
-5. **What exists in the product today, screen by screen and agent by agent?**
-   Needed for the "what exists versus what the 50,000 finishes" slide, and to
-   judge whether six months is real.
-6. **Approval gate: automatic with no gate, or a gate as a configuration
-   option?** The old deck and this brief disagree, and it changes the product
-   slide, the problem slide and assumption four.
-7. **What was the close rate on the 26 meetings?** Anchors the most important
-   assumption in the model.
-8. **Has anyone measured tokens per agent run, even roughly?** Collapses a
-   2.4x range in COGS.
-9. **Do clients send from their own mailboxes or ours?** Worth 150 PLN per
-   client per month and a large share of the liability in 6c.
-10. **Is the angel known, and are they strategic or financial?** Section 7 gives
-    different advice for each.
-11. **How many founding-member conversations are live, and at what stage?** The
-    traction slide needs a number I can defend.
-12. **Dale Carnegie: paying client, pilot, or reference?** The 130,000 PLN is
-    pipeline; the commercial relationship is a separate fact and the slide needs
-    both.
-13. **Are the five testing companies from the old deck still live?**
-14. **Where does the 2,000 PLN a month of tool spend come from today, and is
-    there any service revenue?** Moves 12,000 PLN in the use of funds.
-15. **Do you still stand behind the 284,500 PLN cost-of-work figure** from the
-    old deck's slide 02?
+**Blocking, because a slide cannot be written without them:**
 
----
+1. **The structure of the ask.** Slide 10 is "the ask and the structure" and has
+   to say what the angel receives. Three choices: a named equity percentage, a
+   convertible with a cap, or a revenue-share loan. No legal detail goes on the
+   slide either way, just the instrument and the headline terms. My
+   recommendation remains the convertible, now for a simpler reason than before:
+   with the product shipping in two weeks, the next twelve months will set a
+   valuation far better than any number you could defend today.
+2. **The real feature list, shipped versus two weeks out.** Slide 5 needs it and
+   I will not invent screens or capabilities. If there are screenshots, they
+   belong on the slide instead of bullets, per section 5 assumption two.
+3. **Traction, precisely.** Is Dale Carnegie a paying client, a pilot, or a
+   reference? How many founding-member conversations are live, and at what
+   stage? Slide 6 is the honesty slide and it needs facts I can stand behind
+   under a direct question.
 
-## 9. What changes in the deck once this is settled
+**Not blocking. I will proceed with a labelled assumption unless corrected:**
 
-Not building it yet. Noting the consequences so they are not a surprise:
+4. **Close rate on the 26 meetings.** The most load-bearing number in section 4.
+   Without it the twelve-month plan ships with 6% to 12% on the slide, marked
+   forecast, plus the 4% downside row.
+5. **Has token spend per agent run been measured?** Collapses a 2.4x range in
+   COGS. Until then the deck quotes 62% to 79% gross margin rather than a point
+   figure.
+6. **Do clients send from their own mailboxes, or do we provide them?** Worth
+   150 PLN per client per month. I will assume the client's own domains, which
+   is both cheaper and the right answer on liability.
+7. **Is the angel strategic or financial?** Changes the emphasis of slide 10,
+   not its content.
 
-- **Slide 9, use of funds, cannot say "almost entirely development."** Section
-  1b. Reframe as six months of runway to ship and make saleable.
-- **Slide 10, the ask, should name the instrument**, which on current analysis
-  is a convertible loan with a cap, not an equity percentage.
-- **Slide 7, business model, should quote 62% to 79% gross margin** and should
-  not quote LTV/CAC. The setup-fee-covers-CAC point is stronger and true.
-- **Slide 8, path to revenue, should carry the 4% close-rate row** alongside the
-  base case. A forecast with its own downside printed on it reads as rigour.
-- **Slide 6, traction, has to separate what the approach proved from what the
-  product proved.** Section 6e.
-- **Slide 12 gets the founding cohort capped at four**, and the "for life"
-  language gets the scope boundary from section 2c, or the slide is making a
-  promise the model cannot carry.
-- **Twelve slides is right.** The spine in the brief holds. Section 7 argues for
-  one change of emphasis: slide 10 should be about the structure and the angel's
-  role rather than only the number.
+## 9. What this means for the twelve slides
+
+- **Slide 5 shows the product, it does not describe it.** Section 5, assumption
+  two. This is the highest-leverage design decision in the deck.
+- **Slide 9, use of funds, is nine months of runway from a shipped product.**
+  Four lines plus a buffer, from section 1b. It must not say "to build the
+  product", because slide 5 has just said the product is built.
+- **Slide 10 carries the 1c argument, not a funding-gap argument.** 78,000 PLN
+  per founding member, roughly 4x the raise in preserved revenue. One table, no
+  forecast in it.
+- **Slide 7 quotes 62% to 79% gross margin and does not quote LTV to CAC.** The
+  setup-fee-covers-acquisition-cost point is both stronger and true.
+- **Slide 8 carries the 4% close-rate row** beside the base case. A forecast
+  printed with its own downside reads as rigour rather than optimism.
+- **Slide 6 separates what the approach proved from what the product proved.**
+  Section 6e. The 130,000 PLN of pipeline and the 26 meetings were produced by
+  Mario and a tool stack, not by ValenOS, and saying so first is worth more than
+  hoping it is not asked.
+- **Slide 3 states the gate in one line:** agents run unattended by default, an
+  approval step is available per workflow. Default carries the pitch, option
+  removes the objection.
+- **Slide 12 caps the founding cohort at three or four** and bounds "for life" to
+  the scope signed at go-live. Section 2c. At ten members the model in 1c inverts
+  and the discount becomes the reason the raise was needed.
+- **No legal or corporate-structure content on any slide.** Adopted.
+- **Twelve slides still holds**, with the brief's spine intact.

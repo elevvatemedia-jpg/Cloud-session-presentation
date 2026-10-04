@@ -6,4 +6,4 @@
 The spreadsheet comes after Mario corrects the assumptions in section 8, so the
 drivers get built once against real inputs rather than twice.
 
-FX is 3.85 PLN to the dollar throughout, matching the previous V&P deck.
+FX is 3.85 PLN to the dollar throughout.
