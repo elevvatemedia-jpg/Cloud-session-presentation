@@ -10,6 +10,92 @@ for it.
 
 ---
 
+## PIVOT: the mass model supersedes sections 2, 3, 4 and 7
+
+Mario's correction, and it reshapes the business rather than just the numbers.
+The economics below in sections 2, 3, 4 and 7 were modelled on the **bespoke
+build**, custom software per client, high onboarding, high price, few clients.
+The rebuild is a standardised product sold at volume. **Those four sections are
+superseded. `model-valenos.xlsx` is the live source.**
+
+### What I had wrong, specifically
+
+The 1,851 PLN "koszt obslugi klienta" was a fully-loaded figure presented as
+cash. It contained 770 PLN of platform cost divided by one client and 300 PLN of
+notional founder time, neither of which is money leaving the account. **Marginal
+cash cost is 781 PLN at the modelled volumes**, and 196 PLN at low volume.
+
+### What standardising actually changes
+
+Onboarding time, support time, the capacity ceiling, and infrastructure
+amortisation all collapse. Per-unit token cost does **not** change: one
+enrichment costs the same whether the software is bespoke or standard. That is
+precisely why the volume allowance, and not the seat cap, is the mechanism that
+protects margin.
+
+### The new structure
+
+Retainer with a seat band and an included agent volume allowance. No setup fee.
+
+| | Start | Standard | Skala |
+|---|---|---|---|
+| Cena / mies. | 990 | **2 490** | 5 900 |
+| Stanowiska | do 3 | do 10 | do 25 |
+| Firm wzbogaconych | 50 | 200 | 600 |
+| Maili | 500 | 2 000 | 6 000 |
+| Koszt krancowy | 175 | 629 | 1 776 |
+| Marza brutto | 82% | 75% | 70% |
+
+Blended at a 20/65/15 mix: price 2 702 PLN, cash cost 710 PLN, **gross profit
+1 992 PLN, margin 74%.**
+
+### Why a seat cap alone is not enough
+
+Cash cost per client runs **196 PLN at low volume to 1 482 PLN at high, a 7.6x
+spread**, and all three of those clients can have three seats. Cost tracks agent
+volume, not headcount.
+
+### Why retainer rather than per seat
+
+1. Cost does not scale with seats, so per-seat systematically undercharges the
+   most expensive customers.
+2. Per-seat picks a losing comparison. 2 490 PLN across 10 seats is 249 PLN per
+   seat, at the very top of the Polish CRM range, against products the buyer
+   thinks are comparable. A retainer competes with a junior SDR at 8 500 to
+   11 000 PLN, where ValenOS wins outright.
+3. Per-seat taxes the moat. The context layer strengthens as more of the team
+   works inside the CRM; charging per seat gives the client a reason to limit
+   logins.
+
+### What the mass model does to the plan
+
+| | Model bespoke | Model masowy |
+|---|---|---|
+| Cena | 5 000 + 6 000 wdrozenie | 2 702 srednio, bez wdrozenia |
+| Prog bez wynagrodzen | 3 klientow | **2 klientow** |
+| Prog z wynagrodzeniami | 10 klientow | **15 klientow** |
+| Miesiac 12 | 23 klientow, 112 000 MRR | **41 klientow, 110 000 MRR** |
+| Sufit przepustowosci | ~20 klientow | **~80 do 100 klientow** |
+
+The revenue in month twelve is effectively identical. **The difference that
+matters is the ceiling.** The bespoke plan hit its own capacity wall at about 20
+clients, which it reached in month eleven, so it had nowhere left to go. The
+mass plan ends year one at 41 of roughly 80 to 100, with another year of room in
+the same two-person structure. That directly resolves the finding in section 2e:
+the binding constraint was delivery capacity, and the rebuild attacks it.
+
+### Still open
+
+- **The founding offer no longer fits.** 3 000 PLN locked for life now sits
+  *above* the Standard price of 2 490. It needs replacing.
+- **Slide 10's investment argument is dead.** The 78 000 PLN per founding member
+  and the 4.7x multiple both derived from the 3 000 versus 5 000 spread and the
+  waived 6 000 setup fee. All three inputs are gone.
+- **The volume allowances are assumptions.** Measure them on the four testing
+  companies before the cennik is published.
+
+---
+
 ## 0. What Mario settled, and what it changed
 
 Four decisions came back. Two of them changed the arithmetic.
@@ -303,7 +389,7 @@ It is checkable in front of the investor, on one slide, with no forecast in it.
 And it answers the question the angel is actually asking, which is not "can you
 build it" but "why does this need my money rather than a customer's."
 
-## 2. Unit economics
+## 2. Unit economics [SUPERSEDED by the pivot section above]
 
 ### 2a. Cost to serve one client per month
 
@@ -489,7 +575,7 @@ tell an investor than a 52x ratio.
 
 ---
 
-## 3. Break-even
+## 3. Break-even [SUPERSEDED]
 
 **Fixed monthly costs, no salaries:**
 
@@ -565,7 +651,7 @@ section 4 is month seven or eight. That hire is in the plan below.
 
 ---
 
-## 4. The twelve months after the MVP ships
+## 4. The twelve months after the MVP ships [SUPERSEDED]
 
 **Month one here is the month the MVP ships, which is month six of the use of
 funds.** The two timelines are sequential, not parallel. **When does the MVP
@@ -877,7 +963,7 @@ before the investor does converts the weakest slide into a credible one.
 
 ---
 
-## 7. The conclusion, restated again
+## 7. The conclusion [SUPERSEDED in part by the pivot section]
 
 The picture changed twice, and the second change was the important one.
 
