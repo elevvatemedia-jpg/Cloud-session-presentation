@@ -943,7 +943,21 @@ explicitly as for money. Dale Carnegie does not appear. Built in Figma Slides.
 
 ## 9. What this means for the twelve slides
 
-Built in **Figma Slides**.
+Built in **Figma Slides**. Revisions applied after the first review:
+
+- **Slide 2 drops tool names** and shows three tasks with hours against each
+  (4 h, 3,5 h, 2,5 h per rep per week). The hours sum to the 10 h that drives
+  the 162,000 PLN figure, so the slide is internally checkable.
+- **Slide 3 is now a view inside the CRM**, with agents working on live records
+  and gold markers on the rows an agent is touching. It no longer reads as "we
+  have four agents": the four are named only in a footnote as the first version,
+  on shared infrastructure. The view is labelled illustrative on the slide.
+- **Slide 5 replaces the list of four agents with the two things the round
+  actually funds:** agent infrastructure (any agent, built per client in hours)
+  and the context layer (shared memory every agent reads from).
+- **Slide 6 leads with what was built**, not with metrics: four companies
+  testing, the CRM structure, brand and identity, site and first traffic. The
+  outbound figures survive as a single supporting line.
 
 - **Slide 5 shows the product, it does not describe it.** The CRM substrate is
   shipped, so this slide is a real screen with real records, and the agents and
