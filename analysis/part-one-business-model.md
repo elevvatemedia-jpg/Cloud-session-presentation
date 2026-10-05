@@ -1027,50 +1027,42 @@ explicitly as for money. Dale Carnegie does not appear. Built in Figma Slides.
 5. **Client mailboxes or ours?** Assuming the client's own domains, which is
    cheaper and better on liability.
 
-## 9. What this means for the twelve slides
+## 9. The deck as built
 
-Built in **Figma Slides**. Revisions applied after the first review:
+Thirteen slides in Figma Slides, https://www.figma.com/slides/AwenRp6CKhGAnQEtODzXiV
 
-- **Slide 2 drops tool names** and shows three tasks with hours against each
-  (4 h, 3,5 h, 2,5 h per rep per week). The hours sum to the 10 h that drives
-  the 162,000 PLN figure, so the slide is internally checkable.
-- **Slide 3 is now a view inside the CRM**, with agents working on live records
-  and gold markers on the rows an agent is touching. It no longer reads as "we
-  have four agents": the four are named only in a footnote as the first version,
-  on shared infrastructure. The view is labelled illustrative on the slide.
-- **Slide 5 replaces the list of four agents with the two things the round
-  actually funds:** agent infrastructure (any agent, built per client in hours)
-  and the context layer (shared memory every agent reads from).
-- **Slide 6 leads with what was built**, not with metrics: four companies
-  testing, the CRM structure, brand and identity, site and first traffic. The
-  outbound figures survive as a single supporting line.
+| # | Slajd | Rola |
+|---|---|---|
+| 1 | Czym jest ValenOS | Jedno zdanie |
+| 2 | Problem | Trzy zadania i godziny, 162 000 PLN rocznie |
+| 3 | **Agenty w CRM** | Kluczowa funkcja pierwsza, dziala dzisiaj. Widok wewnatrz CRM |
+| 4 | **Warstwa kontekstu** | Kluczowa funkcja druga, to buduje runda. Panel kontekstu jednej firmy |
+| 5 | Dlaczego teraz | 84 procent, 126 mld USD, Attio |
+| 6 | Co zbudowalismy | Cztery firmy testuja, CRM, marka, strona |
+| 7 | Model biznesowy | Retainer: Start 990, Standard 2 490, Skala 5 900 |
+| 8 | Ekonomia klienta | 2 702 przychod, 710 koszt, 1 992 zysk, 74 procent |
+| 9 | Wykorzystanie srodkow | Claude Max, narzedzia, marketing. 67 procent na budowe |
+| 10 | Roadmapa | Cztery etapy w szesc miesiecy, do rundy drugiej |
+| 11 | Oferta | 50 000 PLN, kamien milowy, 2 000 000 PLN runda druga |
+| 12 | Zespol | Dwie osoby, kazda z dowodem |
+| 13 | Co musi byc prawda | Trzy zalozenia plus ryzyko inferencji |
 
-- **Slide 5 shows the product, it does not describe it.** The CRM substrate is
-  shipped, so this slide is a real screen with real records, and the agents and
-  context layer are what the 50,000 finishes. That split is now the slide's whole
-  structure and it is a strong one: the unglamorous half is done, the money
-  finishes the half that is hard.
-- **Slide 9, use of funds, leads with agent and context development at 64% of the
-  round.** Section 1b. It can say the money finishes the software, because now it
-  does. The iteration-cost arithmetic belongs on the slide, because it is the
-  answer to "what costs 50,000 PLN when nobody takes a salary."
-- **Slide 10 carries the convertible terms, the 1c option-not-to-discount table,
-  and the distribution ask**, in that order of space. 78,000 PLN per founding
-  member, roughly 4x the raise in preserved revenue, no forecast in it.
-- **Slide 6 is the honest slide and it is thin.** No Dale Carnegie, no customer
-  outcome. It carries the 77 PLN per meeting figure, the 26 meetings, the shipped
-  substrate and the live founding-member conversations, and it says in one line
-  that the approach and channel are proven while the product outcome is not yet.
-  Section 6b.
-- **Slide 7 quotes 62% to 79% gross margin and does not quote LTV to CAC.** The
-  setup-fee-covers-acquisition-cost point is stronger and true.
-- **Slide 8 carries the 4% close-rate row** beside the base case.
-- **Slide 3 states the gate in one line:** agents run unattended by default, an
-  approval step available per workflow.
-- **Slide 12 caps the founding cohort at three or four** and bounds "for life" to
-  the scope signed at go-live, and names the inference-overrun risk rather than a
-  generic one, because a specific risk with a stated control reads as competence.
-- **No legal or corporate-structure content on any slide.**
-- **Twelve slides still holds.** With Dale Carnegie out, slide 6 is the one at
-  risk of being too thin to justify its place; if the founding-member
-  conversations are few, it folds into slide 8 and the deck runs to eleven.
+**Slides 3 and 4 are a deliberate pair.** Slide 3 is labelled "Dziala dzisiaj"
+and shows agents working on live records inside the CRM. Slide 4 is labelled
+"Co konczy 50 000 PLN" and shows the context layer as everything the system
+knows about one company, with the signals it found itself marked in gold. An
+investor reads the pair as: this half works, the money finishes the other half.
+
+**The timeline closes at six months.** Etap 1 MVP (mies. 1-2, 14 000 MRR), Etap
+2 pierwsi platni klienci i cennik zamkniety (mies. 3-4, 30 000), Etap 3 sprzedaz
+masowa i prog rentownosci (mies. 5, 39 000), Etap 4 runda druga 2 000 000 PLN
+(mies. 6, 48 000). The twelve-month model stays in the workbook as the
+underlying arithmetic; the deck shows only the first six.
+
+**Terms are off the deck** at Mario's instruction. Slide 11 states the amount,
+what it builds, the milestone and the next round, with one line saying terms are
+agreed individually.
+
+**Still open:** the website traffic figure (a marked placeholder on slide 6), and
+the volume allowances on slide 7, which should be measured on the four testing
+companies rather than assumed.
